@@ -1,0 +1,74 @@
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+ul,
+ol,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+ul, ol {
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: $baseFont;
+  color: #000;
+  text-transform: none;
+  line-height: 1.42;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1,
+.h1 {
+  font-size: rem(40px);
+}
+
+h2,
+.h2 {
+  margin-top: 30px;
+  font-size: rem(32px);
+}
+
+h3,
+.h3 {
+  margin-top: 30px;
+  font-size: rem(22px);
+}
+
+h4,
+.h4 {
+  margin-top: 30px;
+  font-size: rem(18px);
+}
+
+h5,
+.h5 {
+  margin-top: 30px;
+  font-size: rem(16px);
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
