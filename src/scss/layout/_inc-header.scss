@@ -1,0 +1,167 @@
+.header {
+  padding: 28px 0 38px 0;
+  box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
+  margin-bottom: 40px;
+
+  &-content {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    margin-right: 34px;
+    max-width: 184px;
+    width: 100%;
+  }
+
+  &-control {
+    width: 100%;
+
+    &-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 33px;
+    }
+
+    &-bottom {
+      display: flex;
+    }
+
+    &-nav {
+      margin-right: 46px;
+      border-right: 1px solid #D9E4F1;
+
+      a {
+        font-size: 22px;
+        color: #172542;
+        // margin-right: 16px;
+        padding: 14px 20px 11px 18px;
+
+        &:last-child {
+          margin-right: 18px;
+        }
+
+        &:hover {
+          background: #F8FBFF;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      img {
+        position: relative;
+        top: -3px;
+        // right: 24px;
+      }
+    }
+
+    &-optional {
+      a {
+        position: relative;
+        font-size: 22px;
+        color: #728EAE;
+
+        &:hover {
+          color: #a8bed6;
+        }
+
+        &:first-child {
+          margin-right: 48px;
+        }
+
+        img {
+          position: absolute;
+          top: 1px;
+          line-height: 0;
+
+          &.fire {
+            right: -6px;
+          }
+
+          &.precent {
+            right: -9px;
+          }
+        }
+      }
+    }
+
+    &-link {
+      a {
+        &:first-child {
+          stroke: #000;
+
+          svg {
+            &:hover {
+              stroke: #a8bed6;
+            }
+          }
+        }
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        transition: 0.1s ease-out;
+
+        &:hover {
+          fill: #a8bed6;
+        }
+      }
+    }
+
+    &-search {
+      position: relative;
+      max-width: 850px;
+      width: 100%;
+      margin-right: 60px;
+
+      img {
+        position: absolute;
+        left: 21px;
+        top: 18px;
+      }
+    }
+
+    &-number {
+      font-family: 'FuturaMediumC';
+      color: #728EAE;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-right: 62px;
+      font-weight: 500;
+
+      &:hover {
+        color: #a8bed6;
+      }
+    }
+
+    &-link {
+      max-width: 138px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-cart {
+      position: relative;
+    }
+
+    &-count {
+      background-color: #fdc300;
+      border-radius: 8px;
+      text-align: center;
+      color: #172542;
+      font-family: FuturaDemiC;
+      top: -7px;
+      font-size: 10px;
+      position: absolute;
+      right: -8px;
+      min-width: 16px;
+      height: 16px;
+      line-height: 16px;
+      padding: 0 2px;
+    }
+  }
+}

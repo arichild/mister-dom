@@ -3,6 +3,10 @@
 @import "./base/typography.scss";
 @import "./base/grid.scss";
 @import "./base/mixin.scss";
+@import "./base/ui.scss";
+
+/* fonts */
+@import "./fonts.scss";
 
 /* layout */
 @import "./layout/inc-header.scss";

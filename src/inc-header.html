@@ -2,19 +2,92 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="Start-project" />
-  <meta name="description" content="Start-project" />
+  <meta name="keywords" content="MISTER-DOM" />
+  <meta name="description" content="MISTER-DOM" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <title>Start-project</title>
-
+  <title>MISTER-DOM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- wrapper -->
 <div class="wrapper" id="wrapper">
   <header class="header" id="header">
-    <h1>header</h1>
+    <div class="container">
+      <div class="header-content">
+        <div class="header-logo">
+          <a href="#">
+            <img src="./images/icon/logo.png" alt="alt" loading="lazy">
+          </a>
+        </div>
+
+        <div class="header-control">
+          <div class="header-control-top">
+            <div class="header-control-search">
+              <input class="ui-input" type="text" placeholder="Поиск товара по каталогу">
+
+              <img src="./images/icon/Search.svg" alt="alt">
+            </div>
+
+            <a href="tel:+375333556677" class="header-control-number">
+              + 375 33 355 66 77
+            </a>
+
+            <div class="header-control-link">
+              <a href="#">
+                <svg class="sprite">
+                  <use xlink:href="./images/svg/symbols.svg#Heart"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="sprite">
+                  <use xlink:href="./images/svg/symbols.svg#user"></use>
+                </svg>
+              </a>
+              <a href="#" class="header-control-cart">
+                <svg class="sprite">
+                  <use xlink:href="./images/svg/symbols.svg#cart"></use>
+                </svg>
+
+                <div class="header-control-count">
+                  2
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-control-bottom">
+            <div class="header-control-nav">
+              <a href="#" class="header-control-item">
+                Инфо-центр
+                <img src="./images/icon/arrow.svg" alt="alt">
+              </a>
+              <a href="#">Ванная</a>
+              <a href="#">Интерьер</a>
+              <a href="#">Детям</a>
+              <a href="#">Посуда</a>
+              <a href="#">Свет</a>
+              <a href="#">Текстиль</a>
+              <a href="#">Хранение</a>
+            </div>
+
+            <div class="header-control-optional">
+              <a href="#">
+                Хиты продаж
+
+                <img src="./images/icon/fire.svg" alt="alt" class="fire">
+              </a>
+              <a href="#">
+                Низкие цены
+
+                <img src="./images/icon/percent.svg" alt="alt" class="precent">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>

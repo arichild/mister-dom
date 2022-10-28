@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('FuturaBookC.eot');
+    src: url('FuturaBookC.eot?#iefix') format('embedded-opentype'),
+        url('FuturaBookC.woff2') format('woff2'),
+        url('FuturaBookC.woff') format('woff'),
+        url('FuturaBookC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('FuturaBookC_1.eot');
+    src: url('FuturaBookC_1.eot?#iefix') format('embedded-opentype'),
+        url('FuturaBookC_1.woff2') format('woff2'),
+        url('FuturaBookC_1.woff') format('woff'),
+        url('FuturaBookC_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

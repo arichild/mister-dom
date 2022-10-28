@@ -1,0 +1,89 @@
+.footer {
+  &-info {
+    padding-bottom: 90px;
+    border-bottom: 1px solid #D9E4F1;
+    margin-bottom: 48px;
+  }
+
+  &-title {
+    font-family: 'FuturaDemiC';
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 45px;
+    letter-spacing: 0.05em;
+  }
+
+  &-subtitle {
+    color: #9BADC2;
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: 0.05em;
+  }
+
+  &-links {
+    a {
+      display: block;
+      line-height: 1;
+      font-size: 20px;
+      color: #172542;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+
+      &:hover {
+        color: #a8bed6;
+      }
+    }
+  }
+
+  &-contact {
+    position: relative;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+
+    img {
+      position: absolute;
+      margin-right: 8px;
+      width: 20px;
+      height: 24px;
+    }
+  }
+
+  &-caption {
+    padding-left: 27px;
+    font-size: 20px;
+    color: #172542;
+
+  }
+
+  &-other {
+    margin-bottom: 40px;
+
+    .flex {
+      justify-content: space-between;
+    }
+  }
+
+  &-create {
+    &.flex {
+      align-items: center;
+    }
+  }
+
+  &-name {
+    font-size: 20px;
+    color: #172542;
+    margin-right: 8px;
+  }
+
+  a {
+    display: block;
+
+    &:hover {
+      color: #a8bed6;
+    }
+  }
+}

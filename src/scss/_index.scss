@@ -1,0 +1,265 @@
+.back-link {
+  margin-bottom: 10px;
+
+  &.flex {
+    align-items: center;
+  }
+
+  img {
+    margin-right: 10px;
+  }
+
+  &-caption {
+    font-size: 22px;
+    color: #172542;
+    // padding-bottom: 2px;
+    border-bottom: 1px solid #FAD89D;
+  }
+}
+
+.result {
+  text-align: center;
+  max-width: 690px;
+  margin: 0 auto;
+  margin-bottom: 117px;
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  &-search {
+    margin: 0 15px;
+
+    .header-control-search {
+      margin-right: 16px;
+    }
+
+    .ui-btn {
+      max-width: 152px;
+      width: 100%;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 136px;
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  // &-img {
+  //   line-height: 0;
+  //   min-height: 130px;
+  //   overflow: hidden;
+  // }
+
+  &-card {
+    max-width: 370px;
+    text-align: center;
+    margin-right: 40px;
+    position: relative;
+
+    &.light-blue {
+      background: #DBEEF5;
+    }
+
+    &.light-orange {
+      background: #F7E5D0;
+    }
+
+    &.blue {
+      background: #BFD4ED;
+    }
+
+    &.light-yellow {
+      background: #F7F0E7;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &-txt {
+    padding: 46px 50px 152px 50px;
+    // margin-bottom: 24px;
+    // padding-bottom: 152px;
+  }
+
+  &-title {
+    font-size: 24px;
+    color: #172542;
+    font-family: 'FuturaMediumC';
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  &-subtitle {
+    line-height: 1.2;
+    color: #172542;
+    letter-spacing: 0.05em;
+  }
+}
+
+.commercial {
+  margin-bottom: 131px;
+  &-img {
+    margin-right: 40px;
+    padding-top: 105px;
+    max-width: 370px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.txt {
+      padding: 0;
+
+      img {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    strong {
+      font-size: 40px;
+    }
+  }
+
+  &-subtitle {
+    font-size: 30px;
+  }
+}
+
+.slider {
+  &-items {
+    margin-bottom: 164px;
+
+    .btn-new-prev, .btn-new-next {
+      position: static;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+    }
+
+    .btn-new-prev {
+      margin-right: 24px;
+    }
+
+    .btn-new-prev:after {
+      content: '';
+    }
+
+    .btn-new-next:after {
+      content: '';
+    }
+  }
+
+  &-item {
+    max-width: 370px;
+
+    &-img {
+      margin-bottom: 30px;
+    }
+
+    &-link {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &-title {
+      font-family: 'FuturaDemiC';
+      font-size: 24px;
+      color: #172542;
+      margin-bottom: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+    }
+
+    &-subtitle {
+      font-size: 20px;
+      color: #9BADC2;
+      margin-bottom: 16px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &-price {
+    margin-bottom: 17px;
+
+    &.flex {
+      justify-content: space-between;
+      align-items: center
+    }
+
+    &-present {
+      font-family: 'FuturaDemiC';
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 0.05em;
+    }
+
+    &-discount {
+      font-family: 'FuturaDemiC';
+      font-weight: 600;
+      font-size: 24px;
+      text-decoration: line-through;
+      color: #728EAE;
+      margin-left: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    &-cart {
+      position: relative;
+      max-width: 56px;
+      width: 100%;
+      height: 56px;
+      border-radius: 50%;
+      background: #F2F2F2;
+      cursor: pointer;
+      transition: 0.1s ease-out;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        background: #a8bed6;
+      }
+    }
+  }
+
+  &-control {
+    margin-bottom: 64px;
+
+    &.flex {
+      justify-content: space-between;
+    }
+  }
+
+  &-btn {
+    &-previous {
+      margin-right: 24px;
+    }
+  }
+}

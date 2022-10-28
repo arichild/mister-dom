@@ -13,8 +13,8 @@
   flex-flow: row wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  margin-left: -33px;
-  margin-right: -33px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .flex {
@@ -58,8 +58,8 @@
 
 [class*="col-"] {
   width: 100%;
-  padding-left: 33px;
-  padding-right: 33px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .clear {
