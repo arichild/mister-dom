@@ -42,23 +42,14 @@
 }
 
 .services {
-  margin-bottom: 136px;
-
-  .flex {
-    flex-wrap: wrap;
-  }
-
-  // &-img {
-  //   line-height: 0;
-  //   min-height: 130px;
-  //   overflow: hidden;
-  // }
+  margin-bottom: 116px;
 
   &-card {
     max-width: 370px;
     text-align: center;
-    margin-right: 40px;
     position: relative;
+    margin-bottom: 20px;
+    height: 100%;
 
     &.light-blue {
       background: #DBEEF5;
@@ -74,10 +65,6 @@
 
     &.light-yellow {
       background: #F7F0E7;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
     }
 
     img {
@@ -111,6 +98,7 @@
 
 .commercial {
   margin-bottom: 131px;
+
   &-img {
     margin-right: 40px;
     padding-top: 105px;
@@ -122,6 +110,7 @@
 
     &.txt {
       padding: 0;
+      text-transform: uppercase;
 
       img {
         margin-bottom: 35px;
@@ -172,13 +161,22 @@
 
     &-img {
       margin-bottom: 30px;
+      object-fit: contain;
     }
 
     &-link {
       display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      &.img {
         overflow: hidden;
+        position: relative;
+        display: block;
+        height: 0;
+        padding-bottom: 108%;
+      }
     }
 
     &-title {
@@ -209,11 +207,18 @@
       align-items: center
     }
 
+    &-num {
+      &.flex {
+        flex-wrap: wrap;
+      }
+    }
+
     &-present {
       font-family: 'FuturaDemiC';
       font-weight: 600;
       font-size: 24px;
       letter-spacing: 0.05em;
+      margin-right: 12px;
     }
 
     &-discount {
@@ -222,7 +227,6 @@
       font-size: 24px;
       text-decoration: line-through;
       color: #728EAE;
-      margin-left: 12px;
       letter-spacing: 0.05em;
     }
 

@@ -41,6 +41,15 @@
   }
 }
 
+.ui-rating.flex {
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.ui-rating-stars {
+  margin-right: 10px;
+}
+
 .ui-rating-star {
   display: inline-block;
   background: url(.././images/icon/star-grey.svg) repeat 0 0;
@@ -60,13 +69,12 @@
   font-weight: 400;
   font-size: 16px;
   color: #858585;
-  margin-left: 10px;
+  // margin-left: 10px;
 }
 
 .ui-breadcrumbs {
   text-align: left;
   letter-spacing: 0.05em;
-  // margin-bottom: 25px;
 
   .split {
     display: inline-block;
@@ -77,9 +85,6 @@
     margin: 0 8px;
     color: #172542;
   }
-
-  // @include fz(14);
-  // color: $gray_trn;
 
   &-link {
     font-family: 'FuturaMediumC';
@@ -92,16 +97,7 @@
     &.active {
       color: #172542;
       border-bottom: 2px solid #172542;
-      // text-decoration: underline;
-      // color: $secondary;
     }
-
-    // &:after {
-    //   content: "/";
-    //   margin-left: 8px;
-    //   margin-right: 10px;
-    //   // color: $gray_trn;
-    // }
   }
 
   @media (max-width: 1024.99px) {

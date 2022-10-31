@@ -21,6 +21,11 @@
   }
 
   &-links {
+    ul {
+      margin-bottom: 0;
+      margin-right: 98px;
+    }
+
     a {
       display: block;
       line-height: 1;
@@ -71,12 +76,24 @@
     &.flex {
       align-items: center;
     }
-  }
 
-  &-name {
-    font-size: 20px;
-    color: #172542;
-    margin-right: 8px;
+    &-logo {
+      &.flex {
+        align-items: center;
+      }
+    }
+
+    &-img {
+      margin-right: 5px;
+      line-height: 0;
+      padding-bottom: 15px;
+    }
+
+    &-name {
+      font-size: 20px;
+      color: #172542;
+      margin-right: 8px;
+    }
   }
 
   a {
