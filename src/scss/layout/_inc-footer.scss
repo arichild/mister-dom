@@ -72,6 +72,16 @@
     }
   }
 
+  &-paymnet {
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+
   &-create {
     &.flex {
       align-items: center;
