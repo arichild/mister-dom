@@ -69,17 +69,31 @@
 
     &.flex {
       align-items: center;
-      // flex-wrap: wrap;
+
+      @media(max-width: 1024px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
 
     &-txt {
       max-width: 460px;
       width: 100%;
       margin-right: 46px;
+      margin-bottom: 25px;
+
+      @media(max-width: 1024px) {
+        max-width: none;
+        width: auto;
+      }
     }
 
     &-fields {
       width: 100%;
+
+      @media(max-width:1024px) {
+        width: auto;
+      }
     }
 
     &-title {
