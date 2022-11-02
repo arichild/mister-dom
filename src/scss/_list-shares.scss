@@ -1,0 +1,142 @@
+.shares {
+  &-content {
+    .ui-title {
+      margin-bottom: 85px;
+    }
+  }
+
+  &-card {
+    margin-bottom: 80px;
+
+    &-link {
+      display: block;
+      position: relative;
+      margin-bottom: 35px;
+
+      .ui-status {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-img {
+      line-height: 0;
+    }
+
+    &-title {
+      display: block;
+      font-family: 'FuturaMediumC';
+      font-weight: 500;
+      font-size: 36px;
+      color: #172542;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    &-subtitle {
+      position: relative;
+      padding-left: 25px;
+      color: #728EAE;
+      letter-spacing: 0.05em;
+
+      .sprite {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+
+        &.green {
+          fill: #43CF7B;
+        }
+
+        &.red {
+          fill: #CF4343;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  &-mailing {
+    padding: 55px 75px;
+    background-color: #F7F0E7;
+    color: #172542;
+    margin-bottom: 60px;
+
+    &.flex {
+      align-items: center;
+      // flex-wrap: wrap;
+    }
+
+    &-txt {
+      max-width: 460px;
+      width: 100%;
+      margin-right: 46px;
+    }
+
+    &-fields {
+      width: 100%;
+    }
+
+    &-title {
+      font-family: 'FuturaMediumC';
+      font-size: 44px;
+      margin-bottom: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    &-subtitle {
+      position: relative;
+      padding-left: 52px;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: 0.05em;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-cell {
+      position: relative;
+      margin-bottom: 10px;
+
+      .ui-btn {
+        background-color: #172542;
+        color: #fff;
+
+        &:hover {
+          background-color: #a8bed6;
+        }
+      }
+
+      .ui-input {
+        max-width: 320px;
+        margin-right: 12px;
+        border-color: #172542;
+
+        &:hover {
+          border-color: #a8bed6;
+        }
+      }
+
+      img {
+        position: absolute;
+        line-height: 0;
+        left: 24px;
+        top: 21px;
+      }
+    }
+
+    &-warn {
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+}

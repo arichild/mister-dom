@@ -10,7 +10,7 @@
 
   &-logo {
     margin-right: 34px;
-    max-width: 184px;
+    min-width: 184px;
     width: 100%;
   }
 
@@ -94,7 +94,7 @@
           line-height: 0;
 
           &.fire {
-            right: -6px;
+            right: -11px;
           }
 
           &.precent {

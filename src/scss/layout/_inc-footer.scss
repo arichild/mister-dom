@@ -21,10 +21,18 @@
   }
 
   &-links {
-    ul {
-      margin-bottom: 0;
-      margin-right: 98px;
+    &.flex {
+      flex-wrap: wrap;
     }
+
+    &.col-ul {
+      ul {
+        margin-bottom: 0;
+        column-count: 2;
+        width: 100%;
+      }
+    }
+
 
     a {
       display: block;
@@ -42,18 +50,23 @@
 
   &-contact {
     position: relative;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     letter-spacing: 0.05em;
 
     &:last-of-type {
       margin-bottom: 50px;
     }
 
-    img {
+    &-img {
       position: absolute;
+      top: 5px;
       margin-right: 8px;
       width: 20px;
-      height: 24px;
+      height: auto;
+
+      &.top-8 {
+        top: 8px;
+      }
     }
   }
 
@@ -61,7 +74,8 @@
     padding-left: 27px;
     font-size: 20px;
     color: #172542;
-
+    letter-spacing: 0.05em;
+    line-height: 1.8;
   }
 
   &-other {

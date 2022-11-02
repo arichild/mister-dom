@@ -1,5 +1,9 @@
 .back-link {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+
+  &.margin-72 {
+    margin-bottom: 72px;
+  }
 
   &.flex {
     align-items: center;
@@ -15,13 +19,62 @@
     // padding-bottom: 2px;
     border-bottom: 1px solid #FAD89D;
   }
+
+  &-dash {
+    margin: 0 12px;
+    margin-top: 2px;
+    width: 15px;
+    height: 1px;
+    background-color: #BECCDC;
+  }
+
+  &-current {
+    font-size: 22px;
+    color: #BECCDC;
+  }
 }
 
 .result {
   text-align: center;
-  max-width: 690px;
+  max-width: 730px;
   margin: 0 auto;
   margin-bottom: 117px;
+
+  &-lines {
+    &.flex {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-img-txt {
+    margin-bottom: 30px;
+  }
+
+  &-img {
+    margin-bottom: 62px;
+  }
+
+  &-txt {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    color: #172542;
+    margin-bottom: 20px;
+  }
+
+  &-line {
+    width: 52px;
+    height: 1px;
+    background: #172542;
+  }
+
+  &-circle {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background: #FAD89D;
+  }
 
   img {
     margin-bottom: 30px;
@@ -39,17 +92,30 @@
       width: 100%;
     }
   }
+
+  .header-control-search {
+    img {
+      position: absolute;
+      left: 21px;
+      top: 18px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .services {
-  margin-bottom: 116px;
+  margin-bottom: 96px;
 
   &-card {
     max-width: 370px;
     text-align: center;
     position: relative;
-    margin-bottom: 20px;
-    height: 100%;
+    margin-bottom: 40px;
+    min-height: calc(100% - 40px);
+
+    &.height-auto {
+      min-height: auto;
+    }
 
     &.light-blue {
       background: #DBEEF5;
@@ -108,8 +174,7 @@
       margin-right: 0;
     }
 
-    &.txt {
-      padding: 0;
+    &-txt {
       text-transform: uppercase;
 
       img {
@@ -123,7 +188,8 @@
     margin-bottom: 20px;
 
     strong {
-      font-size: 40px;
+      font-size: 45px;
+      letter-spacing: .05em;
     }
   }
 
@@ -135,6 +201,13 @@
 .slider {
   &-items {
     margin-bottom: 164px;
+    .swiper-wrapper {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
 
     .btn-new-prev, .btn-new-next {
       position: static;
@@ -165,10 +238,13 @@
     }
 
     &-link {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      position: relative;
+
+      .ui-status {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       &.img {
         overflow: hidden;
@@ -187,6 +263,8 @@
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: 0.05em;
+      height: 100%;
+      min-height: 56px;
     }
 
     &-subtitle {

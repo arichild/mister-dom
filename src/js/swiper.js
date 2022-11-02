@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper.slider-new', {
+const swiperTab = new Swiper('.swiper.slider-new', {
   slidesPerView: 4,
   spaceBetween: 40,
   setWrapperSize: true,

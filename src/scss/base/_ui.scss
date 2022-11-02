@@ -13,7 +13,8 @@
   transition: 0.1s ease-out;
   letter-spacing: 0.05em;
   text-align: center;
-  padding: 12px 0;
+  padding: 0 5px;
+  line-height: 56px;
 
   &:hover {
     background: #fadca9;
@@ -52,7 +53,7 @@
 
 .ui-rating-star {
   display: inline-block;
-  background: url(.././images/icon/star-grey.svg) repeat 0 0;
+  background: url(.././images/icon/star-empty.svg) repeat 0 0;
 
   &.active {
     background: url(.././images/icon/star.svg) repeat 0 0;
@@ -92,7 +93,8 @@
     font-weight: 500;
     font-size: 36px;
     color: #172542;
-    padding-bottom: 2px;
+    // padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
 
     &.active {
       color: #172542;
@@ -115,4 +117,35 @@
 
 .ui-breadcrumbs {
   overflow: -moz-scrollbars-none;
+}
+
+.ui-title {
+  font-family: 'FuturaDemiC';
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #172542;
+}
+
+.ui {
+  &-status {
+    padding: 7px 12px;
+    font-family: 'FuturaDemiC';
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+
+    &.green {
+      background-color: #43CF7B;
+    }
+
+    &.red {
+      background-color: #CF4343;
+    }
+
+    &.light-blue {
+      background-color: #ADBFD4;
+    }
+  }
 }

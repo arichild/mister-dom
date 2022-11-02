@@ -1,0 +1,145 @@
+.shares {
+  &-more {
+    .ui-title {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-caption {
+    margin-bottom: 30px;
+  }
+
+  &-subtitle {
+    &.flex {
+      align-items: center;
+    }
+
+    .ui-status {
+      margin-right: 12px;
+    }
+
+    .ui-status {
+      display: inline-block;
+    }
+  }
+
+  &-info {
+    &-card {
+      margin-bottom: 70px;
+    }
+
+    &-img {
+      margin-bottom: 60px;
+    }
+
+    &-txt {
+      font-size: 22px;
+      font-family: 'FuturaLightC';
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+      color: #172542;
+
+      a {
+        font-family: FuturaMediumC;
+        color: #0B5089;
+
+        &:hover {
+          color: #a8bed6;
+        }
+      }
+    }
+  }
+
+  &-share {
+    background: #FAFCFF;
+    padding: 38px 60px;
+    margin-bottom: 115px;
+
+    svg {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    &-txt {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: 40px px;
+      font-size: 22px;
+      letter-spacing: 0.05em;
+      color: #172542;
+      margin-right: 33px;
+    }
+
+    &-img {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    &-link {
+      position: relative;
+      display: inline-block;
+      border: 1px solid #FAD89D;
+      border-radius: 50%;
+      margin-right: 8px;
+      min-width: 56px;
+      min-height: 56px;
+
+      &:hover {
+        background-color: #FAD89D;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &-last {
+    margin-bottom: 165px;
+
+    &-caption {
+      font-family: 'FuturaMediumC';
+      font-size: 36px;
+      letter-spacing: 0.05em;
+      color: #172542;
+      margin-bottom: 70px;
+    }
+
+    &-link {
+      position: relative;
+
+      .ui-status {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-img {
+      margin-bottom: 20px;
+      line-height: 0;
+    }
+
+    &-title {
+      display: block;
+      font-family: 'FuturaMediumC';
+      font-size: 28px;
+      color: #172542;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: #728EAE;
+    }
+  }
+}

@@ -13,7 +13,10 @@
 @import "./layout/inc-footer.scss";
 
 /* pages */
-@import "index";
+@import "index.scss";
+@import "list-shares.scss";
+@import "shares-page.scss";
+@import "pages.scss";
 
 * {
   box-sizing: border-box;
