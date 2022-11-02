@@ -110,8 +110,8 @@
     max-width: 370px;
     text-align: center;
     position: relative;
-    margin-bottom: 40px;
     min-height: calc(100% - 40px);
+    margin: 0 auto 40px auto;
 
     &.height-auto {
       min-height: auto;

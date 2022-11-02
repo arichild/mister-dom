@@ -129,12 +129,14 @@
 
 .ui {
   &-status {
-    padding: 7px 12px;
+    padding: 0 12px;
+    line-height: 30px;
     font-family: 'FuturaDemiC';
     font-weight: 600;
     font-size: 15px;
     color: #fff;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 
     &.green {
       background-color: #43CF7B;
