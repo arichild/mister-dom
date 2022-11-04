@@ -1,39 +1,3 @@
-.back-link {
-  margin-bottom: 30px;
-
-  &.margin-72 {
-    margin-bottom: 72px;
-  }
-
-  &.flex {
-    align-items: center;
-  }
-
-  img {
-    margin-right: 10px;
-  }
-
-  &-caption {
-    font-size: 22px;
-    color: #172542;
-    // padding-bottom: 2px;
-    border-bottom: 1px solid #FAD89D;
-  }
-
-  &-dash {
-    margin: 0 12px;
-    margin-top: 2px;
-    width: 15px;
-    height: 1px;
-    background-color: #BECCDC;
-  }
-
-  &-current {
-    font-size: 22px;
-    color: #BECCDC;
-  }
-}
-
 .result {
   text-align: center;
   max-width: 730px;
