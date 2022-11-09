@@ -13,13 +13,6 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: FuturaLightC-Italic;
-	font-display: swap;
-	src: url("../fonts/FuturaLightC-Italic.woff2") format("woff2"), url("../fonts/FuturaLightC-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
 	font-family: FuturaDemiC-Italic;
 	font-display: swap;
 	src: url("../fonts/FuturaDemiC-Italic.woff2") format("woff2"), url("../fonts/FuturaDemiC-Italic.woff") format("woff");
@@ -27,16 +20,9 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: FuturaMediumC-Italic;
+	font-family: FuturaDemiC;
 	font-display: swap;
-	src: url("../fonts/FuturaMediumC-Italic.woff2") format("woff2"), url("../fonts/FuturaMediumC-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: FuturaMediumC;
-	font-display: swap;
-	src: url("../fonts/FuturaMediumC.woff2") format("woff2"), url("../fonts/FuturaMediumC.woff") format("woff");
+	src: url("../fonts/FuturaDemiC.woff2") format("woff2"), url("../fonts/FuturaDemiC.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -48,9 +34,23 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: FuturaDemiC;
+	font-family: FuturaMediumC;
 	font-display: swap;
-	src: url("../fonts/FuturaDemiC.woff2") format("woff2"), url("../fonts/FuturaDemiC.woff") format("woff");
+	src: url("../fonts/FuturaMediumC.woff2") format("woff2"), url("../fonts/FuturaMediumC.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: FuturaMediumC-Italic;
+	font-display: swap;
+	src: url("../fonts/FuturaMediumC-Italic.woff2") format("woff2"), url("../fonts/FuturaMediumC-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: FuturaLightC-Italic;
+	font-display: swap;
+	src: url("../fonts/FuturaLightC-Italic.woff2") format("woff2"), url("../fonts/FuturaLightC-Italic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }

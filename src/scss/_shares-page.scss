@@ -101,7 +101,7 @@
   }
 
   &-last {
-    margin-bottom: 165px;
+    margin-bottom: 125px;
 
     &-caption {
       font-family: 'FuturaMediumC';
@@ -124,6 +124,13 @@
     &-img {
       margin-bottom: 20px;
       line-height: 0;
+    }
+
+    &-card {
+      max-width: 370px;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &-title {

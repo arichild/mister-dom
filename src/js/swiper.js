@@ -25,5 +25,6 @@ const duosSecond = new Swiper('.swiper.duos-second', {
 
   pagination: {
     el: ".swiper-pagination",
+    clickable: true
   },
 });

@@ -27,7 +27,7 @@
   height: 56px;
   border-radius: 32px;
   border: 1px solid #D9E4F1;
-  padding: 15px 50px;
+  padding: 15px 5px 15px 50px;
   font-family: FuturaBookC;
   font-weight: 400;
   font-size: 20px;
@@ -137,6 +137,7 @@
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 
     &.green {
       background-color: #43CF7B;

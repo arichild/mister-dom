@@ -70,6 +70,10 @@
 .services {
   margin-bottom: 96px;
 
+  &.margin-58 {
+    margin-bottom: 60px;
+  }
+
   &-card {
     max-width: 370px;
     text-align: center;
@@ -170,7 +174,7 @@
       margin-bottom: 17px;
     }
 
-    .swiper-wrapper {
+    .swiper {
       display: none;
 
       &.active {
@@ -203,12 +207,14 @@
 
     .slider-item {
       margin-bottom: 95px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &.active {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: block;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
     }
   }
 
