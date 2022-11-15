@@ -16,13 +16,22 @@
   padding: 0 5px;
   line-height: 56px;
 
+  &.white {
+    background: transparent;
+    border: 1px solid #172542;
+
+    &:hover {
+      border: 1px solid transparent;
+    }
+  }
+
   &:hover {
     background: #fadca9;
   }
 }
 
 .ui-input {
-  max-width: 850px;
+  // max-width: 850px;
   width: 100%;
   height: 56px;
   border-radius: 32px;
@@ -32,6 +41,12 @@
   font-weight: 400;
   font-size: 20px;
   color: #BECCDC;
+
+  @media(max-width: 1440px) {
+    height: 52px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 
   &::placeholder {
     color: #BECCDC;
@@ -62,6 +77,12 @@
   &.base {
     width: 20px;
     height: 20px;
+    background-size: cover;
+  }
+
+  &.small {
+    width: 16px;
+    height: 16px;
     background-size: cover;
   }
 }
@@ -125,6 +146,10 @@
   font-size: 48px;
   line-height: 1.2;
   color: #172542;
+
+  &.fs-35 {
+    font-size: 35px;
+  }
 }
 
 .ui {
@@ -186,5 +211,93 @@
   &-current {
     font-size: 22px;
     color: #BECCDC;
+  }
+}
+
+.ui-count {
+  background: #EEF1F7;
+  max-width: 180px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &-btn {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #dfe3ed;
+    }
+
+    &.minus {
+      left: 0;
+      top: 0;
+    }
+
+    &.plus {
+      right: 0;
+      top: 0;
+    }
+  }
+
+  input[type="number"] {
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+    font-size: 22px;
+    outline: none;
+    margin: 2px 0;
+    padding: 0 60px;
+    -moz-appearance: textfield;
+  }
+}
+
+.cookie {
+  position: fixed;
+  z-index: 999;
+  background: #fff;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 20px 25px 20px;
+
+  &-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    @media(max-width: 1024px) {
+      font-size: 16px;
+    }
+}
+
+  .ui-btn {
+    &:first-child {
+      margin-right: 15px;
+    }
+
+    @media(max-width: 1024px) {
+      max-width: 160px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 16px;
+    }
   }
 }

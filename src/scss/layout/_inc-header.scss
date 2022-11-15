@@ -6,11 +6,53 @@
   &-content {
     display: flex;
     align-items: center;
+
+    @media(max-width: 1024px) {
+      // justify-content: space-between;
+      display: none;
+    }
+  }
+
+  &-mob {
+    display: none;
+
+    @media(max-width: 1024px) {
+      display: block;
+
+      &-bottom {
+        position: relative;
+
+        .ui-input {
+          height: 42px;
+        }
+
+        .header-control-btn {
+          top: 10px;
+        }
+      }
+
+      &-top {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      &-logo {
+        @media(max-width: 576px) {
+          max-width: 84px;
+        }
+      }
+    }
   }
 
   &-logo {
     margin-right: 34px;
     min-width: 184px;
+
+    @media(max-width: 1440px) {
+      min-width: 165px;
+      margin-right: 32px;
+    }
   }
 
   &-control {
@@ -20,6 +62,26 @@
       display: flex;
       align-items: center;
       margin-bottom: 33px;
+
+      .header-control-item {
+        display: none;
+
+        @media(max-width: 1260px) {
+          display: block;
+          position: relative;
+          font-size: 18px;
+          color: #172542;
+          padding: 14px 20px 14px 18px;
+          white-space: nowrap;
+          margin-right: 40px;
+          background: #F8FBFF;
+          border-radius: 32px;
+
+          img {
+            top: -2px;
+          }
+        }
+      }
     }
 
     &-bottom {
@@ -29,7 +91,11 @@
     &-nav {
       margin-right: 46px;
       border-right: 1px solid #D9E4F1;
-      white-space: nowrap;
+      // white-space: nowrap;
+
+      @media(max-width: 1440px) {
+        margin-right: 32px;
+      }
 
       ul {
         margin-bottom: 0;
@@ -48,6 +114,12 @@
         color: #172542;
         padding: 14px 20px 11px 18px;
 
+        @media(max-width: 1440px) {
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: 20px;
+        }
+
         &:hover {
           background: #F8FBFF;
         }
@@ -61,10 +133,16 @@
         position: relative;
         top: -3px;
       }
+
+      &.hidden {
+        @media(max-width: 1260px) {
+          display: none;
+        }
+      }
     }
 
     &-optional {
-      white-space: nowrap;
+      // white-space: nowrap;
 
       ul {
         margin-bottom: 0;
@@ -75,6 +153,10 @@
 
         &:first-child {
           margin-right: 48px;
+
+          @media(max-width: 1440px) {
+            margin-right: 32px;
+          }
         }
       }
 
@@ -82,6 +164,10 @@
         position: relative;
         font-size: 22px;
         color: #728EAE;
+
+        @media(max-width: 1440px) {
+          font-size: 20px;
+        }
 
         &:hover {
           color: #a8bed6;
@@ -116,10 +202,21 @@
         }
       }
 
+      .hidden {
+        @media(max-width: 1024px) {
+          display: none;
+        }
+      }
+
       svg {
         width: 30px;
         height: 30px;
         transition: 0.1s ease-out;
+
+        @media(max-width: 1024px) {
+          width: 20px;
+          height: 20px;
+        }
 
         &:hover {
           fill: #a8bed6;
@@ -132,6 +229,16 @@
       max-width: 850px;
       width: 100%;
       margin-right: 60px;
+
+      @media(max-width: 1440px) {
+        margin-right: 58px;
+        max-width: 655px;
+      }
+
+      @media(max-width: 1260px) {
+        max-width: 405px;
+        margin-right: 20px;
+      }
     }
 
     &-btn {
@@ -141,8 +248,12 @@
       background: transparent;
       border: none;
       padding: 0;
-      z-index: 99999;
+      z-index: 1;
       cursor: pointer;
+
+      @media(max-width: 1440px) {
+        top: 15px;
+      }
     }
 
     &-number {
@@ -154,6 +265,11 @@
       font-weight: 500;
       white-space: nowrap;
       text-transform: uppercase;
+
+      @media(max-width: 1440px) {
+        font-size: 25px;
+        margin-right: 40px;
+      }
 
       &:hover {
         color: #a8bed6;
@@ -185,6 +301,42 @@
       height: 16px;
       line-height: 16px;
       padding: 0 2px;
+    }
+  }
+
+  &-icon {
+    display: none;
+
+    @media(max-width: 1024px) {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 16px;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .heart {
+        stroke: #000;
+      }
+
+      .header-control-count {
+        top: -22px;
+      }
+    }
+
+    @media(max-width: 576px) {
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .header-control-count {
+        top: -15px;
+      }
     }
   }
 }

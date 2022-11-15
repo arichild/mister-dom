@@ -1,0 +1,167 @@
+.cart {
+  &-container {
+    margin-bottom: 145px;
+
+    .ui-title {
+      margin-bottom: 85px;
+    }
+  }
+
+  &-title {
+    font-family: 'FuturaMediumC';
+    font-size: 36px;
+    color: #172542;
+    margin-bottom: 50px;
+  }
+
+  &-info {
+    padding-bottom: 24px;
+    margin-bottom: 44px;
+    border-bottom: 1px solid #D9E4F1;
+
+    &-txt {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.flex {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+
+      span {
+        font-size: 20px;
+        color: #172542;
+
+        &.bold {
+          font-family: 'FuturaDemiC';
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  &-price {
+    margin-bottom: 40px;
+
+    &.flex {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+
+    span {
+      font-size: 20px;
+      color: #172542;
+
+      &.bold {
+        font-family: 'FuturaDemiC';
+        font-size: 22px;
+      }
+    }
+  }
+
+  &-total {
+    .ui-btn {
+      max-width: 235px;
+    }
+  }
+
+  &-item {
+    padding: 18px 40px 18px 20px;
+    border: 1px solid #D9E4F1;
+    border-bottom: 0;
+    align-items: center;
+
+    &:first-child {
+      border-top: 1px solid #D9E4F1;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #D9E4F1;
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 140px;
+      margin-right: 16px;
+    }
+
+    &-info {
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-family: 'FuturaMediumC';
+      font-size: 22px;
+      color: #172542;
+      max-width: 295px;
+    }
+
+    &-old {
+      font-family: 'FuturaDemiC';
+      font-size: 16px;
+      color: #728EAE;
+      text-decoration: line-through;
+
+      &.right {
+        text-align: right;
+      }
+    }
+
+    &-present {
+      font-family: 'FuturaDemiC';
+      font-size: 22px;
+      color: #FFA800;
+    }
+
+    &-sum {
+      font-family: 'FuturaDemiC';
+      font-size: 22px;
+      color: #172542;
+    }
+
+    &-btn {
+      flex: 0 0 24px;
+      max-width: 24px;
+      margin: auto 0;
+      cursor: pointer;
+
+      .sprite {
+        max-width: 24px;
+        height: 24px;
+        fill: #D4DFEA;
+        pointer-events: none;
+      }
+      use {
+        pointer-events: none;
+      }
+      &:hover {
+        .sprite{
+          fill: #b7c7d7;
+        }
+      }
+    }
+
+    &-control {
+      flex: 0 0 370px;
+      align-items: center;
+
+      .ui-count {
+        margin-right: 40px;
+      }
+    }
+
+    &-txt {
+      width: 100%;
+      justify-content: space-between;
+      margin-right: 40px;
+      align-items: center;
+    }
+  }
+}
