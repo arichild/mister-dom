@@ -18,6 +18,7 @@
 @import "list-shares.scss";
 @import "shares-page.scss";
 @import "cart.scss";
+@import "making-order.scss";
 @import "pages.scss";
 
 * {
@@ -43,8 +44,9 @@ body {
   font-weight: 400;
   font-size: rem(16px);
   line-height: 1.42;
-  color: #000;
+  color: #172542;
   background-color: #fff;
+  line-height: 1;
 }
 
 #wrapper {

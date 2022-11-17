@@ -7,11 +7,52 @@
     }
   }
 
+  &-final {
+    &-price {
+      text-align: right;
+      background-color: #FFF7EA;
+      padding: 27px 32px 20px 0;
+      margin-bottom: 50px;
+
+      span {
+        font-family: 'FuturaDemiC';
+        font-size: 20px;
+
+        &.big {
+          font-size: 28px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  &-header{
+    &.flex {
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  &-link {
+    font-size: 18px;
+    border-bottom: 1px solid #172542;
+
+    &:hover {
+      border-color: #a8bed6;
+    }
+  }
+
   &-title {
     font-family: 'FuturaMediumC';
     font-size: 36px;
     color: #172542;
     margin-bottom: 50px;
+    letter-spacing: .05em;
+  }
+
+  &-txt {
+    padding-left: 10px;
+    padding-right: 20px;
   }
 
   &-info {
@@ -40,12 +81,39 @@
           font-family: 'FuturaDemiC';
           font-size: 22px;
         }
+
+        &.grey {
+          color: #728EAE;
+        }
       }
+    }
+
+    &.margin-30 {
+      margin-bottom: 30px;
+    }
+
+    &.margin-25 {
+      margin-bottom: 25px;
     }
   }
 
   &-price {
     margin-bottom: 40px;
+
+    .ui-input {
+      max-width: 172px;
+      height: 48px;
+      border-radius: 6px;
+      padding: 10px;
+    }
+
+    &.margin-7 {
+      margin-bottom: 7px;
+    }
+
+    &.margin-30 {
+      margin-bottom: 30px;
+    }
 
     &.flex {
       justify-content: space-between;
@@ -70,11 +138,28 @@
     }
   }
 
+  &-btn {
+    text-align: right;
+  }
+
+  &-items {
+    margin-bottom: 42px;
+  }
+
+  &-list {
+    @media(max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+  }
+
   &-item {
-    padding: 18px 40px 18px 20px;
+    padding: 18px 68px 18px 20px;
     border: 1px solid #D9E4F1;
     border-bottom: 0;
     align-items: center;
+    letter-spacing: 0.05em;
+    flex-wrap: wrap;
+    position: relative;
 
     &:first-child {
       border-top: 1px solid #D9E4F1;
@@ -84,16 +169,31 @@
       border-bottom: 1px solid #D9E4F1;
     }
 
+    &-count {
+      font-size: 18px;
+      color: #728EAE;
+      margin-right: 40px;
+    }
+
     &-img {
       width: 100%;
       max-width: 140px;
       margin-right: 16px;
+      line-height: 0;
     }
 
     &-info {
-      width: 100%;
+      // width: 100%;
       align-items: center;
-      justify-content: space-between;
+      // justify-content: space-between;
+
+      &:first-child {
+        margin-right: 58px;
+      }
+    }
+
+    &-price {
+      margin-right: 40px;
     }
 
     &-title {
@@ -101,6 +201,7 @@
       font-size: 22px;
       color: #172542;
       max-width: 295px;
+      margin-bottom: 12px;
     }
 
     &-old {
@@ -108,6 +209,7 @@
       font-size: 16px;
       color: #728EAE;
       text-decoration: line-through;
+      letter-spacing: .05em;
 
       &.right {
         text-align: right;
@@ -118,19 +220,24 @@
       font-family: 'FuturaDemiC';
       font-size: 22px;
       color: #FFA800;
+      letter-spacing: .05em;
     }
 
     &-sum {
       font-family: 'FuturaDemiC';
       font-size: 22px;
       color: #172542;
+      letter-spacing: .05em;
     }
 
     &-btn {
-      flex: 0 0 24px;
+      position: absolute;
       max-width: 24px;
       margin: auto 0;
       cursor: pointer;
+      right: 40px;
+      top: 50%;
+      transform: translate(0, -50%);
 
       .sprite {
         max-width: 24px;
@@ -149,7 +256,7 @@
     }
 
     &-control {
-      flex: 0 0 370px;
+      // flex: 0 0 370px;
       align-items: center;
 
       .ui-count {
@@ -157,11 +264,11 @@
       }
     }
 
-    &-txt {
-      width: 100%;
-      justify-content: space-between;
-      margin-right: 40px;
-      align-items: center;
-    }
+    // &-txt {
+    //   width: 100%;
+    //   justify-content: space-between;
+    //   margin-right: 40px;
+    //   align-items: center;
+    // }
   }
 }

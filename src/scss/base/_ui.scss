@@ -271,7 +271,7 @@
   }
 }
 
-.cookie {
+.country {
   position: fixed;
   z-index: 999;
   background: #fff;
@@ -300,4 +300,111 @@
       font-size: 16px;
     }
   }
+}
+
+.ui {
+  &-select {
+    position: relative;
+    // margin-bottom: 8px;
+
+    &-img {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+
+      &.center {
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    span {
+      font-size: 18px;
+      color: #728EAE;
+      margin-top: 2px;
+    }
+
+    .padding {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+  }
+
+  &-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &+label {
+      display: inline-flex;
+      // align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      user-select: none;
+      padding: 26px 21px 26px 62px;
+      border: 1px solid #d3d3d3;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 20px;
+      color: #172542;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #d3d3d3;
+        border-radius: 50%;
+        position: absolute;
+        right: 21px;
+        top: 25px;
+      }
+    }
+
+    &:checked {
+      &+label {
+        outline: 2px solid #FAD89D;
+        border-color: transparent;
+
+        &::before {
+          content: "";
+          border: 2px solid #FAD89D;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 16px;
+          height: 16px;
+          background-color: #FAD89D;
+          position: absolute;
+          top: 29px;
+          right: 25px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+textarea.ui-input {
+  height: auto;
+  padding: 16px;
+  white-space: normal;
+  line-height: 1.375;
+  resize: vertical;
+  border-radius: 6px;
+}
+
+span.error {
+  color: #bc0000;
+}
+
+.ui-input.error {
+  border-color: #bc0000;
+
+  // &::placeholder {
+  //   color: #bc0000 !important;
+  // }
 }

@@ -1,0 +1,165 @@
+.order {
+  &-container {
+    margin-bottom: 142px;
+
+    .ui-title {
+      margin-bottom: 85px;
+    }
+
+    @media(min-width: 1024px) {
+      .col-order-5 {
+        flex: 0 0 37.66667%;
+        max-width: 37.66667%;
+      }
+
+      .col-order-7 {
+        flex: 0 0 62.33333%;
+        max-width: 62.33333%;
+      }
+
+      .col-order-8 {
+        flex: 0 0 66.5%;
+        max-width: 66.5%;
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+    }
+
+    .cart-item {
+      padding: 9px 20px 9px 9px;
+    }
+
+    .cart-item-img {
+      max-width: 76px;
+      margin-right: 8px;
+    }
+
+    .cart-item-title {
+      font-size: 18px;
+      max-width: 221px;
+      font-family: 'FuturaBookC';
+      margin-bottom: 0;
+    }
+
+    // .cart-item-control {
+    //   flex: 0 0 120px;
+    // }
+
+    .cart-item-sum {
+      font-family: 'FuturaBookC';
+      font-size: 18px;
+    }
+
+    .cart-item-info:first-child {
+      margin-right: 40px;
+    }
+  }
+
+  &-info {
+    margin-bottom: 68px;
+
+    &.margin-42 {
+      margin-bottom: 42px;
+    }
+
+    .row {
+      margin-left: -13px;
+      margin-right: -13px;
+    }
+
+    @media(min-width: 1024px) {
+      .col-order-3 {
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+    }
+
+    .col-md-6 {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+
+    &-title {
+      font-family: 'FuturaMediumC';
+      font-size: 36px;
+      margin-bottom: 38px;
+
+      &.margin-30 {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-subtitle {
+      font-family: 'FuturaBookC';
+      font-size: 20px;
+      margin-bottom: 40px;
+
+      a {
+        border-bottom: 1px solid #172542;
+
+        &:hover {
+          border-color: #a8bed6;
+        }
+      }
+    }
+
+    .ui-field {
+      margin-bottom: 26px;
+
+      &.margin-0 {
+        margin-bottom: 0;
+      }
+
+      &.margin-30 {
+        margin-bottom: 30px;
+      }
+    }
+
+    .ui-input {
+      border-radius: 6px;
+      color: #172542;
+      font-size: 20px;
+      padding-left: 24px;
+
+      &::placeholder {
+        color: #728EAE;
+      }
+    }
+  }
+
+  &-option {
+    margin-bottom: 25px;
+
+    &.margin-0 {
+      margin-bottom: 0;
+    }
+  }
+
+  &-warn {
+    position: relative;
+
+    &-img {
+      position: absolute;
+      left: 0;
+      top: -8px;
+    }
+
+    &-txt {
+      padding-left: 64px;
+      font-size: 18px;
+      color: #728EAE;
+
+      span {
+        font-family: 'FuturaMediumC';
+
+        &.black {
+          display: block;
+          color: #172542;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
