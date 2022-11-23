@@ -32,6 +32,34 @@
     a {
       font-family: 'FuturaDemiC';
     }
+
+    .social {
+      display: inline-block;
+      font-family: 'FuturaBookC';
+      font-size: 20px;
+      color: #172542;
+
+      span {
+        border-bottom: 1px solid #172542;
+        transition: .1s ease-out;
+      }
+
+      img {
+        display: inline-block;
+        /* margin-right: 5px; */
+        width: 24px;
+        /* vertical-align: sub; */
+        position: relative;
+        top: 5px;
+      }
+
+      &:hover {
+        span {
+          color: #a8bed6;
+          border-bottom: 1px solid #a8bed6;
+        }
+      }
+    }
   }
 
   &-subtitle {

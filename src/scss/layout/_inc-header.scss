@@ -380,6 +380,16 @@
 
     &-info {
       align-items: center;
+
+      &.flex-first {
+        max-width: 427px;
+        flex: 0 0 427px;
+      }
+      &.flex-second {
+        max-width: 367px;
+        flex: 0 0 367px;
+        justify-content: space-between;
+      }
     }
 
     &-title {
@@ -392,8 +402,9 @@
 
     &-txt {
       font-size: 18px;
-      margin-right: 105px;
+      // margin-right: 105px;
       letter-spacing: 0.05em;
+      white-space: nowrap;
 
       .stock {
         padding-right: 10px;
@@ -414,6 +425,7 @@
     &-sum {
       font-size: 18px;
       letter-spacing: 0.05em;
+      white-space: nowrap;
     }
   }
 
