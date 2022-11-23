@@ -1,0 +1,68 @@
+<div class="ui-popup sign-up">
+  <div class="ui-popup-title">
+    Зарегистрируйтесь
+  </div>
+
+  <div class="ui-popup-subtitle">
+    Используйте возможности личного кабинета:история заказов, отслеживание.
+  </div>
+
+  <div class="ui-popup-form">
+    <form action="#" class="ui-popup-validate">
+      <div class="ui-popup-field">
+        <input type="text" class="ui-input popup" name="email" id="email" placeholder="Электронная почта">
+      </div>
+
+      <div class="ui-popup-field">
+        <input type="text" class="ui-input popup" name="password" id="password" placeholder="Пароль">
+      </div>
+
+      <div class="ui-popup-field">
+        <input type="text" class="ui-input popup" name="password_confirm" id="password_confirm" placeholder="Повторите пароль">
+      </div>
+
+      <button class="ui-btn">Зарегистрироваться</button>
+    </form>
+
+    <div class="ui-popup-link">
+      <span>Есть аккаунт?<a class="mfp-link" href="javascript:void(0)" data-href="./popup/sign-in.html">Войдите</a></span>
+    </div>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      console.log($(".ui-popup-form"))
+      $(".ui-popup-validate").validate({
+        errorElement: "span",
+
+        rules: {
+          email: {
+            required: true,
+            email: true,
+          },
+          password: {
+            required: true,
+            minlength: 5,
+        },
+        password_confirm: {
+            equalTo: "#password"
+        }
+        },
+
+        messages: {
+          email: {
+            required: "Пожалуйста, введите данные",
+            email: "Введите корректный email",
+          },
+          password: {
+            required: "Пожалуйста, введите данные",
+            minlength: "Минимальная длина - 5 символов",
+          },
+          password_confirm: {
+            equalTo: 'Пароли не совпадают'
+          }
+        }
+      });
+    });
+  </script>
+</div>

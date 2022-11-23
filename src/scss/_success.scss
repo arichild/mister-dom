@@ -1,0 +1,41 @@
+.success {
+  &-block {
+    padding: 150px 0 138px 0;
+    border: 1px solid #D9E4F1;
+    border-radius: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-bottom: 133px;
+    text-align: center;
+  }
+
+  &-title {
+    font-family: 'FuturaDemiC';
+    color: #728EAE;
+    font-size: 32px;
+    margin-bottom: 44px;
+
+    span {
+      color: #172542;
+    }
+  }
+
+  &-txt {
+    font-size: 20px;
+    color: #172542;
+    line-height: 1.6;
+    margin-bottom: 44px;
+    max-width: 690px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+
+    a {
+      font-family: 'FuturaDemiC';
+    }
+  }
+
+  &-subtitle {
+    font-size: 36px;
+    font-family: 'FuturaDemiC';
+  }
+}

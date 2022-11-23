@@ -20,6 +20,11 @@
 @import "cart.scss";
 @import "making-order.scss";
 @import "pages.scss";
+@import "success.scss";
+
+/* popups */
+@import "./popup/sign-in.scss";
+@import "./popup/sign-up.scss";
 
 * {
   box-sizing: border-box;

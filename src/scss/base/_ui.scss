@@ -41,6 +41,13 @@
   font-weight: 400;
   font-size: 20px;
   color: #BECCDC;
+  position: relative;
+  z-index: 2;
+
+  &.popup {
+    border-radius: 6px;
+    padding-left: 22px;
+  }
 
   @media(max-width: 1440px) {
     height: 52px;
@@ -409,4 +416,106 @@ span.error {
   // &::placeholder {
   //   color: #bc0000 !important;
   // }
+}
+
+.ui-checkbox {
+  display: block;
+  position: relative;
+  // margin-bottom: 14px;
+  padding-left: 34px;
+  font-size: 18px;
+
+  &-inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+  }
+
+  &-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &-label {
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border: 1px solid #848484;
+      background-color: #ffffff;
+      border-radius: 3px;
+      cursor: pointer;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      z-index: 1;
+      transition: .15s background-color, .15s border;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      z-index: 1;
+      width: 10px;
+      height: 5px;
+      border-left: 2px solid #FFF;
+      border-bottom: 2px solid #FFF;
+      opacity: 0;
+      transition: .15s opacity, .15s transform;
+    }
+
+    span {
+      color: #8BA0B7;
+    }
+  }
+
+  &:hover {
+    .ui-checkbox-input+.ui-checkbox-label {
+      &:before {
+        border-color:  #2A4455;
+      }
+    }
+  }
+
+  &-input:checked {
+    &+.ui-checkbox-label::before {
+      border-color:  #2A4455;
+      background-color:  #2A4455
+    }
+
+    &+.ui-checkbox-label::after {
+      opacity: 1;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-input:disabled {
+    cursor: not-allowed;
+
+    &+.ui-checkbox-label {
+      color: #D3D3D3;
+      cursor: not-allowed;
+    }
+
+    &+.ui-checkbox-label::before {
+      border-color: #D3D3D3 !important;
+      background-color: #FFF !important;
+      cursor: not-allowed;
+    }
+
+    &+.ui-checkbox-label::after {
+      opacity: 0;
+      cursor: not-allowed;
+    }
+  }
+
 }

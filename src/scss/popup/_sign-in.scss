@@ -1,0 +1,67 @@
+.ui-popup {
+  position: relative;
+  max-width: 510px;
+  padding: 50px 40px;
+  background: #fff;
+  margin: 0 auto;
+
+  &-title {
+    font-family: 'FuturaMediumC';
+    font-size: 28px;
+    color: #172542;
+    margin-bottom: 24px;
+  }
+
+  &-subtitle {
+    font-size: 20px;
+    color: #172542;
+    margin-bottom: 30px;
+  }
+
+  &-control {
+    margin-bottom: 48px;
+
+    &.flex {
+      justify-content: space-between;
+      // align-items: baseline;
+    }
+
+    a {
+      border-bottom: 1px solid #172542;
+      font-size: 18px;
+
+      &:hover {
+        color: #a8bed6;
+        border-color: #a8bed6;
+      }
+    }
+  }
+
+  &-field {
+    margin-bottom: 25px;
+  }
+
+  &-link {
+    span {
+      font-size: 18px;
+
+      a {
+        margin-left: 16px;
+        color: #4670C8;
+
+        &:hover {
+          color: #a8bed6;
+        }
+      }
+    }
+  }
+
+  .ui-btn {
+    max-width: 336px;
+    margin-bottom: 35px;
+
+    &.margin-0 {
+      margin-bottom: 0;
+    }
+  }
+}
