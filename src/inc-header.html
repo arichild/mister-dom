@@ -40,8 +40,8 @@
         <div class="header-control">
           <div class="header-control-top">
             <div class="header-control-search main">
-              <form action="#">
-                <input class="ui-input" type="text" id="search" placeholder="Поиск товара по каталогу">
+              <form action="#" class="form-header">
+                <input class="ui-input test" type="text" id="search" placeholder="Поиск товара по каталогу">
 
                 <button class="header-control-btn">
                   <img src="./images/icon/Search.svg" alt="alt">
@@ -177,7 +177,7 @@
                   <use xlink:href="./images/svg/symbols.svg#Heart"></use>
                 </svg>
               </a>
-              <a href="#" class="hidden">
+              <a class="mfp-link hidden link" href="javascript:void(0)" data-href="./popup/sign-in.html">
                 <svg class="sprite">
                   <use xlink:href="./images/svg/symbols.svg#user"></use>
                 </svg>
@@ -239,13 +239,13 @@
       <div class="header-mob">
         <div class="header-mob-top flex">
           <div class="header-mob-control">
-            <div class="header-icon">
+            <div class="header-icon burger">
               <svg class="sprite">
                   <use xlink:href="./images/svg/symbols.svg#burger"></use>
                 </svg>
             </div>
             <div class="header-icon">
-              <a href="#">
+              <a class="mfp-link" href="javascript:void(0)" data-href="./popup/sign-in.html">
                 <svg class="sprite">
                   <use xlink:href="./images/svg/symbols.svg#user"></use>
                 </svg>
@@ -282,13 +282,66 @@
         </div>
 
         <div class="header-mob-bottom">
-          <form action="#">
-            <input class="ui-input" type="text" placeholder="Поиск товара по каталогу">
+          <!-- сюда переносится .form-header с помощью js -->
+        </div>
+      </div>
 
-            <button class="header-control-btn">
-              <img src="./images/icon/Search.svg" alt="alt">
-            </button>
-          </form>
+      <div class="header-burger">
+        <div class="header-burger-top flex">
+
+          <div class="header-burger-search">
+            <form action="#">
+              <input class="ui-input test" type="text" id="search" placeholder="Поиск товара по каталогу">
+
+              <button class="header-control-btn">
+                <img src="./images/icon/Search.svg" alt="alt">
+              </button>
+            </form>
+          </div>
+
+          <div class="header-burger-close">
+            <svg class="sprite">
+              <use xlink:href="./images/svg/symbols.svg#close-btn"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="header-burger-menu">
+          <ul>
+            <li>
+              <a href="#">Ванная</a>
+            </li>
+            <li>
+              <a href="#">Интерьер</a>
+            </li>
+            <li>
+              <a href="#">Детям</a>
+            </li>
+            <li>
+              <a href="#">Посуда</a>
+            </li>
+            <li>
+              <a href="#">Свет</a>
+            </li>
+            <li>
+              <a href="#">Текстиль</a>
+            </li>
+            <li>
+              <a href="#">Хранение</a>
+            </li>
+            <li>
+              <a href="#" class="blue">
+                Хиты продаж
+                <img src="./images/icon/fire.svg" alt="alt" class="fire">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="blue">
+                Низкие цены
+                <img src="./images/icon/percent.svg" alt="alt" class="precent">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

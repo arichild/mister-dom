@@ -80,6 +80,11 @@
         &.bold {
           font-family: 'FuturaDemiC';
           font-size: 22px;
+
+          // @note: не увеличивает fs
+          &.fs-28 {
+            font-size: 28px;
+          }
         }
 
         &.grey {
@@ -210,6 +215,7 @@
       color: #728EAE;
       text-decoration: line-through;
       letter-spacing: .05em;
+      margin-bottom: 3px;
 
       &.right {
         text-align: right;

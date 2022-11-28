@@ -40,9 +40,13 @@
   font-family: FuturaBookC;
   font-weight: 400;
   font-size: 20px;
-  color: #BECCDC;
+  color: #172542;
   position: relative;
-  z-index: 2;
+  // z-index: 3;
+
+  &::placeholder {
+    color: #BECCDC;
+  }
 
   &.popup {
     border-radius: 6px;
@@ -127,6 +131,7 @@
     &.active {
       color: #172542;
       border-bottom: 2px solid #172542;
+      margin-bottom: 9px;
     }
   }
 
@@ -351,7 +356,7 @@
       flex-direction: column;
       user-select: none;
       padding: 26px 21px 26px 62px;
-      border: 1px solid #d3d3d3;
+      border: 1px solid #D4DFEA;
       border-radius: 8px;
       width: 100%;
       cursor: pointer;

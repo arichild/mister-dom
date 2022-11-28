@@ -40,12 +40,10 @@ $(".order-form").validate({
   errorPlacement: function (error, element) {
     console.log(error)
     if (element.hasClass('ui-radio')) {
-      console.log("asdasd")
       element.closest('.ui-select').after(error);
     }
     if (element.hasClass('ui-input')) {
-      console.log("asdasd")
-      element.closest('.ui-input').after(error);
+      element.closest('.ui-field').append(error);
     }
   },
 
@@ -88,3 +86,12 @@ $(".order-form").validate({
 jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^[a-z]+$/i.test(value);
 }, "Letters only please");
+
+let phone = document.getElementById('phone')
+
+if(phone) {
+  let phoneMask = IMask(
+    phone, {
+      mask: '+{375} (00) 000 00 00'
+  });
+}
