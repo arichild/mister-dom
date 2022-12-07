@@ -11,22 +11,8 @@ document.body.addEventListener('click', (e) => {
 
 // search menu onclick for header input and clear button
 const search = document.getElementById('search');
-const btnClear = document.getElementsByClassName('clear-input')[0];
+const btnClear = document.querySelector('.clear-input');
 const searchMenu = document.querySelector('.header-search-result');
-
-// search.addEventListener('focus', () => {
-//   const numberBlock = document.querySelector('.header-control-number');
-//   const infoBlock = document.querySelector('.header-control-item');
-//   const headerControlBlock = document.querySelector('.header-control-top');
-
-//   numberBlock.style.display = 'none'
-//   infoBlock.style.display = 'none'
-
-//   headerControlBlock.style.justifyContent = 'space-between'
-
-//   searchMenu.classList.add('active')
-//   btnClear.classList.add('active')
-// });
 
 document.body.addEventListener('click', (e) => {
   const parentSearchMenu = e.target.closest('.header-search-result.active');
@@ -38,6 +24,7 @@ document.body.addEventListener('click', (e) => {
   if(parentSearchMenu === null && e.target !== search && e.target !== btnClear) {
     searchMenu.classList.remove('active');
     btnClear.classList.remove('active');
+
     numberBlock.classList.remove('hidden');
     infoBlock.classList.remove('hidden-search');
     headerControlBlock.classList.remove('current');
@@ -45,6 +32,7 @@ document.body.addEventListener('click', (e) => {
   } else {
     searchMenu.classList.add('active');
     btnClear.classList.add('active');
+
     numberBlock.classList.add('hidden');
     infoBlock.classList.add('hidden-search');
     headerControlBlock.classList.add('current');
@@ -52,21 +40,20 @@ document.body.addEventListener('click', (e) => {
   }
 });
 
-// @note: is not a function
-// btnClear.addEventListener('click', (e) => {
-//   const input = document.querySelector('.ui-input');
+btnClear.addEventListener('click', (e) => {
+  const input = document.querySelector('.ui-input');
 
-//   e.preventDefault();
+  e.preventDefault();
 
-//   input.value = '';
-// })
+  input.value = '';
+});
 
 (function() {
   if(matchMedia) {
-    const screen1024 = window.matchMedia('(max-width:1024px)');
+    const screen1230 = window.matchMedia('(max-width:1230px)');
 
-    screen1024.addListener(changes);
-    changes(screen1024);
+    screen1230.addListener(changes);
+    changes(screen1230);
   }
 
   function changes(screen) {
@@ -114,15 +101,60 @@ const burgerBtnClose = document.querySelector('.header-burger-close');
 burgerBtn.addEventListener('click', () => {
   const burgerMenu = document.querySelector('.header-burger')
 
-  burgerMenu.classList.add('active')
+  burgerMenu.classList.add('active');
+
+  document.body.style.overflow = 'hidden';
+
+  $('.header-burger-search').append($('.form-header'))
 })
 
 burgerBtnClose.addEventListener('click', (e) => {
-  console.log(e.target)
-  const burgerMenu = document.querySelector('.header-burger')
+  const burgerMenu = document.querySelector('.header-burger');
 
-  burgerMenu.classList.remove('active')
+  burgerMenu.classList.remove('active');
+
+  document.body.style.overflow = 'visible';
+
+  $('.header-mob-bottom').append($('.form-header'))
 })
 
+// dropdown
+const dropdownItem = document.querySelector('.dropdown');
 
-//@note: мб сделать для making-order чтобы span.current при заполненом ипнуте не уберался, а когда пустой, то убирать?
+dropdownItem.addEventListener('click', (e) => {
+  const dropdown = document.querySelector('.dropdown-content');
+
+  if(e.target.classList[0] === 'dropbtn') {
+
+    dropdown.classList.add('active')
+  }
+
+  if(e.target.classList[0] === 'dropdown-option') {
+    const selectedCountryName = e.target.textContent;
+    const countryNamePlace = document.querySelector('.dropbtn');
+    const countryNameOption = document.querySelectorAll('.dropdown-option.active');
+
+    countryNamePlace.textContent = selectedCountryName;
+
+    dropdown.classList.remove('active');
+
+    for(let i = 0; i < countryNameOption.length; i++) {
+      countryNameOption[i].classList.remove('active');
+    }
+
+    e.target.classList.add('active')
+  }
+})
+
+const inputField = document.querySelectorAll('.ui-field input');
+
+for(let i = 0; i < inputField.length; i++) {
+  inputField[i].addEventListener('blur', (e) => {
+    const span = e.target.parentNode.querySelector('.current');
+    if(e.target.value !== '') {
+      span.classList.add('active')
+    } else {
+      span.classList.remove('active')
+    }
+  })
+}

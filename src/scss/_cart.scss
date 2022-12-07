@@ -81,10 +81,6 @@
           font-family: 'FuturaDemiC';
           font-size: 22px;
 
-          // @note: не увеличивает fs
-          &.fs-28 {
-            font-size: 28px;
-          }
         }
 
         &.grey {
@@ -133,6 +129,10 @@
       &.bold {
         font-family: 'FuturaDemiC';
         font-size: 22px;
+
+        &.fs-28 {
+          font-size: 28px;
+        }
       }
     }
   }

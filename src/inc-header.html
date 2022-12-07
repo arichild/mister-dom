@@ -41,7 +41,7 @@
           <div class="header-control-top">
             <div class="header-control-search main">
               <form action="#" class="form-header">
-                <input class="ui-input test" type="text" id="search" placeholder="Поиск товара по каталогу">
+                <input autocomplete="off" class="ui-input test" type="text" id="search" placeholder="Поиск товара по каталогу">
 
                 <button class="header-control-btn">
                   <img src="./images/icon/Search.svg" alt="alt">
@@ -198,7 +198,7 @@
             <div class="header-control-nav">
               <ul>
                 <li>
-                  <a href="#" class="header-control-item hidden">
+                  <a href="#" class="header-control-item hidden current">
                     Инфо-центр
                     <img src="./images/icon/arrow.svg" alt="alt">
                   </a>
@@ -282,66 +282,117 @@
         </div>
 
         <div class="header-mob-bottom">
-          <!-- сюда переносится .form-header с помощью js -->
+          <!-- сюда переносится .form-header с помощью js при resize -->
         </div>
       </div>
 
       <div class="header-burger">
-        <div class="header-burger-top flex">
+        <div class="header-burger-wrap">
+          <div class="header-burger-top flex">
+            <div class="header-burger-search">
 
-          <div class="header-burger-search">
-            <form action="#">
-              <input class="ui-input test" type="text" id="search" placeholder="Поиск товара по каталогу">
+            </div>
 
-              <button class="header-control-btn">
-                <img src="./images/icon/Search.svg" alt="alt">
-              </button>
-            </form>
+            <div class="header-burger-close">
+              <svg class="sprite">
+                <use xlink:href="./images/svg/symbols.svg#close-btn"></use>
+              </svg>
+            </div>
           </div>
 
-          <div class="header-burger-close">
-            <svg class="sprite">
-              <use xlink:href="./images/svg/symbols.svg#close-btn"></use>
-            </svg>
+          <div class="header-burger-menu">
+            <ul>
+              <li>
+                <a href="#">Ванная</a>
+              </li>
+              <li>
+                <a href="#">Интерьер</a>
+              </li>
+              <li>
+                <a href="#">Детям</a>
+              </li>
+              <li>
+                <a href="#">Посуда</a>
+              </li>
+              <li>
+                <a href="#">Свет</a>
+              </li>
+              <li>
+                <a href="#">Текстиль</a>
+              </li>
+              <li>
+                <a href="#">Хранение</a>
+              </li>
+              <li>
+                <a href="#" class="blue">
+                  Хиты продаж
+                  <img src="./images/icon/fire.svg" alt="alt" class="fire">
+                </a>
+              </li>
+              <li>
+                <a href="#" class="blue">
+                  Низкие цены
+                  <img src="./images/icon/percent.svg" alt="alt" class="precent">
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="header-burger-menu">
-          <ul>
-            <li>
-              <a href="#">Ванная</a>
-            </li>
-            <li>
-              <a href="#">Интерьер</a>
-            </li>
-            <li>
-              <a href="#">Детям</a>
-            </li>
-            <li>
-              <a href="#">Посуда</a>
-            </li>
-            <li>
-              <a href="#">Свет</a>
-            </li>
-            <li>
-              <a href="#">Текстиль</a>
-            </li>
-            <li>
-              <a href="#">Хранение</a>
-            </li>
-            <li>
-              <a href="#" class="blue">
-                Хиты продаж
-                <img src="./images/icon/fire.svg" alt="alt" class="fire">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="blue">
-                Низкие цены
-                <img src="./images/icon/percent.svg" alt="alt" class="precent">
-              </a>
-            </li>
-          </ul>
+        <div class="header-burger-footer">
+          <div class="header-burger-content">
+            <div class="header-burger-list">
+              <ul>
+                <li>
+                  <a href="#">Доставка</a>
+                </li>
+                <li>
+                  <a href="#">Оплата</a>
+                </li>
+                <li>
+                  <a href="#">Возврат</a>
+                </li>
+                <li>
+                  <a href="#">Юр. лицам</a>
+                </li>
+                <li>
+                  <a href="#">О нас</a>
+                </li>
+                <li>
+                  <a href="#">Оферта</a>
+                </li>
+                <li>
+                  <a href="#">Новости</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="tel:+375333556677" class="header-control-number">
+              + 375 33 355 66 77
+            </a>
+
+            <div class="header-burger-country">
+              <div class="header-burger-img">
+                <img src="./images/icon/icon-map.svg" alt="alt">
+              </div>
+
+              <div class="header-burger-title">
+                Ваша страна:
+
+                <div class="dropdown">
+                  <button class="dropbtn">Беларусь</button>
+                  <div class="dropdown-content">
+                    <div class="dropdown-option active">Беларусь</div>
+                    <div class="dropdown-option">Россия</div>
+                    <div class="dropdown-option">Казахстан</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

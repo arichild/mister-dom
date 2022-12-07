@@ -71,6 +71,12 @@ a {
   &:hover {
     color: #a8bed6;
   }
+
+  &.ui-btn {
+    &:hover {
+      color: #172542;
+    }
+  }
 }
 
 img {

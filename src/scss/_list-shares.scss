@@ -66,7 +66,7 @@
     padding: 55px 75px;
     background-color: #F7F0E7;
     color: #172542;
-    margin-bottom: 60px;
+    margin-bottom: 160px;
 
     &.flex {
       align-items: center;
@@ -156,5 +156,74 @@
       line-height: 1;
       max-width: 320px;
     }
+  }
+}
+
+.ya-share2__link {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #fad89d;
+  border-radius: 50%;
+  margin-right: 14px;
+  min-width: 56px;
+  min-height: 56px;
+
+  &:hover {
+    background-color: #fad89d;
+  }
+}
+
+.ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__badge,
+.ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__mobile-popup-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent !important;
+}
+
+.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+  background-size: 24px 24px !important;
+}
+
+.ya-share2,
+.ya-share2 * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#uSocial,
+.uSocial-Share {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+#uSocial .uscl-bar.uscl-size24 .ico_uscl,
+.uSocial-Share .uscl-bar.uscl-size24 .ico_uscl {
+  width: 56px !important;
+  height: 56px !important;
+  line-height: 55px !important;
+  font-size: 28px !important;
+}
+
+#uSocial .uscl-bar.uscl-round .ico_uscl,
+.uSocial-Share .uscl-bar.uscl-round .ico_uscl {
+  border-radius: 100%;
+  border: 1px solid #FAD89D;
+  background: transparent;
+  color: #172542 !important;
+
+  &:hover {
+    color: #fff !important;
+    border-color: transparent;
+  }
+}
+
+#uSocial .uscl-bar.uscl-size24 .uscl-item,
+.uSocial-Share .uscl-bar.uscl-size24 .uscl-item {
+  padding: 0 18px 0 0 !important;
+
+  &:last-child {
+    padding: 0 !important;
   }
 }

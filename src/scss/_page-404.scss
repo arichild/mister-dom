@@ -170,6 +170,10 @@
   &-items {
     margin-bottom: 164px;
 
+    .swiper-slide {
+      height: auto !important;
+    }
+
     &.margin-17 {
       margin-bottom: 17px;
     }
@@ -206,7 +210,7 @@
     display: none;
 
     .slider-item {
-      margin-bottom: 95px;
+      padding-bottom: 95px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -220,6 +224,10 @@
 
   &-item {
     max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 
     &-img {
       margin-bottom: 30px;
