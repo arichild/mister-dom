@@ -3,6 +3,28 @@
     padding-bottom: 90px;
     border-bottom: 1px solid #D9E4F1;
     margin-bottom: 48px;
+
+    @media(max-width: 1024px) {
+      padding-bottom: 50px;
+      margin-bottom: 30px;
+    }
+
+    @media(max-width: 768px) {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    // .row {
+    //   @media(max-width: 1024px) {
+    //     flex-direction: row-reverse;
+    //   }
+    // }
+  }
+
+  &-content {
+    @media(max-width: 1024px) {
+      margin-bottom: 25px;
+    }
   }
 
   &-title {
@@ -11,6 +33,10 @@
     font-size: 24px;
     margin-bottom: 45px;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1024px) {
+      margin-bottom: 25px;
+    }
   }
 
   &-subtitle {
@@ -18,6 +44,12 @@
     font-size: 16px;
     line-height: 1.12;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1024px) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &-links {
@@ -29,7 +61,7 @@
       ul {
         margin-bottom: 0;
         column-count: 2;
-        width: 100%;
+        // width: 100%;
       }
     }
 
@@ -41,6 +73,10 @@
       color: #172542;
       margin-bottom: 16px;
       letter-spacing: 0.05em;
+
+      @media(max-width: 1024px) {
+        font-size: 18px;
+      }
 
       &:hover {
         color: #a8bed6;
@@ -55,6 +91,10 @@
 
     &:last-of-type {
       margin-bottom: 50px;
+
+      @media(max-width: 1024px) {
+        margin-bottom: 25px;
+      }
     }
 
     &-img {
@@ -76,6 +116,10 @@
     color: #172542;
     letter-spacing: 0.05em;
     line-height: 1.8;
+
+    @media(max-width: 1024px) {
+      font-size: 18px;
+    }
   }
 
   &-other {
@@ -84,6 +128,7 @@
     .flex {
       justify-content: space-between;
       flex-wrap: wrap;
+      align-items: center;
     }
   }
 
@@ -94,6 +139,12 @@
 
     li {
       display: inline-block;
+
+      @media(max-width: 1024px) {
+        a {
+          max-width: 35px;
+        }
+      }
     }
   }
 
@@ -112,12 +163,21 @@
       margin-right: 5px;
       line-height: 0;
       padding-bottom: 15px;
+
+      @media(max-width: 1024px) {
+        max-width: 15px;
+        padding-bottom: 6px;
+      }
     }
 
     &-name {
       font-size: 20px;
       color: #172542;
       margin-right: 8px;
+
+      @media(max-width: 1024px) {
+        font-size: 16px;
+      }
     }
   }
 

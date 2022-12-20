@@ -5,6 +5,10 @@
   background: #fff;
   margin: 0 auto;
 
+  @media(max-width: 576px) {
+    padding: 50px 20px;
+  }
+
   &-title {
     font-family: 'FuturaMediumC';
     font-size: 28px;
@@ -24,11 +28,23 @@
     &.flex {
       justify-content: space-between;
       // align-items: baseline;
+
+      @media(max-width: 400px) {
+        flex-direction: column;
+
+        .ui-checkbox {
+          margin-bottom: 10px;
+        }
+      }
     }
 
     a {
       border-bottom: 1px solid #172542;
       font-size: 18px;
+
+      @media(max-width: 400px) {
+        border-bottom: none;
+      }
 
       &:hover {
         color: #a8bed6;
@@ -55,6 +71,10 @@
       }
     }
   }
+
+  // &-btn {
+  //   flex-wrap: wrap;
+  // }
 
   .ui-btn {
     max-width: 336px;

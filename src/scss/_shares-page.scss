@@ -3,6 +3,14 @@
     .ui-title {
       margin-bottom: 15px;
     }
+
+    .row.column {
+      flex-direction: column;
+
+      @media(max-width: 1024px) {
+        flex-direction: row;
+      }
+    }
   }
 
   &-caption {
@@ -16,6 +24,10 @@
 
     .ui-status {
       margin-right: 12px;
+
+      @media(max-width: 438px) {
+        margin-bottom: 10px;
+      }
     }
 
     .ui-status {
@@ -26,10 +38,26 @@
   &-info {
     &-card {
       margin-bottom: 70px;
+
+      // @media(max-width: 1024px) {
+      //   margin-bottom: 30px;
+      // }
+
+      @media(max-width: 576px) {
+        margin-bottom: 40px;
+      }
     }
 
     &-img {
       margin-bottom: 60px;
+
+      @media(max-width: 1024px) {
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 576px) {
+        margin-bottom: 15px;
+      }
     }
 
     &-txt {
@@ -38,6 +66,18 @@
       line-height: 1.2;
       letter-spacing: 0.05em;
       color: #172542;
+
+      @media(max-width: 1024px) {
+        font-size: 20px;
+
+        br {
+          display: none;
+        }
+      }
+
+      @media(max-width: 576px) {
+        font-size: 16px;
+      }
 
       a {
         font-family: FuturaMediumC;
@@ -52,8 +92,17 @@
 
   &-share {
     background: #FAFCFF;
-    padding: 38px 60px;
+    padding: 38px 24px 30px 60px;
     margin-bottom: 115px;
+
+    @media(max-width: 1366px) {
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 70px;
+    }
 
     svg {
       position: absolute;
@@ -73,6 +122,15 @@
       letter-spacing: 0.05em;
       color: #172542;
       margin-right: 31px;
+
+      @media(max-width: 1366px) {
+        margin-bottom: 10px;
+      }
+
+      @media(max-width: 768px) {
+        margin-right: 0;
+        font-size: 18px;
+      }
     }
 
     &-img {
@@ -103,12 +161,25 @@
   &-last {
     margin-bottom: 125px;
 
+    @media(max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+
     &-caption {
       font-family: 'FuturaMediumC';
       font-size: 36px;
       letter-spacing: 0.05em;
       color: #172542;
       margin-bottom: 70px;
+
+      @media(max-width: 1024px) {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+
+      @media(max-width: 576px) {
+        font-size: 24px;
+      }
     }
 
     &-link {
@@ -141,6 +212,11 @@
       letter-spacing: 0.05em;
       margin-bottom: 15px;
       line-height: 1.2;
+
+      @media(max-width: 1024px) {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
     }
 
     &-subtitle {

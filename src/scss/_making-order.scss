@@ -4,9 +4,13 @@
 
     .ui-title {
       margin-bottom: 85px;
+
+      @media(max-width: 1024px) {
+        margin-bottom: 45px;
+      }
     }
 
-    @media(min-width: 1024px) {
+    @media(min-width: 1024.99px) {
       .col-order-5 {
         flex: 0 0 37.66667%;
         max-width: 37.66667%;
@@ -48,11 +52,15 @@
     .cart-item-sum {
       font-family: 'FuturaBookC';
       font-size: 18px;
+
+      @media(max-width: 525px) {
+        font-size: 16px;
+      }
     }
 
-    .cart-item-info:first-child {
-      margin-right: 40px;
-    }
+    // .cart-item-info:first-child {
+    //   margin-right: 40px;
+    // }
   }
 
   &-info {
@@ -65,6 +73,11 @@
     .row {
       margin-left: -13px;
       margin-right: -13px;
+
+      @media(max-width: 1024.99px) {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
     }
 
     @media(min-width: 1024px) {
@@ -86,8 +99,21 @@
       font-size: 36px;
       margin-bottom: 38px;
 
+      @media(max-width: 1024px) {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      @media(max-width: 576px) {
+        font-size: 24px;
+      }
+
       &.margin-30 {
         margin-bottom: 30px;
+
+        @media(max-width: 1024px) {
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -95,6 +121,10 @@
       font-family: 'FuturaBookC';
       font-size: 20px;
       margin-bottom: 40px;
+
+      @media(max-width: 576px) {
+        font-size: 18px;
+      }
 
       a {
         border-bottom: 1px solid #172542;
@@ -108,6 +138,10 @@
     .ui-field {
       margin-bottom: 26px;
       position: relative;
+
+      @media(max-width: 576px) {
+        margin-bottom: 15px;
+      }
 
       .current {
         display: none;

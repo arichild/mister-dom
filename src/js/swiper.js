@@ -7,6 +7,34 @@ const swiperTab = new Swiper('.swiper.slider-new', {
     nextEl: '.swiper-button-next.btn-new-next',
     prevEl: '.swiper-button-prev.btn-new-prev',
   },
+
+  pagination: {
+    el: '.swiper-pagination.new-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  breakpoints: {
+    // when window width is >= 320px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+    // when window width is >= 320px
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 40
+    },
+  }
 });
 
 const duosMain = new Swiper('.swiper.duos-main', {
@@ -16,6 +44,12 @@ const duosMain = new Swiper('.swiper.duos-main', {
   navigation: {
     nextEl: '.swiper-button-next.btn-main-next',
     prevEl: '.swiper-button-prev.btn-main-prev',
+  },
+
+  pagination: {
+    el: '.swiper-pagination.duos-main',
+    type: 'bullets',
+    clickable: true
   },
 });
 

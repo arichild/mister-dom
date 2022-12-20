@@ -2,10 +2,23 @@
   &-sliders {
     margin-bottom: 60px;
 
+    @media(max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+
+    @media(max-width:576px) {
+      margin-bottom: 20px;
+    }
+
     &-main {
       display: flex;
       max-width: 74.4%;
       flex: 0 0 74.4%;
+
+      @media(max-width: 1366px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
 
       .btn-main-next:after, .btn-main-prev:after {
         content: '';
@@ -17,6 +30,10 @@
 
         &:hover {
           opacity: .9;
+        }
+
+        @media(max-width: 768px) {
+          display: none;
         }
       }
 
@@ -34,12 +51,24 @@
       .swiper-rtl .swiper-button-prev {
         right: 60px;
       }
+
+      .swiper-pagination.duos-main {
+        display: none;
+
+        @media(max-width: 768px) {
+          display: block;
+        }
+      }
     }
 
     &-second {
       display: flex;
       max-width: 25.6%;
       flex: 0 0 25.6%;
+
+      @media(max-width: 1366px) {
+        display: none;
+      }
 
       .swiper-horizontal>.swiper-pagination-bullets,
       .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -69,6 +98,10 @@
         width: 100%;
         object-fit: cover;
         object-position: center;
+
+        @media(max-width: 1366px) {
+          height: auto;
+        }
       }
     }
 
@@ -97,11 +130,28 @@
   &-content {
     margin-bottom: 105px;
 
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
+
     .form-mailing {
       max-width: 50%;
       flex: 0 0 50%;
       margin-bottom: 0;
       padding: 80px 95px;
+
+      @media(max-width: 1366px) {
+        padding: 50px;
+      }
+
+      @media(max-width: 768px) {
+        padding: 25px;
+      }
+
+      @media(max-width: 768px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
 
       &.flex {
         flex-direction: column;
@@ -120,6 +170,10 @@
         margin-bottom: 44px;
         max-width: 100%;
         margin-right: 0;
+
+        &.margin-0 {
+          margin-bottom: 0;
+        }
       }
 
       &-title {
@@ -142,6 +196,10 @@
           font-size: 24px;
           letter-spacing: 0.05em;
           line-height: 1.2;
+
+          @media(max-width: 576px) {
+            font-size: 20px;
+          }
         }
       }
 
@@ -167,11 +225,28 @@
         display: inline-block;
         letter-spacing: 0;
         // margin-right: 13px;
+
+        @media(max-width: 768px) {
+          display: none;
+        }
       }
 
       &-caption {
         font-size: 32px;
         padding-left: 65px;
+
+        @media(max-width: 1024px) {
+          font-size: 28px;
+        }
+
+        @media(max-width: 768px) {
+          padding-left: 0;
+          font-size: 24px;
+        }
+
+        @media(max-width: 576px) {
+          font-size: 20px;
+        }
       }
 
       &-caption {
@@ -192,12 +267,29 @@
       &-cell {
         margin-bottom: 38px;
 
+        @media(max-width: 1024px) {
+          flex-direction: column;
+        }
+
+        @media(max-width: 768px) {
+          flex-direction: row;
+        }
+
         .ui-input {
           max-width: 390px;
+
+          @media(max-width: 1024px) {
+            max-width: 100%;
+            margin-bottom: 10px;
+          }
         }
 
         .ui-btn {
           max-width: 200px;
+
+          @media(max-width: 1024px) {
+            max-width: 100%;
+          }
         }
       }
 

@@ -21,9 +21,11 @@
 @import "making-order.scss";
 @import "pages.scss";
 @import "success.scss";
+@import "data.scss";
 
 /* popups */
 @import "./popup/ui-popup.scss";
+@import "./popup/add-item.scss";
 
 * {
   box-sizing: border-box;

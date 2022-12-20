@@ -1,0 +1,132 @@
+.data {
+  &-container {
+    margin-bottom: 118px;
+
+    .ui-title {
+      margin-bottom: 48px;
+    }
+
+    .ui-btn {
+      max-width: 100%;
+    }
+
+    .order-info {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-menu {
+    padding: 36px 10px 82px 60px;
+    background: #F9FCFF;
+    box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
+    color: #172542;
+    height: 370px;
+
+    a {
+      display: block;
+      font-family: 'FuturaBookC';
+      font-size: 22px;
+      margin-bottom: 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        color: #728EAE;
+      }
+    }
+  }
+
+  &-title {
+    font-family: 'FuturaMediumC';
+    font-size: 36px;
+    margin-bottom: 25px;
+    letter-spacing: 0.05em;
+  }
+
+  &-info {
+    border-bottom: 1px solid #D9E4F1;
+    padding-bottom: 30px;
+    margin-bottom: 36px;
+
+    &-header {
+      margin-bottom: 5px;
+
+      &.flex {
+        align-items: baseline;
+        justify-content: space-between;
+      }
+    }
+
+    &-form {
+      .ui-btn {
+        height: 80px;
+
+        img {
+          line-height: 0;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &-title {
+      font-family: 'FuturaMediumC';
+      font-size: 36px;
+      color: #172542;
+    }
+
+    &-link {
+      font-size: 18px;
+      border-bottom: 1px solid #172542;
+    }
+  }
+
+  &-card {
+    margin-bottom: 22px;
+
+    &-img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    &-txt {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &-bill {
+    text-align: right;
+    padding: 37px 47px 30px 10px;
+    background: #FFF7EA;
+    margin-bottom: 28px;
+
+    .txt {
+      font-family: 'FuturaDemiC';
+      font-size: 28px;
+      color: #172542;
+    }
+
+    .ui-tooltip {
+      position: relative;
+      right: 0;
+      top: -3px;
+      text-align: start;
+    }
+  }
+
+  &-cashback {
+    text-align: right;
+    color: #172542;
+    padding-right: 20px;
+
+    span {
+      font-family: 'FuturaDemiC';
+      font-size: 20px;
+    }
+  }
+}

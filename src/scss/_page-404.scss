@@ -17,6 +17,10 @@
 
   &-img {
     margin-bottom: 62px;
+
+    @media(max-width: 1024px) {
+      margin: 0 50px;
+    }
   }
 
   &-txt {
@@ -24,6 +28,14 @@
     letter-spacing: 0.05em;
     color: #172542;
     margin-bottom: 20px;
+
+    @media(max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media(max-width: 576px) {
+      font-size: 20px;
+    }
   }
 
   &-line {
@@ -47,13 +59,30 @@
   &-search {
     margin: 0 15px;
 
+    &.flex {
+      @media(max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+
     .header-control-search {
       margin-right: 16px;
+      max-width: 100%;
     }
 
     .ui-btn {
       max-width: 152px;
       width: 100%;
+
+      @media(max-width: 576px) {
+        max-width: 100%;
+      }
+    }
+
+    .ui-input {
+      @media(max-width: 576px) {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -70,6 +99,12 @@
 .services {
   margin-bottom: 96px;
 
+  &-block {
+    @media(max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+  }
+
   &.margin-58 {
     margin-bottom: 60px;
   }
@@ -81,8 +116,25 @@
     min-height: calc(100% - 40px);
     margin: 0 auto 40px auto;
 
+    @media(max-width: 1024px) {
+      max-width: 100%;
+      min-height: calc(100% - 30px);
+    }
+
+    @media(max-width: 576px) {
+      min-height: calc(100% - 20px);
+    }
+
     &.height-auto {
       min-height: auto;
+
+      @media(max-width: 1024px) {
+        min-height: calc(100% - 30px);
+      }
+
+      @media(max-width: 576px) {
+        min-height: calc(100% - 20px);
+      }
     }
 
     &.light-blue {
@@ -106,6 +158,10 @@
       left: 50%;
       bottom: 0;
       transform: translate(-50%, 0);
+
+      @media(max-width: 576px) {
+        display: none;
+      }
     }
   }
 
@@ -113,6 +169,12 @@
     padding: 46px 50px 152px 50px;
     // margin-bottom: 24px;
     // padding-bottom: 152px;
+
+    @media(max-width: 576px) {
+      padding-bottom: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   &-title {
@@ -132,6 +194,10 @@
 
 .commercial {
   margin-bottom: 131px;
+
+  @media(max-width: 1024px) {
+    display: none;
+  }
 
   &-img {
     margin-right: 40px;
@@ -163,12 +229,24 @@
 
   &-subtitle {
     font-size: 30px;
+
+    @media(max-width: 1090px) {
+      font-size: 20px;
+    }
   }
 }
 
 .slider {
   &-items {
-    margin-bottom: 164px;
+    margin-bottom: 84px;
+
+    .swiper-wrapper {
+      margin-bottom: 80px;
+
+      @media(max-width: 576px) {
+        margin-bottom: 60px;
+      }
+    }
 
     .swiper-slide {
       height: auto !important;
@@ -213,6 +291,10 @@
       padding-bottom: 95px;
       margin-left: auto;
       margin-right: auto;
+
+      @media(max-width: 576px) {
+        padding-bottom: 55px;
+      }
     }
 
     &.active {
@@ -263,6 +345,15 @@
       letter-spacing: 0.05em;
       // height: 100%;
       min-height: 56px;
+
+      @media(max-width: 1024px) {
+        font-size: 20px;
+      }
+
+      @media(max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
     }
 
     &-subtitle {
@@ -272,11 +363,24 @@
       font-weight: 400;
       line-height: 1.2;
       letter-spacing: 0.05em;
+
+      @media(max-width: 1024px) {
+        font-size: 18px;
+      }
+
+      @media(max-width: 768px) {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     }
   }
 
   &-price {
     margin-bottom: 17px;
+
+    @media(max-width: 768px) {
+      margin-bottom: 5px;
+    }
 
     &.flex {
       justify-content: space-between;
@@ -295,6 +399,13 @@
       font-size: 24px;
       letter-spacing: 0.05em;
       margin-right: 12px;
+
+      @media(max-width: 1024px) {
+        font-size: 18px;
+      }
+      @media(max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     &-discount {
@@ -304,6 +415,13 @@
       text-decoration: line-through;
       color: #728EAE;
       letter-spacing: 0.05em;
+
+      @media(max-width: 1024px) {
+        font-size: 18px;
+      }
+      @media(max-width: 768px) {
+        font-size: 16px;
+      }
     }
 
     &-cart {
@@ -315,6 +433,16 @@
       background: #F2F2F2;
       cursor: pointer;
       transition: 0.1s ease-out;
+
+      @media(max-width: 1024px) {
+        max-width: 46px;
+        max-height: 46px;
+      }
+
+      @media(max-width: 768px) {
+        max-width: 36px;
+        max-height: 36px;
+      }
 
       img {
         position: absolute;
@@ -332,6 +460,10 @@
   &-control {
     margin-bottom: 64px;
 
+    @media(max-width: 1024px) {
+      margin-bottom: 34px;
+    }
+
     &.flex {
       justify-content: space-between;
     }
@@ -341,5 +473,18 @@
     &-previous {
       margin-right: 24px;
     }
+
+    @media(max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.swiper-pagination.new-pagination {
+  display: none;
+
+  @media(max-width: 1024px) {
+    bottom: 0;
+    display: block;
   }
 }

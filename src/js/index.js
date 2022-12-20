@@ -50,10 +50,10 @@ btnClear.addEventListener('click', (e) => {
 
 (function() {
   if(matchMedia) {
-    const screen1230 = window.matchMedia('(max-width:1230px)');
+    const screen1024 = window.matchMedia('(max-width:1024px)');
 
-    screen1230.addListener(changes);
-    changes(screen1230);
+    screen1024.addListener(changes);
+    changes(screen1024);
   }
 
   function changes(screen) {
@@ -155,6 +155,34 @@ for(let i = 0; i < inputField.length; i++) {
       span.classList.add('active')
     } else {
       span.classList.remove('active')
+    }
+  })
+}
+
+const targetBlock = document.querySelectorAll('.cart-txt .ui-input');
+
+for(let i = 0; i < targetBlock.length; i++) {
+  targetBlock[i].addEventListener('blur', (e) => {
+    if(e.target.value !== '') {
+      const discountBlock = e.target.closest('.cart-price').querySelector('.cart-price-discount')
+
+      e.target.classList.add('hide');
+
+      discountBlock.classList.add('active')
+    }
+  })
+}
+
+const deleteDiscount = document.querySelectorAll('.cart-price-discount');
+
+for(let i = 0; i < deleteDiscount.length; i++) {
+  deleteDiscount[i].addEventListener('click', (e) => {
+    if(e.target.classList[0] === 'sprite') {
+      const input = e.target.closest('.cart-price').querySelector('.ui-input');
+      const thisBlock = e.target.closest('.cart-price-discount')
+
+      input.classList.remove('hide')
+      thisBlock.classList.remove('active')
     }
   })
 }

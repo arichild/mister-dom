@@ -2,16 +2,32 @@
   &-content {
     .ui-title {
       margin-bottom: 85px;
+
+      @media(max-width: 1240px) {
+        margin-bottom: 50px;
+      }
+
+      @media(max-width: 1024px) {
+        margin-bottom: 15px;
+      }
     }
   }
 
   &-card {
     margin-bottom: 80px;
 
+    @media(max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+
     &-link {
       display: block;
       position: relative;
       margin-bottom: 35px;
+
+      @media(max-width: 1024px) {
+        margin-bottom: 15px;
+      }
 
       .ui-status {
         position: absolute;
@@ -33,6 +49,14 @@
       letter-spacing: 0.05em;
       margin-bottom: 15px;
       line-height: 1.2;
+
+      @media(max-width: 1024px) {
+        font-size: 24px;
+      }
+
+      @media(max-width: 576px) {
+        font-size: 20px;
+      }
     }
 
     &-subtitle {
@@ -68,12 +92,33 @@
     color: #172542;
     margin-bottom: 160px;
 
+    @media(max-width: 1366px) {
+      padding: 35px 75px;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 70px;
+    }
+
+    @media(max-width: 768px) {
+      padding: 35px 45px;
+    }
+
+    @media(max-width: 576px) {
+      padding: 35px 25px;
+    }
+
     &.flex {
       align-items: center;
 
-      @media(max-width: 1024px) {
+      @media(max-width: 1366px) {
+        flex-direction: column;
+      }
+
+      @media(max-width: 768px) {
         flex-wrap: wrap;
-        justify-content: center;
+        // justify-content: center;
+        flex-direction: row;
       }
     }
 
@@ -83,18 +128,29 @@
       margin-right: 46px;
       margin-bottom: 25px;
 
-      @media(max-width: 1024px) {
-        max-width: none;
-        width: auto;
+      &.center {
+        @media(max-width: 1024px) {
+          max-width: none;
+          width: auto;
+          margin: 0 auto;
+          margin-bottom: 25px;
+          text-align: center;
+        }
+
+        @media(max-width: 576px) {
+          margin: 0 auto;
+          margin-bottom: 20px;
+          text-align: center;
+        }
       }
     }
 
     &-fields {
       width: 100%;
 
-      @media(max-width:1024px) {
-        width: auto;
-      }
+      // @media(max-width:1024px) {
+      //   width: auto;
+      // }
     }
 
     &-title {
@@ -103,6 +159,14 @@
       margin-bottom: 10px;
       letter-spacing: 0.05em;
       line-height: 1;
+
+      @media(max-width: 768px) {
+        font-size: 34px;
+      }
+
+      @media(max-width: 576px) {
+        font-size: 28px;
+      }
     }
 
     &-subtitle {
@@ -113,10 +177,26 @@
       letter-spacing: 0.05em;
       max-width: 505px;
 
+      @media(max-width: 768px) {
+        padding-left: 0;
+
+        img {
+          display: none;
+        }
+      }
+
+      @media(max-width: 576px) {
+        font-size: 16px;
+      }
+
       img {
         position: absolute;
         left: 0;
         top: 0;
+
+        @media(max-width: 1024px) {
+          left: 20px;
+        }
       }
     }
 
@@ -124,9 +204,27 @@
       position: relative;
       margin-bottom: 10px;
 
+      @media(max-width: 576px) {
+        margin-bottom: 20px;
+      }
+
+      &.flex {
+        @media(max-width: 576px) {
+          flex-direction: column;
+        }
+      }
+
       .ui-btn {
         background-color: #172542;
         color: #fff;
+
+        @media(max-width: 1366px) {
+          max-width: 50%;
+        }
+
+        @media(max-width: 576px) {
+          max-width: 100%;
+        }
 
         &:hover {
           background-color: #a8bed6;
@@ -138,6 +236,15 @@
         margin-right: 12px;
         border-color: #172542;
 
+        @media(max-width: 1366px) {
+          max-width: 50%;
+        }
+
+        @media(max-width: 576px) {
+          max-width: 100%;
+          margin-bottom: 15px;
+        }
+
         &:hover {
           border-color: #a8bed6;
         }
@@ -148,6 +255,10 @@
         line-height: 0;
         left: 24px;
         top: 21px;
+
+        @media(max-width: 1440px) {
+          top: 19px;
+        }
       }
     }
 
@@ -155,6 +266,16 @@
       font-size: 14px;
       line-height: 1;
       max-width: 320px;
+
+      @media(max-width: 1366px) {
+        margin-left: auto;
+        text-align: end;
+      }
+
+      @media(max-width: 576px) {
+        margin: 0 auto;
+        text-align: center;
+      }
     }
   }
 }
@@ -204,6 +325,13 @@
   height: 56px !important;
   line-height: 55px !important;
   font-size: 28px !important;
+
+  @media(max-width: 768px) {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    font-size: 18px !important;
+  }
 }
 
 #uSocial .uscl-bar.uscl-round .ico_uscl,
