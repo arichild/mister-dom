@@ -65,7 +65,7 @@
         width: 100%;
         background-color: #fff;
         padding: 20px 20px 35px 20px;
-        overflow-y: scroll;
+        overflow-y: auto;
       }
     }
 
@@ -73,7 +73,11 @@
       // margin-left: 15px;
 
       li {
-        margin-bottom: 22px;
+        // margin-bottom: 22px;
+
+        &:last-child {
+          margin-bottom: 34px;
+        }
 
         a {
           position: relative;
@@ -81,6 +85,7 @@
           color: #172542;
           display: block;
           width: 100%;
+          padding: 16px 0;
 
           &::after {
             content: "";
@@ -339,6 +344,10 @@
         font-size: 22px;
         color: #172542;
         padding: 10px 15px;
+
+        @media(max-width: 1440px) {
+          font-size: 20px;
+        }
 
         &:hover {
           background: #fadca9;

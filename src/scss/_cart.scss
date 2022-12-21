@@ -286,6 +286,10 @@
     flex-wrap: wrap;
     position: relative;
 
+    @media(max-width: 768px) {
+      padding: 15px 30px 15px 15px;
+    }
+
     @media(max-width: 1366px) {
       flex-direction: column;
       align-items: flex-start;
@@ -324,6 +328,14 @@
       max-width: 140px;
       margin-right: 16px;
       line-height: 0;
+
+      @media(max-width: 1024px) {
+        max-width: 100px;
+      }
+
+      @media(max-width: 480px) {
+        max-width: 60px;
+      }
     }
 
     &-info {
@@ -339,6 +351,10 @@
         @media(max-width: 1366px) {
           max-width: 100%;
           flex: 0 0 100%;
+        }
+
+        @media(max-width: 1024px) {
+          margin-bottom: 10px;
         }
       }
 
@@ -372,6 +388,23 @@
         @media(max-width: 1366px) {
           max-width: 100%;
           flex: 0 0 100%;
+          padding-left: 150px;
+        }
+
+        @media(max-width: 1024px) {
+          padding-left: 120px;
+        }
+
+        @media(max-width: 650px) {
+          padding-left: 0;
+        }
+
+        @media(max-width: 480px) {
+          flex-wrap: wrap;
+          border-top: 1px solid #d9e4f1;
+          margin-top: 10px;
+          padding-left: 70px;
+          padding-top: 10px;
         }
       }
       &.price {
@@ -400,6 +433,10 @@
 
     &-price {
       margin-right: 40px;
+
+      @media(max-width: 768px) {
+        margin-right: 20px;
+      }
     }
 
     &-title {
@@ -408,6 +445,14 @@
       color: #172542;
       max-width: 295px;
       margin-bottom: 12px;
+
+      @media(max-width: 650px) {
+        max-width: 100%;
+      }
+
+      @media(max-width: 480px) {
+        font-size: 18px;
+      }
     }
 
     &-old {
@@ -420,6 +465,10 @@
 
       &.right {
         text-align: right;
+
+        @media(max-width: 480px) {
+          text-align: left;
+        }
       }
     }
 
@@ -428,6 +477,10 @@
       font-size: 22px;
       color: #FFA800;
       letter-spacing: .05em;
+
+      @media(max-width: 650px) {
+        font-size: 18px;
+      }
     }
 
     &-sum {
@@ -435,6 +488,14 @@
       font-size: 22px;
       color: #172542;
       letter-spacing: .05em;
+
+      @media(max-width: 650px) {
+        font-size: 18px;
+      }
+
+      @media(max-width: 480px) {
+        display: none;
+      }
     }
 
     &-btn {
@@ -445,6 +506,12 @@
       right: 40px;
       top: 50%;
       transform: translate(0, -50%);
+
+      @media(max-width: 768px) {
+        top: 15px;
+        right: 15px;
+        transform: translate(0, 0);
+      }
 
       .sprite {
         max-width: 24px;
@@ -468,6 +535,15 @@
 
       .ui-count {
         margin-right: 40px;
+
+        @media(max-width: 768px) {
+          margin-right: 20px;
+        }
+      }
+
+      @media(max-width: 480px) {
+        margin-bottom: 10px;
+        order: -1;
       }
     }
 

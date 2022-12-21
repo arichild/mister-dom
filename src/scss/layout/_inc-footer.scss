@@ -55,6 +55,10 @@
   &-links {
     &.flex {
       flex-wrap: wrap;
+
+      @media(max-width: 1024px) {
+        display: block;
+      }
     }
 
     &.column-ul {
@@ -62,6 +66,12 @@
         margin-bottom: 0;
         column-count: 2;
         // width: 100%;
+      }
+
+      @media(max-width: 1024px) {
+        li {
+          width: 100%;
+        }
       }
     }
 

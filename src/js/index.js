@@ -119,32 +119,37 @@ burgerBtnClose.addEventListener('click', (e) => {
 })
 
 // dropdown
-const dropdownItem = document.querySelector('.dropdown');
+const dropdownItem = document.querySelectorAll('.dropdown');
 
-dropdownItem.addEventListener('click', (e) => {
-  const dropdown = document.querySelector('.dropdown-content');
+console.log(dropdownItem)
 
-  if(e.target.classList[0] === 'dropbtn') {
+for(let i = 0; i < dropdownItem.length; i++) {
+  dropdownItem[i].addEventListener('click', (e) => {
+    const dropdown = e.target.closest('.dropdown').querySelector('.dropdown-content');
 
-    dropdown.classList.add('active')
-  }
+    if(e.target.classList[0] === 'dropbtn') {
 
-  if(e.target.classList[0] === 'dropdown-option') {
-    const selectedCountryName = e.target.textContent;
-    const countryNamePlace = document.querySelector('.dropbtn');
-    const countryNameOption = document.querySelectorAll('.dropdown-option.active');
-
-    countryNamePlace.textContent = selectedCountryName;
-
-    dropdown.classList.remove('active');
-
-    for(let i = 0; i < countryNameOption.length; i++) {
-      countryNameOption[i].classList.remove('active');
+      dropdown.classList.add('active')
     }
 
-    e.target.classList.add('active')
-  }
-})
+    if(e.target.classList[0] === 'dropdown-option') {
+      const selectedCountryName = e.target.textContent;
+      const countryNamePlace = e.target.closest('.dropdown').querySelector('.dropbtn');
+      const countryNameOption = e.target.closest('.dropdown').querySelectorAll('.dropdown-option.active');
+
+      countryNamePlace.textContent = selectedCountryName;
+
+      dropdown.classList.remove('active');
+
+      for(let i = 0; i < countryNameOption.length; i++) {
+        countryNameOption[i].classList.remove('active');
+      }
+
+      e.target.classList.add('active')
+    }
+  })
+}
+
 
 const inputField = document.querySelectorAll('.ui-field input');
 

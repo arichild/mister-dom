@@ -159,6 +159,10 @@
       bottom: 0;
       transform: translate(-50%, 0);
 
+      @media(max-width: 1366px) {
+        max-height: 90px;
+      }
+
       @media(max-width: 576px) {
         display: none;
       }
@@ -170,8 +174,12 @@
     // margin-bottom: 24px;
     // padding-bottom: 152px;
 
+    @media(max-width: 1366px) {
+      padding: 46px 10px 102px;
+    }
+
     @media(max-width: 576px) {
-      padding-bottom: 50px;
+      padding-bottom: 30px;
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -183,12 +191,22 @@
     font-family: 'FuturaMediumC';
     margin-bottom: 12px;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1366px) {
+      max-width: 270px;
+      margin: 0 auto 12px;
+    }
   }
 
   &-subtitle {
     line-height: 1.2;
     color: #172542;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1366px) {
+      max-width: 270px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -297,6 +315,8 @@
       }
     }
 
+
+
     &.active {
       display: block;
       // flex-wrap: wrap;
@@ -311,27 +331,52 @@
     height: 100%;
     justify-content: space-between;
 
+    @media(max-width: 480px) {
+      margin: 0 auto;
+    }
+
+    &-block {
+      margin-bottom: 30px;
+      position: relative;
+
+      @media(max-width: 400px) {
+        max-width: 250px;
+        margin: 0 auto 30px;
+      }
+    }
+
     &-img {
       margin-bottom: 30px;
       object-fit: contain;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-status {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
     }
 
     &-link {
       position: relative;
       color: #172542;
 
-      .ui-status {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+      // .ui-status {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      // }
 
       &.img {
         overflow: hidden;
         position: relative;
         display: block;
         height: 0;
-        padding-bottom: 108%;
+        padding-bottom: 100%;
       }
     }
 
