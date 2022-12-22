@@ -95,7 +95,7 @@
             margin-top: -5px;
             width: 12px;
             height: 10px;
-            background: url(../../images/icon/arrow-burger.svg) center no-repeat;
+            background: url(.././images/icon/arrow-burger.svg) center no-repeat;
             background-size: contain;
           }
 
@@ -429,12 +429,13 @@
     &-link {
       max-width: 156px;
       width: 100%;
+      text-align: right;
 
       a {
-        overflow: hidden;
+        margin-left: 19px;
 
-        svg {
-          // pointer-events: none;
+        @media(max-width: 1230px) {
+          margin-left: 24px;
         }
 
         &:first-child {
@@ -581,21 +582,6 @@
 
       &:hover {
         color: #a8bed6;
-      }
-    }
-
-    &-link {
-      // max-width: 138px;
-      // display: flex;
-      // justify-content: space-between;
-      // width: 100%;
-
-      .link {
-        padding: 0 28px;
-
-        @media(max-width: 1230px) {
-          padding: 0 14px;
-        }
       }
     }
 
@@ -813,6 +799,7 @@
   text-decoration: underline;
   text-decoration-style: dotted;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .dropdown {

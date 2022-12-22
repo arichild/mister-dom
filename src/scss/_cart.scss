@@ -4,6 +4,14 @@
 
     .ui-title {
       margin-bottom: 85px;
+
+      @media(max-width: 1240px) {
+        margin-bottom: 50px;
+      }
+
+      @media(max-width: 1024px) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -83,6 +91,10 @@
   &-txt {
     padding-left: 10px;
     padding-right: 20px;
+
+    @media(max-width: 1024px) {
+      padding: 0;
+    }
   }
 
   &-info {
@@ -185,9 +197,9 @@
         flex-direction: row;
       }
 
-      @media(max-width: 576px) {
-        flex-direction: column;
-      }
+      // @media(max-width: 576px) {
+      //   flex-direction: column;
+      // }
     }
 
     span {
@@ -388,7 +400,7 @@
         @media(max-width: 1366px) {
           max-width: 100%;
           flex: 0 0 100%;
-          padding-left: 150px;
+          padding-left: 155px;
         }
 
         @media(max-width: 1024px) {
@@ -446,7 +458,7 @@
       max-width: 295px;
       margin-bottom: 12px;
 
-      @media(max-width: 650px) {
+      @media(max-width: 1024px) {
         max-width: 100%;
       }
 
@@ -496,6 +508,12 @@
       @media(max-width: 480px) {
         display: none;
       }
+
+      &.display {
+        @media(max-width: 480px) {
+          display: block;
+        }
+      }
     }
 
     &-btn {
@@ -532,6 +550,13 @@
     &-control {
       // flex: 0 0 370px;
       align-items: center;
+
+      &.making-order {
+        @media(max-width: 480px) {
+          order: 0;
+          margin-bottom: 0;
+        }
+      }
 
       .ui-count {
         margin-right: 40px;

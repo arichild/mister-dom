@@ -1,0 +1,49 @@
+.history {
+  &-container {
+    margin-bottom: 435px;
+
+    .ui-title {
+      margin-bottom: 48px;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      text-align: left;
+      color: #172542;
+      padding: 20px 10px 20px 24px;
+      font-size: 20px;
+
+      &.right {
+        text-align: right;
+      }
+    }
+
+    th {
+      background: #FFF7EA;
+      font-family: 'FuturaMediumC';
+      font-weight: 500;
+    }
+
+    td {
+      font-family: 'FuturaBookC';
+      border-bottom: 1px solid #D4DFEA;
+
+      &.border-none {
+        border-bottom: none;
+      }
+
+      .ui-btn {
+        display: block;
+        max-width: 100%;
+        height: 36px;
+        line-height: 40px;
+      }
+    }
+  }
+}
