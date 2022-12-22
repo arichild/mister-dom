@@ -65,11 +65,21 @@
       ul {
         margin-bottom: 0;
         column-count: 2;
-        // width: 100%;
+        width: 100%;
+
+        @media(max-width: 1200px) {
+          width: auto;
+        }
       }
 
-      @media(max-width: 1024px) {
-        li {
+      li {
+        width: 100%;
+
+        @media(max-width: 1200px) {
+          width: auto;
+        }
+
+        @media(max-width: 1024px) {
           width: 100%;
         }
       }

@@ -2,6 +2,14 @@
   &-container {
     margin-bottom: 142px;
 
+    @media(max-width: 1366px) {
+      margin-bottom: 100px;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 70px;
+    }
+
     .ui-title {
       margin-bottom: 85px;
 

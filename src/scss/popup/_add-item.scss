@@ -5,6 +5,22 @@
     margin-bottom: 40px;
   }
 
+  .ui-popup-btn {
+    @media(max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  .ui-btn {
+    @media(max-width: 576px) {
+      max-width: 100%;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
   .cart-item {
     padding: 18px 30px 25px 20px;
   }

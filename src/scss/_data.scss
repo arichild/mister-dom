@@ -24,6 +24,12 @@
     color: #172542;
     height: 370px;
 
+    @media(max-width: 1366px) {
+      padding: 40px;
+      height: auto;
+      font-size: 20px;
+    }
+
     a {
       display: block;
       font-family: 'FuturaBookC';

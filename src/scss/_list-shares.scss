@@ -351,6 +351,10 @@
 .uSocial-Share .uscl-bar.uscl-size24 .uscl-item {
   padding: 0 18px 0 0 !important;
 
+  @media(max-width: 1024px) {
+    padding: 0 10px !important;
+  }
+
   &:last-child {
     padding: 0 !important;
   }
