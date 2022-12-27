@@ -8,12 +8,32 @@
 
     .ui-btn {
       max-width: 100%;
+
+      @media(max-width: 1024px) {
+        max-width: 350px;
+      }
+
+      @media(max-width: 380px) {
+        font-size: 18px;
+      }
     }
 
     .order-info {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  &-form {
+    @media(max-width: 1024px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &-btn {
+    @media(max-width: 1024px) {
+      text-align: right;
     }
   }
 
@@ -30,6 +50,11 @@
       font-size: 20px;
     }
 
+    @media(max-width: 768px) {
+      margin-bottom: 45px;
+      padding: 25px;
+    }
+
     a {
       display: block;
       font-family: 'FuturaBookC';
@@ -42,6 +67,12 @@
 
       &.active {
         color: #728EAE;
+      }
+
+      @media(max-width: 768px) {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
       }
     }
   }
@@ -71,9 +102,15 @@
       .ui-btn {
         height: 80px;
 
+        @media(max-width: 1024px) {
+          height: 65px;
+        }
+
         img {
           line-height: 0;
           vertical-align: middle;
+          position: relative;
+          top: -3px;
         }
       }
     }

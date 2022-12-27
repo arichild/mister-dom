@@ -2,6 +2,14 @@
   &-container {
     margin-bottom: 435px;
 
+    @media(max-width: 1366px) {
+      margin-bottom: 200px;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 150px;
+    }
+
     .ui-title {
       margin-bottom: 48px;
     }
@@ -18,6 +26,7 @@
       color: #172542;
       padding: 20px 10px 20px 24px;
       font-size: 20px;
+      white-space: nowrap;
 
       &.right {
         text-align: right;
@@ -49,10 +58,14 @@
 
       .ui-btn {
         display: block;
-        max-width: 100%;
+        max-width: 54px;
         height: 36px;
         line-height: 40px;
       }
     }
+  }
+
+  &-table {
+    overflow-x: auto;
   }
 }
