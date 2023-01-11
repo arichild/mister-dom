@@ -3,7 +3,6 @@
 <div class="middle" id="middle">
   <div class="container">
     <div class="ui-breadcrumbs margin-72">
-
       <a href="#" class="ui-breadcrumbs-link">
         <img src="./images/icon/home.svg" alt="alt">
 
@@ -13,20 +12,22 @@
       <div class="ui-breadcrumbs-current">Личный кабинет</div>
     </div>
 
-    <div class="data-container">
-      <div class="ui-title">
+    <div class="page-wrapper">
+      <h1 class="ui-title">
         Личные данные
-      </div>
+      </h1>
 
       <div class="row">
         <div class="col-md-3 col-sm-4">
           <div class="data-menu">
             <div class="data-title">Меню</div>
 
-            <a href="#" class="active">Личные данные</a>
-            <a href="#">Избранное</a>
-            <a href="#">История заказов</a>
-            <a href="#">Выйти</a>
+            <ul>
+              <li><a href="#" class="active">Личные данные</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">История заказов</a></li>
+              <li><a href="#">Выйти</a></li>
+            </ul>
           </div>
         </div>
 
@@ -45,36 +46,41 @@
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="surname" id="surname" placeholder="Фамилия">
-                    <span class="current">Фамилия</span>
+                    <label class="ui-label">Фамилия</span>
                   </div>
                 </div>
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="name" id="name" placeholder="Имя">
-                    <span class="current">Имя</span>
+                    <label class="ui-label">Имя</span>
                   </div>
                 </div>
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="lastName" id="lastName" placeholder="Отчество">
-                    <span class="current">Отчество</span>
+                    <label class="ui-label">Отчество</span>
                   </div>
                 </div>
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="email" id="email" placeholder="Email">
-                    <span class="current">Email</span>
+                    <label class="ui-label">Email</span>
                   </div>
                 </div>
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="phone" id="phone" placeholder="Телефон">
-                    <span class="current">Телефон</span>
+                    <label class="ui-label">Телефон</span>
                   </div>
+                </div>
+                <div class="col-order-3 col-xs-6">
+                  <button class="ui-btn">Обновить данные</button>
                 </div>
               </div>
             </div>
+          </form>
 
+          <form action="#" class="data-form">
             <div class="order-info margin-68">
               <div class="order-info-title margin-30">
                 Смена пароля
@@ -84,13 +90,13 @@
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="surname" id="surname" placeholder="Текущий пароль">
-                    <span class="current">Текущий пароль</span>
+                    <label class="ui-label">Текущий пароль</span>
                   </div>
                 </div>
                 <div class="col-order-3 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="name" id="name" placeholder="Новый пароль">
-                    <span class="current">Новый пароль</span>
+                    <label class="ui-label">Новый пароль</span>
                   </div>
                 </div>
                 <div class="col-order-3 col-xs-6">
@@ -98,14 +104,16 @@
                 </div>
               </div>
             </div>
+          </form>
 
+          <form action="#" class="data-form">
             <div class="order-info">
               <div class="order-info-title margin-30">
                 Подписка на рассылки
               </div>
 
               <div class="ui-checkbox">
-                <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" checked="">
+                <input onChange="this.form.submit()" autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input">
                 <label for="customCheckbox" class="ui-checkbox-label">
                   <span class="default-txt">
                     Получать рассылку по новостям и акциям магазина
@@ -116,7 +124,7 @@
           </form>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 col-md-offset col-sm-offset col-sm-8">
           <div class="data-info-form">
             <form action="#">
               <div class="data-info">

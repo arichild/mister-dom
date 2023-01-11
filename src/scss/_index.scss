@@ -45,11 +45,19 @@
       .swiper-button-prev,
       .swiper-rtl .swiper-button-next {
         left: 60px;
+
+        @media(max-width: 1024px) {
+          left: 15px;
+        }
       }
 
       .swiper-button-next,
       .swiper-rtl .swiper-button-prev {
         right: 60px;
+
+        @media(max-width: 1024px) {
+          right: 15px;
+        }
       }
 
       .swiper-pagination.duos-main {

@@ -13,11 +13,16 @@
     .ui-title {
       margin-bottom: 48px;
     }
+  }
+
+  &-table {
+    overflow-x: auto;
 
     table {
       font-family: arial, sans-serif;
       border-collapse: collapse;
       width: 100%;
+      font-size: 20px;
     }
 
     td,
@@ -25,8 +30,7 @@
       text-align: left;
       color: #172542;
       padding: 20px 10px 20px 24px;
-      font-size: 20px;
-      white-space: nowrap;
+      // white-space: nowrap;
 
       &.right {
         text-align: right;
@@ -35,6 +39,10 @@
       &.width {
         max-width: 320px;
         min-width: 320px;
+      }
+
+      &.nowrap {
+        white-space: nowrap;
       }
 
       &.border-none {
@@ -46,6 +54,7 @@
       background: #FFF7EA;
       font-family: 'FuturaMediumC';
       font-weight: 500;
+      white-space: nowrap;
     }
 
     td {
@@ -58,14 +67,10 @@
 
       .ui-btn {
         display: block;
-        max-width: 54px;
+        min-width: 54px;
         height: 36px;
         line-height: 40px;
       }
     }
-  }
-
-  &-table {
-    overflow-x: auto;
   }
 }

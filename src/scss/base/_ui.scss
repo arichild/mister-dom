@@ -1,3 +1,19 @@
+.page-wrapper {
+  padding-bottom: 140px;
+
+  .ui-title {
+    margin-bottom: 80px;
+
+    @media(max-width: 1240px) {
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .ui-btn {
   font-family: 'FuturaBookC';
   background: #FAD89D;
@@ -250,8 +266,8 @@
 
 .ui-breadcrumbs {
   margin-bottom: 30px;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  // vertical-align: middle;
 
   &.margin-72 {
     margin-bottom: 72px;
@@ -439,6 +455,10 @@
     @media(max-width: 1170px) {
       // height: auto;
       margin-bottom: 12px;
+    }
+
+    @media(max-width: 1024px) {
+      height: auto;
     }
 
     &-img {

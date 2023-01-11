@@ -27,6 +27,10 @@
 
   .cart-item-info {
     margin-right: 0 !important;
+
+    @media(max-width: 480px) {
+      align-items: flex-start;
+    }
   }
 
   .cart-item-img {

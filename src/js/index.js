@@ -121,8 +121,6 @@ burgerBtnClose.addEventListener('click', (e) => {
 // dropdown
 const dropdownItem = document.querySelectorAll('.dropdown');
 
-console.log(dropdownItem)
-
 for(let i = 0; i < dropdownItem.length; i++) {
   dropdownItem[i].addEventListener('click', (e) => {
     const dropdown = e.target.closest('.dropdown').querySelector('.dropdown-content');
@@ -155,8 +153,9 @@ const inputField = document.querySelectorAll('.ui-field input');
 
 for(let i = 0; i < inputField.length; i++) {
   inputField[i].addEventListener('blur', (e) => {
-    const span = e.target.parentNode.querySelector('.current');
+    const span = e.target.parentNode.querySelector('.ui-label');
     if(e.target.value !== '') {
+      console.log(span)
       span.classList.add('active')
     } else {
       span.classList.remove('active')

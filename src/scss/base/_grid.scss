@@ -16,6 +16,16 @@
   margin-left: -20px;
   margin-right: -20px;
 
+  &.mini {
+    margin-left: -13px;
+    margin-right: -13px;
+
+    & > div[class*="col"] {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+  }
+
   @media(max-width: 1024px) {
     margin-left: -15px;
     margin-right: -15px;
@@ -540,6 +550,10 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  .col-sm-offset {
+    margin-left: 33.33333%;
+  }
 }
 
 @media (min-width: 1024.99px) {
@@ -613,6 +627,10 @@
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .col-md-offset {
+    margin-left: 0;
   }
 }
 

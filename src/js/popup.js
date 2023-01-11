@@ -1,6 +1,6 @@
 $(document).on("click", ".mfp-link", function () {
     var a = $(this);
-    console.log(a.attr("data-href"))
+
     $.magnificPopup.open({
       items: { src: a.attr("data-href") },
       type: "ajax",

@@ -13,10 +13,10 @@
       <div class="ui-breadcrumbs-current">Оформление заказа</div>
     </div>
 
-    <div class="order-container">
-      <div class="ui-title">
+    <div class="page-wrapper order-container">
+      <h1 class="ui-title">
         Оформление заказа
-      </div>
+      </h1>
 
       <form action="#" class="order-form">
         <div class="row">
@@ -27,45 +27,45 @@
               </div>
 
               <div class="order-info-subtitle">
-                Если вы уже зарегистрированы, пожалуйста, <a href="#">авторизуйтесь.</a>
+                Если вы уже зарегистрированы, пожалуйста, <a class="mfp-link" href="javascript:void(0)" data-href="./popup/sign-in.html">авторизуйтесь.</a>
               </div>
 
-              <div class="row">
-                <div class="col-order-3 col-xs-6">
+              <div class="row mini">
+                <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="surname" id="surname" placeholder="Фамилия">
-                    <span class="current">Фамилия</span>
+                    <label class="ui-label">Фамилия</span>
                   </div>
                 </div>
-                <div class="col-order-3 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="name" id="name" placeholder="Имя">
-                    <span class="current">Имя</span>
+                    <label class="ui-label">Имя</span>
                   </div>
                 </div>
-                <div class="col-order-3 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="lastName" id="lastName" placeholder="Отчество">
-                    <span class="current">Отчество</span>
+                    <label class="ui-label">Отчество</span>
                   </div>
                 </div>
-                <div class="col-order-3 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="email" id="email" placeholder="Email">
-                    <span class="current">Email</span>
+                    <label class="ui-label">Email</span>
                   </div>
                 </div>
-                <div class="col-order-3 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="phone" id="phone" placeholder="Телефон">
-                    <span class="current">Телефон</span>
+                    <label class="ui-label">Телефон</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-order-8">
+              <div class="col-md-8">
                 <div class="order-info">
                   <div class="order-info-title">
                     Город доставки
@@ -73,7 +73,7 @@
 
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input" name="town" id="town" placeholder="Город">
-                    <span class="current">Город</span>
+                    <label class="ui-label">Город</span>
 
                   </div>
 
@@ -155,7 +155,7 @@
 
                   <div class="ui-field margin-0">
                     <input autocomplete="off" type="text" name="address" id="address" class="ui-input" placeholder="Адрес">
-                    <span class="current">Адрес</span>
+                    <label class="ui-label">Адрес</span>
                   </div>
                 </div>
 
@@ -212,15 +212,15 @@
               <div class="cart-items">
                 <div class="cart-item flex">
                   <div class="cart-item-info txt flex">
-                    <div class="cart-item-img">
+                    <a href="#" class="cart-item-img">
                       <img src="./images/cart-item-1.png" alt="alt">
-                    </div>
+                    </a>
 
                     <div class="cart-item-txt flex">
                       <div class="cart-item-name">
-                        <div class="cart-item-title">
+                        <a href="#" class="cart-item-title">
                           СКУББ Модуль для хранения с 6 отделениями
-                        </div>
+                        </a>
                       </div>
 
                     </div>
@@ -231,26 +231,23 @@
                       2 шт.
                     </div>
 
-                    <div class="cart-item-control making-order flex">
-                      <div class="cart-item-sum display">
-                        226 485,60 р.
-                      </div>
+                    <div class="cart-item-sum display">
+                      226 485,60 р.
                     </div>
                   </div>
                 </div>
                 <div class="cart-item flex">
                   <div class="cart-item-info txt flex">
-                    <div class="cart-item-img">
+                    <a href="#" class="cart-item-img">
                       <img src="./images/cart-item-2.png" alt="alt">
-                    </div>
+                    </a>
 
                     <div class="cart-item-txt flex">
                       <div class="cart-item-name">
-                        <div class="cart-item-title">
+                        <a href="#" class="cart-item-title">
                           Рундминта горшок цветочный
-                        </div>
+                        </a>
                       </div>
-
                     </div>
                   </div>
 
@@ -259,10 +256,8 @@
                       1 шт.
                     </div>
 
-                    <div class="cart-item-control making-order flex">
-                      <div class="cart-item-sum display">
-                        73 550,00 р.
-                      </div>
+                    <div class="cart-item-sum display">
+                      73 550,00 р.
                     </div>
                   </div>
                 </div>
@@ -271,19 +266,19 @@
               <div class="cart-txt">
                 <div class="cart-info padding margin-25">
                   <div class="cart-info-txt flex">
-                    <span>Сумма товаров</span>
-                    <span class="bold">226 485,60 р.</span>
+                    <span class="span-value">Сумма товаров</span>
+                    <span class="span-value bold">226 485,60 р.</span>
                   </div>
                   <div class="cart-info-txt flex">
-                    <span>Скидка</span>
-                    <span class="bold">288,75 р.</span>
+                    <span class="span-value">Скидка</span>
+                    <span class="span-value bold">288,75 р.</span>
                   </div>
                 </div>
 
                 <div class="cart-info padding margin-30">
                   <div class="cart-info-txt flex">
-                    <span>Доставка. <span class="grey">DPD до двери. 3-6 дней.</span></span>
-                    <span class="bold">720,60 р.</span>
+                    <span class="span-value">Доставка. <span class="grey">DPD до двери. 3-6 дней.</span></span>
+                    <span class="span-value bold">720,60 р.</span>
                   </div>
                 </div>
 

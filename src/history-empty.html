@@ -13,45 +13,45 @@
       <div class="ui-breadcrumbs-current">Личный кабинет</div>
     </div>
 
-    <div class="history-container">
-      <div class="ui-title">
+    <div class="page-wrapper">
+      <h1 class="ui-title">
         История заказов
-      </div>
+      </h1>
 
       <div class="row">
         <div class="col-md-3 col-sm-4">
           <div class="data-menu">
             <div class="data-title">Меню</div>
 
-            <a href="#">Личные данные</a>
-            <a href="#">Избранное</a>
-            <a href="#" class="active">История заказов</a>
-            <a href="#">Выйти</a>
+            <ul>
+              <li><a href="#" class="active">Личные данные</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">История заказов</a></li>
+              <li><a href="#">Выйти</a></li>
+            </ul>
           </div>
         </div>
 
         <div class="col-md-9 col-sm-8">
           <div class="history-table">
             <table>
-              <tr>
-                <th>№ Заказа</th>
-                <th class="width">Покупатель</th>
-                <th  class="right">Кол-во</th>
-                <th>Статус</th>
-                <th class="right">Итого</th>
-                <th>Дата</th>
-                <th></th>
-              </tr>
-              <tr>
-                <td class="border-none">У вас еще нет ни одного заказа...</td>
-                <td class="border-none width"></td>
-                <td class="border-none right"></td>
-                <td class="border-none"></td>
-                <td class="border-none right"></td>
-                <td class="border-none"></td>
-                <td class="border-none">
-                </td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>№ Заказа</th>
+                  <th class="width">Покупатель</th>
+                  <th  class="right">Кол-во</th>
+                  <th>Статус</th>
+                  <th class="right">Итого</th>
+                  <th>Дата</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td colspan="7" class="border-none">У вас еще нет ни одного заказа...</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>

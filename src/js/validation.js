@@ -38,10 +38,10 @@ $(".order-form").validate({
   },
 
   errorPlacement: function (error, element) {
-    console.log(error)
     if (element.hasClass('ui-radio')) {
-      element.closest('.ui-select').after(error);
+      element.closest('.ui-select').append(error);
     }
+
     if (element.hasClass('ui-input')) {
       element.closest('.ui-field').append(error);
     }

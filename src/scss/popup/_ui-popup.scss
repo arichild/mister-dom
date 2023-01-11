@@ -6,7 +6,7 @@
   margin: 0 auto;
 
   @media(max-width: 576px) {
-    padding: 50px 20px;
+    padding: 50px 15px;
   }
 
   &-title {
@@ -94,5 +94,12 @@
     top: 15px;
     right: 15px;
     opacity: 1;
+  }
+}
+
+.mfp-container {
+  @media(max-width: 900px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

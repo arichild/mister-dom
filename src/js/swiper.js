@@ -30,7 +30,7 @@ const swiperTab = new Swiper('.swiper.slider-new', {
       slidesPerView: 2,
       spaceBetween: 20
     },
-    300: {
+    0: {
       slidesPerView: 1,
       spaceBetween: 40
     },
