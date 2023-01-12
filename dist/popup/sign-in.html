@@ -1,0 +1,70 @@
+<div class="ui-popup sign-in">
+  <div class="ui-popup-title">
+    Войти в личный кабинет
+  </div>
+
+  <div class="ui-popup-subtitle">
+    Отслеживайте заказы и копить бонусы.
+  </div>
+
+  <div class="ui-popup-form">
+    <form action="#" class="ui-popup-validate">
+      <div class="ui-popup-field">
+        <input autocomplete="off" type="text" class="ui-input popup" id="email" name="email" placeholder="Электронная почта">
+      </div>
+
+      <div class="ui-popup-field">
+        <input autocomplete="off" type="text" class="ui-input popup" id="password" name="password" placeholder="Пароль">
+      </div>
+
+      <div class="ui-popup-control flex">
+        <div class="ui-checkbox">
+          <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" checked="">
+          <label for="customCheckbox" class="ui-checkbox-label">
+            <span class="default-txt">
+              Запомнить меня</a>
+            </span>
+          </label>
+        </div>
+
+        <a class="mfp-link" href="javascript:void(0)" data-href="./popup/password-1.html">Забыли пароль?</a>
+      </div>
+
+      <button class="ui-btn">Войти на сайт</button>
+    </form>
+
+    <div class="ui-popup-link">
+      <span>Нет аккаунта? <a class="mfp-link" href="javascript:void(0)" data-href="./popup/sign-up.html">Зарегистрируйтесь</a></span>
+    </div>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      $(".ui-popup-validate").validate({
+        errorElement: "span",
+
+        rules: {
+          email: {
+            required: true,
+            email: true,
+          },
+          password: {
+            required: true,
+            minlength: 8,
+          },
+        },
+
+        messages: {
+          email: {
+            required: "Пожалуйста, введите данные",
+            email: "Введите корректный email",
+          },
+          password: {
+            required: "Пожалуйста, введите данные",
+            minlength: "Минимальная длина - 8 символов",
+          },
+        }
+      });
+    });
+  </script>
+</div>

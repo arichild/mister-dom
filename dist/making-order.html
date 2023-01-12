@@ -1,0 +1,430 @@
+<!--#include file="inc-header.html"-->
+
+<div class="middle" id="middle">
+  <div class="container">
+    <div class="ui-breadcrumbs margin-72">
+      <a href="#" class="ui-breadcrumbs-link">
+        <img src="./images/icon/home.svg" alt="alt">
+
+        <span>На главную</span>
+      </a>
+      <div class="ui-breadcrumbs-dash"></div>
+      <div class="ui-breadcrumbs-current">Оформление заказа</div>
+    </div>
+
+    <div class="page-wrapper order-container">
+      <h1 class="ui-title">
+        Оформление заказа
+      </h1>
+
+      <form action="#" class="order-form">
+        <div class="row">
+          <div class="col-order-7">
+            <div class="order-info margin-42">
+              <div class="order-info-title margin-30">
+                Личные данные
+              </div>
+
+              <div class="order-info-subtitle">
+                Если вы уже зарегистрированы, пожалуйста, <a class="mfp-link" href="javascript:void(0)" data-href="./popup/sign-in.html">авторизуйтесь.</a>
+              </div>
+
+              <div class="row mini">
+                <div class="col-md-4 col-xs-6">
+                  <div class="ui-field">
+                    <input autocomplete="off" type="text" class="ui-input" name="surname" id="surname" placeholder="Фамилия">
+                    <label class="ui-label">Фамилия</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <div class="ui-field">
+                    <input autocomplete="off" type="text" class="ui-input" name="name" id="name" placeholder="Имя">
+                    <label class="ui-label">Имя</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <div class="ui-field">
+                    <input autocomplete="off" type="text" class="ui-input" name="lastName" id="lastName" placeholder="Отчество">
+                    <label class="ui-label">Отчество</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <div class="ui-field">
+                    <input autocomplete="off" type="text" class="ui-input" name="email" id="email" placeholder="Email">
+                    <label class="ui-label">Email</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <div class="ui-field">
+                    <input autocomplete="off" type="text" class="ui-input" name="phone" id="phone" placeholder="Телефон">
+                    <label class="ui-label">Телефон</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8">
+                <div class="order-info">
+                  <div class="order-info-title">
+                    Город доставки
+                  </div>
+
+                  <div class="ui-field">
+                    <input autocomplete="off" type="text" class="ui-input" name="town" id="town" placeholder="Город">
+                    <label class="ui-label">Город</span>
+
+                  </div>
+
+                  <div class="order-warn">
+                    <div class="order-warn-img">
+                      <img src="./images/icon/warn.svg" alt="alt">
+                    </div>
+
+                    <div class="order-warn-txt">
+                     <span>Город обязательно выбирайте из выпадающего списка</span>, чтобы список появился необходимо начать вводить название города в это поле.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-info">
+                  <div class="order-info-title">
+                    Способ оплаты
+                  </div>
+
+                  <div class="order-option margin-0">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12 col-xs-6">
+                        <div class="ui-select">
+                          <input autocomplete="off" type="radio" class="ui-radio" id="select1" name="select">
+                          <label for="select1">Банковской картой</label>
+
+                          <div class="ui-select-img">
+                            <img src="./images/icon/payment-method-1.svg" alt="alt">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-xs-6">
+                        <div class="ui-select">
+                          <input autocomplete="off" type="radio" class="ui-radio" id="select2" name="select">
+                          <label for="select2">Оплата при получении</label>
+
+                          <div class="ui-select-img">
+                            <img src="./images/icon/payment-method-2.svg" alt="alt">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-info">
+                  <div class="order-info-title">
+                    Способ доставки
+                  </div>
+
+                  <div class="order-option">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12 col-xs-6">
+                        <div class="ui-select">
+                          <input autocomplete="off" type="radio" class="ui-radio" id="select3" name="select1">
+                          <label for="select3" class="padding">
+                            До двери
+
+                            <span>10.02 р., срок 6 дн.</span>
+                          </label>
+
+                          <div class="ui-select-img">
+                            <img src="./images/icon/payment-method-1.svg" alt="alt">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-xs-6">
+                        <div class="ui-select">
+                          <input autocomplete="off" type="radio" class="ui-radio" id="select4" name="select1">
+                          <label for="select4">Пункты выдачи</label>
+
+                          <div class="ui-select-img">
+                            <img src="./images/icon/payment-method-2.svg" alt="alt">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ui-field margin-0">
+                    <input autocomplete="off" type="text" name="address" id="address" class="ui-input" placeholder="Адрес">
+                    <label class="ui-label">Адрес</span>
+                  </div>
+                </div>
+
+                <div class="order-info">
+                  <div class="order-info-title">
+                    Комментарий
+                  </div>
+
+                  <div class="ui-field margin-30">
+                    <textarea id="textbox" name="textbox" placeholder="Комментарий к заказу" class="ui-input height" rows="4"></textarea>
+                  </div>
+
+                  <div class="order-warn">
+                    <div class="order-warn-img">
+                      <img src="./images/icon/warn.svg" alt="alt">
+                    </div>
+
+                    <div class="order-warn-txt">
+                     <span class="black">Внимание! Перед тем как оформить заказ:</span>
+
+                     <ul>
+                      <li>
+                        — Убедитесь, что в данных покупателя указан человек, который будет получать заказ;
+                      </li>
+                      <li>
+                        — Город обязательно выбирайте из выпадающего списка в поле "*Город" (чтобы список появился необходимо начать вводить его);
+                      </li>
+                      <li>
+                        — Проверьте правильность заполнения адреса;
+                      </li>
+                      <li>
+                        — Заказ нельзя отредактировать после его оформления (только отменить и сделать заново).
+                      </li>
+                     </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-order-5">
+            <div class="cart-total">
+              <div class="cart-header flex">
+                <div class="cart-title">
+                  Ваша корзина
+                </div>
+
+                <div class="cart-link">
+                  <a href="#">Изменить</a>
+                </div>
+              </div>
+
+              <div class="cart-items">
+                <div class="cart-item flex">
+                  <div class="cart-item-info txt flex">
+                    <a href="#" class="cart-item-img">
+                      <img src="./images/cart-item-1.png" alt="alt">
+                    </a>
+
+                    <div class="cart-item-txt flex">
+                      <div class="cart-item-name">
+                        <a href="#" class="cart-item-title">
+                          СКУББ Модуль для хранения с 6 отделениями
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="cart-item-info price flex">
+                    <div class="cart-item-count">
+                      2 шт.
+                    </div>
+
+                    <div class="cart-item-sum display">
+                      226 485,60 р.
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-item flex">
+                  <div class="cart-item-info txt flex">
+                    <a href="#" class="cart-item-img">
+                      <img src="./images/cart-item-2.png" alt="alt">
+                    </a>
+
+                    <div class="cart-item-txt flex">
+                      <div class="cart-item-name">
+                        <a href="#" class="cart-item-title">
+                          Рундминта горшок цветочный
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item-info price flex">
+                    <div class="cart-item-count">
+                      1 шт.
+                    </div>
+
+                    <div class="cart-item-sum display">
+                      73 550,00 р.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart-txt">
+                <div class="cart-info padding margin-25">
+                  <div class="cart-info-txt flex">
+                    <span class="span-value">Сумма товаров</span>
+                    <span class="span-value bold">226 485,60 р.</span>
+                  </div>
+                  <div class="cart-info-txt flex">
+                    <span class="span-value">Скидка</span>
+                    <span class="span-value bold">288,75 р.</span>
+                  </div>
+                </div>
+
+                <div class="cart-info padding margin-30">
+                  <div class="cart-info-txt flex">
+                    <span class="span-value">Доставка. <span class="grey">DPD до двери. 3-6 дней.</span></span>
+                    <span class="span-value bold">720,60 р.</span>
+                  </div>
+                </div>
+
+                <div class="cart-price margin-7 flex">
+                  <div class="cart-price-txt">
+                    <span>Списать бонусы (у вас <b>523</b> балла)</span>
+
+                    <span class="ui-tooltip">
+                      <span class="ui-tooltip-icon">!</span>
+                      <div class="ui-tooltip-answer">
+                        Чтобы накапливать баллы зарегистрируйтесь и вступайте в клуб “Mymisterdom”.
+                      </div>
+                    </span>
+                  </div>
+
+                  <input autocomplete="off" type="text" class="ui-input">
+
+                  <div class="cart-price-discount">
+                    <div class="cart-price-minus"> -246 р.</div>
+
+                    <div class="cart-price-del">
+                      <svg class="sprite">
+                        <use xlink:href="./images/svg/symbols.svg#close-dis"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart-price margin-7 flex">
+                  <div class="cart-price-txt">
+                    <span>Купон</span>
+                  </div>
+
+                  <input autocomplete="off" type="text" class="ui-input">
+
+                  <div class="cart-price-discount">
+                    <div class="cart-price-minus"> -431 р.</div>
+
+                    <div class="cart-price-del">
+                      <svg class="sprite">
+                        <use xlink:href="./images/svg/symbols.svg#close-dis"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart-price margin-30 flex">
+                  <div class="cart-price-txt">
+                    <span>Подарочный сертификат</span>
+                  </div>
+
+                  <input autocomplete="off" type="text" class="ui-input">
+
+                  <div class="cart-price-discount">
+                    <div class="cart-price-minus"> -10 000 р.</div>
+
+                    <div class="cart-price-del">
+                      <svg class="sprite">
+                        <use xlink:href="./images/svg/symbols.svg#close-dis"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart-final-price">
+                <span>Итого: <span class="big">226 485,60 р.</span></span>
+              </div>
+
+              <div class="cart-btn">
+                <button class="ui-btn">Оформить заказ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="services">
+      <div class="row">
+        <div class="col-md-3 col-xs-6">
+          <div class="services-card light-blue">
+            <div class="services-txt">
+              <div class="services-title">
+                Удобная доставка
+              </div>
+
+              <div class="services-subtitle">
+                В Беларусь, Россию и Казахстан до двери и в пункты выдачи!
+              </div>
+            </div>
+
+            <div class="services-img">
+              <img src="./images/services-1.png" alt="alt">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="services-card light-orange">
+            <div class="services-txt">
+              <div class="services-title">
+                Товары из IKEA
+              </div>
+
+              <div class="services-subtitle blue">
+                Только импортные товары и качество, которое сразу видно
+              </div>
+            </div>
+
+              <div class="services-img">
+              <img src="./images/services-2.png" alt="alt">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="services-card blue">
+            <div class="services-txt">
+              <div class="services-title">
+                Отслеживание наличия
+              </div>
+
+              <div class="services-subtitle">
+                Отмечай товары и получай по SMS автоматические уведомления
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="services-card light-yellow">
+            <div class="services-txt">
+              <div class="services-title">
+                Бонусная программа
+              </div>
+
+              <div class="services-subtitle">
+                Совершай покупки и накапливай несгораемые скидки до 10%
+              </div>
+            </div>
+
+              <div class="services-img">
+              <img src="./images/services-3.png" alt="alt">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="inc-footer.html"-->
