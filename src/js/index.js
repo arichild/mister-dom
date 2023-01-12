@@ -152,10 +152,18 @@ for(let i = 0; i < dropdownItem.length; i++) {
 const inputField = document.querySelectorAll('.ui-field input');
 
 for(let i = 0; i < inputField.length; i++) {
+  inputField[i].addEventListener('focus', (e) => {
+    const span = e.target.parentNode.querySelector('.ui-label');
+
+    if(e.target.value === '') {
+      span.classList.add('active')
+    }
+  })
+
   inputField[i].addEventListener('blur', (e) => {
     const span = e.target.parentNode.querySelector('.ui-label');
+
     if(e.target.value !== '') {
-      console.log(span)
       span.classList.add('active')
     } else {
       span.classList.remove('active')

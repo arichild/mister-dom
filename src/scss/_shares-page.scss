@@ -13,11 +13,9 @@
     }
   }
 
-  &-caption {
-    margin-bottom: 30px;
-  }
-
   &-subtitle {
+    margin-bottom: 30px;
+
     &.flex {
       align-items: center;
     }
@@ -38,10 +36,6 @@
   &-info {
     &-card {
       margin-bottom: 70px;
-
-      // @media(max-width: 1024px) {
-      //   margin-bottom: 30px;
-      // }
 
       @media(max-width: 576px) {
         margin-bottom: 40px;

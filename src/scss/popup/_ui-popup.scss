@@ -27,7 +27,6 @@
 
     &.flex {
       justify-content: space-between;
-      // align-items: baseline;
 
       @media(max-width: 400px) {
         flex-direction: column;
@@ -72,10 +71,6 @@
     }
   }
 
-  // &-btn {
-  //   flex-wrap: wrap;
-  // }
-
   .ui-btn {
     max-width: 336px;
     margin-bottom: 35px;
@@ -99,7 +94,7 @@
 
 .mfp-container {
   @media(max-width: 900px) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }

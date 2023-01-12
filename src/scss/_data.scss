@@ -42,11 +42,10 @@
   }
 
   &-menu {
-    padding: 36px 10px 82px 60px;
+    padding: 36px 10px 62px 60px;
     background: #F9FCFF;
     box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
     color: #172542;
-    height: 370px;
 
     @media(max-width: 1366px) {
       padding: 40px;
@@ -75,7 +74,7 @@
     }
 
     li {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
 
       &:last-child {
         margin-bottom: 0;
@@ -90,7 +89,7 @@
   &-title {
     font-family: 'FuturaMediumC';
     font-size: 36px;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
     letter-spacing: 0.05em;
 
     @media(max-width: 1024px) {

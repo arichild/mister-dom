@@ -117,7 +117,6 @@
 
       @media(max-width: 768px) {
         flex-wrap: wrap;
-        // justify-content: center;
         flex-direction: row;
       }
     }
@@ -147,10 +146,6 @@
 
     &-fields {
       width: 100%;
-
-      // @media(max-width:1024px) {
-      //   width: auto;
-      // }
     }
 
     &-title {
@@ -235,6 +230,8 @@
         max-width: 320px;
         margin-right: 12px;
         border-color: #172542;
+        border-radius: 32px;
+        padding-left: 50px;
 
         @media(max-width: 1366px) {
           max-width: 50%;

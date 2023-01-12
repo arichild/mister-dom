@@ -13,17 +13,19 @@
       padding-bottom: 20px;
       margin-bottom: 20px;
     }
-
-    // .row {
-    //   @media(max-width: 1024px) {
-    //     flex-direction: row-reverse;
-    //   }
-    // }
   }
 
   &-content {
     @media(max-width: 1024px) {
       margin-bottom: 25px;
+    }
+
+    &-links {
+      margin-bottom: 50px;
+
+      @media(max-width: 1024px) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -104,17 +106,16 @@
     }
   }
 
+  &-call {
+    display: block;
+  }
+
   &-contact {
     position: relative;
-    // margin-bottom: 10px;
     letter-spacing: 0.05em;
 
-    &:last-of-type {
-      margin-bottom: 50px;
-
-      @media(max-width: 1024px) {
-        margin-bottom: 25px;
-      }
+    a {
+      display: block;
     }
 
     &-img {
@@ -207,11 +208,7 @@
     }
   }
 
-  a {
-    display: block;
-
-    // &:hover {
-    //   color: #a8bed6;
-    // }
-  }
+  // a {
+  //   display: block;
+  // }
 }
