@@ -13,22 +13,28 @@ if(cartList) {
   })
 }
 
-// search menu onclick for header input and clear button
-const wrapper = document.querySelector('.wrapper')
+const search = document.getElementById('search');
 
-if(wrapper) {
-  const search = document.getElementById('search');
+if(search) {
   const btnClear = document.querySelector('.clear-input');
   const searchMenu = document.querySelector('.header-search-result');
+  const numberBlock = document.querySelector('.header-control-number');
+  const infoBlock = document.querySelector('.header-control-item');
+  const headerControlBlock = document.querySelector('.header-control-top');
+  const searchBlock = document.querySelector('.header-control-search');
 
-  wrapper.addEventListener('click', (e) => {
-    const parentSearchMenu = e.target.closest('.header-search-result.active');
-    const numberBlock = document.querySelector('.header-control-number');
-    const infoBlock = document.querySelector('.header-control-item');
-    const headerControlBlock = document.querySelector('.header-control-top');
-    const searchBlock = document.querySelector('.header-control-search');
+  search.addEventListener('focus', () => {
+    searchMenu.classList.add('active')
+    btnClear.classList.add('active')
 
-    if(parentSearchMenu === null && e.target !== search && e.target !== btnClear) {
+    numberBlock.classList.add('hidden');
+    infoBlock.classList.add('hidden-search');
+    headerControlBlock.classList.add('current');
+    searchBlock.classList.add('current');
+  })
+
+  $(document).on('mouseup',function(e) {
+    if ($('.form-header').has(e.target).length === 0) {
       searchMenu.classList.remove('active');
       btnClear.classList.remove('active');
 
@@ -36,23 +42,13 @@ if(wrapper) {
       infoBlock.classList.remove('hidden-search');
       headerControlBlock.classList.remove('current');
       searchBlock.classList.remove('current');
-    } else {
-      searchMenu.classList.add('active');
-      btnClear.classList.add('active');
-
-      numberBlock.classList.add('hidden');
-      infoBlock.classList.add('hidden-search');
-      headerControlBlock.classList.add('current');
-      searchBlock.classList.add('current');
     }
   });
 
   btnClear.addEventListener('click', (e) => {
-    const input = document.querySelector('.ui-input');
-
     e.preventDefault();
 
-    input.value = '';
+    search.value = '';
   });
 
   (function() {
