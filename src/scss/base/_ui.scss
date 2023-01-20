@@ -492,7 +492,7 @@
       justify-content: center;
       flex-direction: column;
       user-select: none;
-      padding: 26px 45px 26px 62px;
+      padding: 35px 45px 35px 62px;
       border: 1px solid #D4DFEA;
       border-radius: 8px;
       width: 100%;
@@ -678,12 +678,19 @@ span.error {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    border: 1px solid #728EAE;
-    background: #728EAE;
-    color: #fff !important;
-    font-size: 10px;
-    text-align: center;
-    line-height: 20px;
+    background: #fff;
+
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: #728EAE;
+    }
+
+    &:hover {
+      svg {
+        fill: #829cb9;
+      }
+    }
   }
 
   &-answer {

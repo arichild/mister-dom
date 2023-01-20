@@ -21,6 +21,7 @@ $(".order-form").validate({
     phone: {
       required: true,
       minlength: 19,
+      phoneNumber: true
     },
     town: {
       required: true,
@@ -87,11 +88,22 @@ jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^[a-z]+$/i.test(value);
 }, "Letters only please");
 
+jQuery.validator.addMethod("phoneNumber", function(value, element) {
+  if(!value.match('_')){
+    return element.value === value
+  }
+
+}, "Введите корректный номер");
+
 let phone = document.getElementById('phone')
 
 if(phone) {
-  let phoneMask = IMask(
-    phone, {
-      mask: '+{375} (00) 000 00 00'
-  });
+  phone.addEventListener('focus', function(){
+    mask = IMask(this, {
+        mask: '+{375} (00) 000-00-00',
+        overwrite: true,
+        lazy: false,
+        placeholderChar: '_',
+    });
+  })
 }

@@ -197,6 +197,10 @@
   &-warn {
     position: relative;
 
+    &.mb-40 {
+      margin-bottom: 40px;
+    }
+
     &-img {
       position: absolute;
       left: 0;

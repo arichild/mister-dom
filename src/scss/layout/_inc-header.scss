@@ -526,7 +526,7 @@
 
           &:hover {
             svg {
-              fill: #728EAE;
+              fill: #c10202;
             }
           }
         }
@@ -771,6 +771,10 @@
   text-decoration-style: dotted;
   background-color: transparent;
   cursor: pointer;
+  font-size: 16px;
+  // border-bottom: 1px red dotted;
+  // padding: 0;
+  // text-decoration-skip-ink: none;
 }
 
 .dropdown {

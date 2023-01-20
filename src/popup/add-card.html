@@ -1,0 +1,83 @@
+<div class="ui-popup sign-up">
+  <div class="ui-popup-title">
+    Привязать карту лояльности
+  </div>
+
+  <div class="ui-popup-subtitle">
+    Вы сможете накапливать и тратить бонусные баллы
+  </div>
+
+  <div class="ui-popup-form">
+    <form action="#" class="ui-popup-validate">
+      <div class="ui-popup-field">
+        <input autocomplete="off" type="text" class="ui-input popup" name="phone" id="phone" placeholder="Номер телефона">
+      </div>
+
+      <div class="ui-popup-field">
+        <input autocomplete="off" type="text" class="ui-input popup" name="cardName" id="cardName" placeholder="Номер карты лояльности">
+      </div>
+
+      <div class="order-warn mb-40">
+        <div class="order-warn-img">
+          <img src="./images/icon/warn.svg" alt="alt">
+        </div>
+
+        <div class="order-warn-txt">
+          <span>Город обязательно выбирайте из выпадающего списка</span>, чтобы список появился необходимо начать вводить название города в это поле.
+        </div>
+      </div>
+
+      <button class="ui-btn mb-0">Привязать карту</button>
+    </form>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      console.log($(".ui-popup-form"))
+      $(".ui-popup-validate").validate({
+        errorElement: "span",
+
+        rules: {
+          phone: {
+            required: true,
+            minlength: 19,
+            phoneNumber: true
+          },
+          cardName: {
+            required: true,
+          },
+        },
+
+        messages: {
+          phone: {
+            required: "Пожалуйста, введите данные",
+            minlength: "Введите полный номер",
+          },
+          cardName: {
+            required: "Пожалуйста, введите данные",
+          },
+        }
+      });
+
+      jQuery.validator.addMethod("phoneNumber", function(value, element) {
+        if(!value.match('_')){
+          return element.value === value
+        }
+
+      }, "Введите корректный номер");
+
+      let phone = document.getElementById('phone')
+
+      if(phone) {
+        phone.addEventListener('focus', function(){
+          mask = IMask(this, {
+              mask: '+{375} (00) 000-00-00',
+              overwrite: true,
+              lazy: false,
+              placeholderChar: '_',
+          });
+        })
+      }
+    });
+  </script>
+</div>
