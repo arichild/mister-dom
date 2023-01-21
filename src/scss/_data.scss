@@ -25,6 +25,13 @@
     }
   }
 
+  &-btn {
+    a {
+      display: block;
+      line-height: 80px;
+    }
+  }
+
   &-form {
     @media(max-width: 1024px) {
       margin-bottom: 120px;
