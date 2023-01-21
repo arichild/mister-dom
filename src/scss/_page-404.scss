@@ -323,8 +323,6 @@
       }
     }
 
-
-
     &.active {
       display: block;
     }
@@ -336,6 +334,14 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+
+    &.pb-95 {
+      padding-bottom: 95px;
+
+      @media(max-width: 576px) {
+        padding-bottom: 55px;
+      }
+    }
 
     @media(max-width: 480px) {
       margin: 0 auto;

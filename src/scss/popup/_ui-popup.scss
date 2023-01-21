@@ -5,6 +5,10 @@
   background: #fff;
   margin: 0 auto;
 
+  &.center {
+    text-align: center;
+  }
+
   @media(max-width: 576px) {
     padding: 50px 15px;
   }
@@ -20,6 +24,26 @@
     font-size: 20px;
     color: #172542;
     margin-bottom: 30px;
+  }
+
+  &-img {
+    margin-bottom: 35px;
+  }
+
+  &-link {
+    a {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &-txt {
+    font-size: 20px;
+    color: #172542;
+    // margin-bottom: 38px;
+    max-width: 310px;
+    width: 100%;
+    margin: 0 auto 38px;
   }
 
   &-control {
