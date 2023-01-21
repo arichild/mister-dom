@@ -786,3 +786,208 @@ span.error {
 .swiper-pagination-bullet-active {
   background: #172542 !important;
 }
+
+.ui-pgn {
+  margin-bottom: 45px;
+
+  .ui-btn-block {
+    margin-bottom: 30px;
+  }
+
+  &-btns {
+    font-size: 0;
+
+    svg.sprite {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      transition: fill .3s,stroke .3s;
+    }
+  }
+
+  &-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0px 3px 5px;
+
+    &-icon {
+      fill: #d3d3d3;
+    }
+    &:hover {
+      .ui-pgn-arrow-icon {
+        fill: #2a4455;
+      }
+    }
+  }
+
+  &-btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'FuturaMediumC';
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    margin: 0px 0 5px;
+    font-size: 24px;
+
+    &:hover {
+      color: .8;
+    }
+
+    &.current {
+      border-radius: 50%;
+      background: #FAD89D;
+    }
+  }
+
+  &-dots {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    font-weight: 600;
+    margin: 0px 3px 5px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    &-arrow {
+      margin-left: 0;
+      margin-right: 0;
+      width: 24px;
+      padding: 10px 4px;
+    }
+    &-btn,
+    &-dots {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+  }
+  @media (max-width: 420px) {
+    &-arrow {
+      width: 24px;
+      height: 32px;
+      padding: 5px 4px;
+    }
+    &-btn,
+    &-dots {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+  @media (max-width: 360px) {
+    &-arrow {
+      width: 32px;
+      height: 32px;
+      padding: 5px 4px;
+    }
+    &-btn,
+    &-dots {
+      display: none;
+
+      &.current {
+        display: inline-block;
+      }
+    }
+    .ui-btn-block {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.jq-selectbox__select {
+  background: #fff;
+  box-shadow: none;
+  text-shadow: none;
+  height: 56px;
+  line-height: 56px;
+  border: 1px solid #D4DFEA;
+  border-radius: 6px;
+  padding-left: 24px;
+
+  &:hover {
+    background: #fdfdfe;
+  }
+}
+
+.jq-selectbox__select-text {
+  font-family: 'FuturaBookC';
+  font-size: 20px;
+  color: #172542;
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  left: 0;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform .15s;
+  transition: -webkit-transform .15s;
+  -o-transition: transform .15s;
+  transition: transform .15s;
+  transition: transform .15s,-webkit-transform .15s;
+  width: 24px;
+  height: 24px;
+  background: url(../../images/icon/arrow-select.svg) center no-repeat;
+  background-size: contain;
+  border: none;
+}
+
+.jq-selectbox {
+  width: 100%;
+}
+
+.jq-selectbox__select-text {
+  width: 100% !important;
+}
+
+.jq-selectbox__dropdown {
+    top: 36px !important;
+    margin: 0;
+    border-radius: 0;
+    z-index: -1;
+    padding-top: 26px;
+    box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
+    padding-bottom: 14px;
+}
+
+.jq-selectbox li.selected {
+  background: transparent;
+  color: #172542;
+}
+
+.jq-selectbox li {
+  font-family: 'FuturaBookC';
+  font-size: 20px;
+  color: #172542;
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+}
+
+.jq-selectbox li:hover {
+  background: #fff;
+  color: #364e80;
+}
+
+.jq-selectbox__select:hover {
+
+}
