@@ -797,6 +797,10 @@ span.error {
   &-btns {
     font-size: 0;
 
+    @media(max-width: 1024px) {
+      text-align: center;
+    }
+
     svg.sprite {
       display: block;
       max-width: 100%;
@@ -916,6 +920,11 @@ span.error {
   border-radius: 6px;
   padding-left: 24px;
 
+  @media(max-width: 1024px) {
+    height: 46px;
+    line-height: 46px;
+  }
+
   &:hover {
     background: #fdfdfe;
   }
@@ -925,6 +934,10 @@ span.error {
   font-family: 'FuturaBookC';
   font-size: 20px;
   color: #172542;
+
+  @media(max-width: 1024px) {
+    font-size: 16px;
+  }
 }
 
 .jq-selectbox__trigger {

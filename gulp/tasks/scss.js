@@ -8,29 +8,19 @@ import map from 'gulp-sourcemaps';
 
 const sass = gulpSass(dartSass);
 
-// export const scss = () => {
-// 	return app.gulp.src(app.path.src.scss)
-// 		.pipe(map.init())
-// 		.pipe(sass({
-// 			outputStyle: 'expanded'
-// 		}).on('error', sass.logError))
-// 		.pipe(concat('style.css'))
-// 		.pipe(app.gulp.dest(app.path.build.css))
-// }
-
-
 export const scss = () => {
 	return app.gulp.src(app.path.src.scss)
 		.pipe(map.init())
 		.pipe(sass({
-			outputStyle: 'compressed'
+			// compressed
+			outputStyle: 'expanded'
 		}).on('error', sass.logError))
-		.pipe(prefixer({
-			browsers: ['last 2 versions']
-		}))
-		.pipe(clean({
-			level: 2
-		}))
+		// .pipe(prefixer({
+		// 	browsers: ['last 2 versions']
+		// }))
+		// .pipe(clean({
+		// 	level: 2
+		// }))
 		.pipe(concat('style.css'))
 		.pipe(map.write('../sourcemaps/'))
 		.pipe(app.gulp.dest(app.path.build.css))

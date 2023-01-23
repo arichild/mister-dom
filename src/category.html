@@ -19,147 +19,64 @@
 
       <div class="row">
         <div class="col-md-3">
-          <div class="category-filter">
-            <div class="category-filter-title">
-              Фильтр товаров
+          <div class="category-filter-menu">
+            <div class="category-filter-bg"></div>
+            <div class="category-filter">
+              <div class="category-filter-title">
+                Фильтр товаров
+
+                <div class="category-filter-close">
+
+                </div>
+              </div>
+
+              <form action="#">
+                <div class="category-filter-accordion">
+                  <button class="category-filter-btn">Цена товара</button>
+                  <div class="category-filter-settings active">
+                    <div class="row">
+                      <div class="col-ss-6">
+                        <input type="text" class="ui-input">
+                      </div>
+                      <div class="col-ss-6">
+                        <input type="text" class="ui-input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="category-filter-accordion">
+                  <button class="category-filter-btn">Состояние на складе</button>
+                  <div class="category-filter-settings active">
+                    <div class="ui-checkbox">
+                      <input type="checkbox" id="customCheckbox1" class="ui-checkbox-input">
+                      <label for="customCheckbox1" class="ui-checkbox-label">
+                        <span class="default-txt">
+                          В наличии
+                        </span>
+                      </label>
+                    </div>
+                    <div class="ui-checkbox">
+                      <input type="checkbox" id="customCheckbox2" class="ui-checkbox-input">
+                      <label for="customCheckbox2" class="ui-checkbox-label">
+                        <span class="default-txt">
+                          Скоро заканчивается
+                        </span>
+                      </label>
+                    </div>
+                    <div class="ui-checkbox">
+                      <input type="checkbox" id="customCheckbox3" class="ui-checkbox-input">
+                      <label for="customCheckbox3" class="ui-checkbox-label">
+                        <span class="default-txt">
+                          Нет в наличии
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-
-            <form action="#">
-              <div class="category-filter-accordion">
-                <button class="category-filter-btn">Цена товара</button>
-                <div class="category-filter-settings">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <input type="text" class="ui-input">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" class="ui-input">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="category-filter-accordion">
-                <button class="category-filter-btn">Состояние на складе</button>
-                <div class="category-filter-settings">
-                  <div class="ui-checkbox">
-                    <input type="checkbox" id="customCheckbox1" class="ui-checkbox-input">
-                    <label for="customCheckbox1" class="ui-checkbox-label">
-                      <span class="default-txt">
-                        В наличии
-                      </span>
-                    </label>
-                  </div>
-                  <div class="ui-checkbox">
-                    <input type="checkbox" id="customCheckbox2" class="ui-checkbox-input">
-                    <label for="customCheckbox2" class="ui-checkbox-label">
-                      <span class="default-txt">
-                        Скоро заканчивается
-                      </span>
-                    </label>
-                  </div>
-                  <div class="ui-checkbox">
-                    <input type="checkbox" id="customCheckbox3" class="ui-checkbox-input">
-                    <label for="customCheckbox3" class="ui-checkbox-label">
-                      <span class="default-txt">
-                        Нет в наличии
-                      </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </form>
           </div>
-
-          <!-- <div id="filter-column">
-            <div class="box" id="oct-ismobile">
-            <div class="box-heading"><div id="filter-close"><i class="fa fa-times"></i></div>Фильтр товаров</div>
-            <div class="box-content filtered">
-          <input type="hidden" name="temp_limit" value="0">
-              <div id="oct-selected-values"></div>
-              <form method="post" enctype="multipart/form-data" id="oct-product-filter-data"><div class="inner-box expanded" data-sort="1" data-type="price">
-              <div class="item-title">
-                <a class="list-group-item item-name"><span class="name">Цена (без налога)</span><span class="link"><i class="fa fa-minus"></i></span></a>
-              </div>
-              <div class="list-group-item item-content price-item">
-                <div class="row">
-                  <div class="col-xs-6"><input type="text" name="low_price" value="8" class="form-control oct-inp-pr-filter"></div>
-                  <div class="col-xs-6"><input type="text" name="high_price" value="14" class="form-control oct-inp-pr-filter"></div>
-                </div>
-                <div id="oct-price-slider" class="noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-origin" style="left: 27.7778%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="55.6" aria-valuenow="27.8" aria-valuetext="8" style="z-index: 5;"></div></div><div class="noUi-connect" style="left: 27.7778%; right: 38.8889%;"></div><div class="noUi-origin" style="left: 61.1111%;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="33.3" aria-valuemax="100.0" aria-valuenow="61.1" aria-valuetext="14" style="z-index: 4;"></div></div></div></div>
-                        <div class="checkbox">
-              <input id="special-only" type="checkbox" name="special_only" value="1" disabled="">
-              <label for="special-only">Товары со скидкой</label>
-                                  <span class="label label-default oct-filter-total-label">0</span>
-                                </div>
-                        </div>
-            </div><div class="inner-box expanded" data-sort="2" data-type="tag">
-              <div class="item-title">
-                <a class="list-group-item item-name"><span class="name">Тег</span><span class="link"><i class="fa fa-minus"></i></span></a>
-              </div>
-              <div class="list-group-item item-content">
-                      <div>
-            <input type="text" name="tag" value="" class="form-control" placeholder="Введите слово для поиска">
-            </div>
-                          <small class="oct-filter-faq">Введите два или более слов для более точного результата</small>
-              </div>
-            </div><div class="inner-box expanded" data-sort="8" data-type="stock">
-                <div class="item-title">
-                  <a class="list-group-item item-name"><span class="name">Состояние на складе</span><span class="link"><i class="fa fa-minus"></i></span></a>
-                </div>
-                <div class="list-group-item item-content">
-                                          <div class="checkbox">
-                  <input type="checkbox" id="stock-key-in_stock" name="stock[]" value="in_stock">
-                  <label for="stock-key-in_stock">В наличии</label>
-                                          <span class="label label-primary oct-filter-total-label">3</span>
-                                        </div>
-                              <div class="checkbox">
-                  <input type="checkbox" id="stock-key-out_of_stock" name="stock[]" value="out_of_stock" disabled="">
-                  <label for="stock-key-out_of_stock">Нет в наличии</label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                              <div class="checkbox">
-                  <input type="checkbox" id="stock-key-ending_stock" name="stock[]" value="ending_stock" disabled="">
-                  <label for="stock-key-ending_stock">Скоро заканчивается</label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                                          </div>
-              </div><div class="inner-box expanded" data-sort="9" data-type="review">
-                <div class="item-title">
-                  <a class="list-group-item item-name"><span class="name">Рейтинг</span><span class="link"><i class="fa fa-minus"></i></span></a>
-                </div>
-                <div class="list-group-item item-content">
-                                          <div class="checkbox">
-                  <input type="checkbox" id="review-key-0" name="rating[]" value="1" disabled="">
-                  <label for="review-key-0"><img src="image/octemplates/oct_product_filter/star_1.png" class="oct-rating-stars" alt="0"></label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                              <div class="checkbox">
-                  <input type="checkbox" id="review-key-1" name="rating[]" value="2" disabled="">
-                  <label for="review-key-1"><img src="image/octemplates/oct_product_filter/star_2.png" class="oct-rating-stars" alt="1"></label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                              <div class="checkbox">
-                  <input type="checkbox" id="review-key-2" name="rating[]" value="3" disabled="">
-                  <label for="review-key-2"><img src="image/octemplates/oct_product_filter/star_3.png" class="oct-rating-stars" alt="2"></label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                              <div class="checkbox">
-                  <input type="checkbox" id="review-key-3" name="rating[]" value="4" disabled="">
-                  <label for="review-key-3"><img src="image/octemplates/oct_product_filter/star_4.png" class="oct-rating-stars" alt="3"></label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                              <div class="checkbox">
-                  <input type="checkbox" id="review-key-4" name="rating[]" value="5" disabled="">
-                  <label for="review-key-4"><img src="image/octemplates/oct_product_filter/star_5.png" class="oct-rating-stars" alt="4"></label>
-                                          <span class="label label-default oct-filter-total-label">0</span>
-                                        </div>
-                                          </div>
-              </div></form>
-            </div>
-            </div>
-          </div> -->
-
           <div class="category-subscribe">
             <div class="category-subscribe-caption">
               Подписка <br> на рассылку
@@ -173,12 +90,19 @@
 
             <div class="category-subscribe-form">
               <form action="#">
-                <div class="category-subscribe-input">
-                  <input type="text" class="ui-input" placeholder="example@site.by">
-                  <img src="./images/icon/email-2.svg" alt="alt">
+                <div class="row">
+                  <div class="col-md-12 col-xs-6">
+                    <div class="category-subscribe-input">
+                      <input type="text" class="ui-input" placeholder="example@site.by">
+                      <img src="./images/icon/email-2.svg" alt="alt">
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 col-xs-6">
+                    <button class="ui-btn dark-blue">Подписаться</button>
+                  </div>
                 </div>
 
-                <button class="ui-btn dark-blue">Подписаться</button>
 
                 <div class="category-subscribe-warn">
                   *Нажимая на “Подписаться” вы даете согласие на обработку ваших персональных данных
@@ -191,7 +115,15 @@
         <div class="col-md-9">
           <div class="category-content">
             <div class="category-settings flex">
+
               <div class="category-control flex">
+                <div class="category-btn-menu">
+                  <svg class="sprite">
+                    <use xlink:href="./images/svg/symbols.svg#filter-btn"></use>
+                  </svg>
+                  Фильтры
+                </div>
+
                 <div class="category-select-sorting">
                   <select>
                     <option>Название, порядок (А - Я)</option>
@@ -210,12 +142,12 @@
               </div>
 
               <div class="category-style">
-                <a href="#" class="category-style-toggler">
+                <a href="javascript:void(0)" class="category-style-toggler">
                   <svg class="sprite">
                     <use xlink:href="./images/svg/symbols.svg#style-tile"></use>
                   </svg>
                 </a>
-                <a href="#" class="category-style-toggler active">
+                <a href="javascript:void(0)" class="category-style-toggler active">
                   <svg class="sprite">
                     <use xlink:href="./images/svg/symbols.svg#style-list"></use>
                   </svg>
