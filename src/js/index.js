@@ -324,11 +324,11 @@ $( document ).ready(function() {
   $('select').styler();
 
   // accrodion for category.html
-  const accordion = document.getElementsByClassName("category-filter-accordion");
+  const accordion = document.getElementsByClassName("category-filter-btn");
 
   if(accordion) {
     for (let i = 0; i < accordion.length; i++) {
-      accordion[i].addEventListener("click", function() {
+      accordion[i].addEventListener("click", function(e) {
         let panel = this.nextElementSibling;
 
         this.classList.toggle("active");
@@ -338,6 +338,8 @@ $( document ).ready(function() {
         } else {
           panel.style.display = "block";
         }
+
+        e.preventDefault()
       });
     }
   }
