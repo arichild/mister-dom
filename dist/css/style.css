@@ -1825,7 +1825,7 @@ span.error {
   z-index: -1;
   padding-top: 26px;
   box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
-  min-width: 120px;
+  min-width: 95px;
   width: 100% !important;
 }
 
