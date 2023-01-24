@@ -21,62 +21,153 @@
         <div class="col-md-3">
           <div class="category-filter-menu">
             <div class="category-filter-bg"></div>
-            <div class="category-filter">
-              <div class="category-filter-title">
+
+            <div class="box" id="oct-ismobile">
+              <div class="box-heading">
                 Фильтр товаров
 
-                <div class="category-filter-close">
-
-                </div>
+                <div class="category-filter-close"></div>
               </div>
-
-              <form action="#">
-                <div class="category-filter-accordion">
-                  <button class="category-filter-btn">Цена товара</button>
-                  <div class="category-filter-settings active">
-                    <div class="row">
-                      <div class="col-ss-6">
-                        <input type="text" class="ui-input">
+              <div class="box-content filtered new-filter">
+                <input type="hidden" name="temp_limit" value="0" />
+                <div id="oct-selected-values"></div>
+                <form method="post" enctype="multipart/form-data" id="oct-product-filter-data">
+                  <div class="inner-box expanded" data-sort="1" data-type="price">
+                    <div class="item-title">
+                      <a class="list-group-item item-name"><span class="name">Цена (без налога)</span></a>
+                    </div>
+                    <div class="list-group-item item-content price-item">
+                      <div class="category-input">
+                        <div class="row">
+                          <div class="col-ss-6">
+                            <input type="text" name="low_price" class="form-control oct-inp-pr-filter" />
+                          </div>
+                          <div class="col-ss-6">
+                            <input type="text" name="high_price" class="form-control oct-inp-pr-filter" />
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-ss-6">
-                        <input type="text" class="ui-input">
+
+                      <div class="category-range">
+                        <div id="oct-price-slider"></div>
+                      </div>
+                      <div class="checkbox mb-0">
+                        <input id="special-only" type="checkbox" name="special_only" value="1" />
+                        <label for="special-only">Товары со скидкой</label>
+
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <div class="category-filter-accordion">
-                  <button class="category-filter-btn">Состояние на складе</button>
-                  <div class="category-filter-settings active">
-                    <div class="ui-checkbox">
-                      <input type="checkbox" id="customCheckbox1" class="ui-checkbox-input">
-                      <label for="customCheckbox1" class="ui-checkbox-label">
-                        <span class="default-txt">
-                          В наличии
-                        </span>
-                      </label>
+                  <div class="inner-box expanded" data-sort="2" data-type="tag">
+                    <div class="item-title">
+                      <a class="list-group-item item-name"><span class="name">Тег</span></a>
                     </div>
-                    <div class="ui-checkbox">
-                      <input type="checkbox" id="customCheckbox2" class="ui-checkbox-input">
-                      <label for="customCheckbox2" class="ui-checkbox-label">
-                        <span class="default-txt">
-                          Скоро заканчивается
-                        </span>
-                      </label>
-                    </div>
-                    <div class="ui-checkbox">
-                      <input type="checkbox" id="customCheckbox3" class="ui-checkbox-input">
-                      <label for="customCheckbox3" class="ui-checkbox-label">
-                        <span class="default-txt">
-                          Нет в наличии
-                        </span>
-                      </label>
+                    <div class="list-group-item item-content">
+                      <div>
+                        <input type="text" name="tag" value="" class="form-control" placeholder="Введите слово для поиска" />
+                      </div>
+                      <small class="oct-filter-faq">Введите два или более слов для более точного результата</small>
                     </div>
                   </div>
-                </div>
-              </form>
+                  <div class="inner-box expanded" data-sort="8" data-type="stock">
+                    <div class="item-title">
+                      <a class="list-group-item item-name"><span class="name">Состояние на складе</span></a>
+                    </div>
+                    <div class="list-group-item item-content">
+                      <div class="checkbox">
+                        <input type="checkbox" id="stock-key-in_stock" name="stock[]" value="in_stock" />
+                        <label for="stock-key-in_stock">В наличии</label>
+
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="stock-key-out_of_stock" name="stock[]" value="out_of_stock" />
+                        <label for="stock-key-out_of_stock">Нет в наличии</label>
+
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="stock-key-ending_stock" name="stock[]" value="ending_stock" />
+                        <label for="stock-key-ending_stock">Скоро заканчивается</label>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner-box expanded" data-sort="9" data-type="review">
+                    <div class="item-title">
+                      <a class="list-group-item item-name"><span class="name">Рейтинг</span></a>
+                    </div>
+                    <div class="list-group-item item-content">
+                      <div class="checkbox">
+                        <input type="checkbox" id="review-key-0" name="rating[]" value="1"  />
+                        <label for="review-key-0">
+                          <div class="ui-rating-stars">
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                          </div>
+                        </label>
+
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="review-key-1" name="rating[]" value="2"  />
+                        <label for="review-key-1">
+                          <div class="ui-rating-stars">
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                          </div>
+                        </label>
+
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="review-key-2" name="rating[]" value="3"  />
+                        <label for="review-key-2">
+                          <div class="ui-rating-stars">
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                          </div>
+                        </label>
+
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="review-key-3" name="rating[]" value="4"  />
+                        <label for="review-key-3">
+                          <div class="ui-rating-stars">
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base"></div>
+                          </div>
+                        </label>
+
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="review-key-4" name="rating[]" value="5"  />
+                        <label for="review-key-4">
+                          <div class="ui-rating-stars">
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                          </div>
+                        </label>
+
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
+
           <div class="category-subscribe">
             <div class="category-subscribe-caption">
               Подписка <br> на рассылку

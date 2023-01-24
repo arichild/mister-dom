@@ -324,12 +324,14 @@ $( document ).ready(function() {
   $('select').styler();
 
   // accrodion for category.html
-  const accordion = document.getElementsByClassName("category-filter-btn");
+  const accordion = document.getElementsByClassName("item-title");
 
   if(accordion) {
     for (let i = 0; i < accordion.length; i++) {
       accordion[i].addEventListener("click", function(e) {
         let panel = this.nextElementSibling;
+
+        console.log(panel)
 
         panel.classList.toggle("active");
         this.classList.toggle("active");
@@ -354,7 +356,7 @@ $( document ).ready(function() {
           $('.category-bottom').after($('.category-subscribe'))
         } else {
           //экран более 1024
-          $('.category-filter').after($('.category-subscribe'))
+          $('.category-filter-menu').after($('.category-subscribe'))
         }
       }
     })();
@@ -362,22 +364,48 @@ $( document ).ready(function() {
 
     // filter-menu
   const filterMenuBtn = document.querySelector('.category-btn-menu');
-  const filterMenuClose = document.querySelector('.category-filter-close');
 
   if(filterMenuBtn) {
+    const filterMenuClose = document.querySelector('.category-filter-close');
     const filterMenu = document.querySelector('.category-filter-menu');
+    const filterMenuBg = document.querySelector('.category-filter-bg');
 
     filterMenuBtn.addEventListener('click', () => {
       filterMenu.classList.add('active')
     })
+
     filterMenuClose.addEventListener('click', () => {
       filterMenu.classList.remove('active')
     })
 
-    $(document).on('mouseup',function(e) {
-      if ($('.category-filter').has(e.target).length === 0) {
-        filterMenu.classList.remove('active');
-      }
-    });
+    filterMenuBg.addEventListener('click', () => {
+      filterMenu.classList.remove('active')
+    })
+
+    // $(document).on('mouseup',function(e) {
+    //   if ($('#oct-ismobile').has(e.target).length === 0) {
+    //     filterMenu.classList.remove('active');
+    //   }
+    // });
   }
+
+  var oct_price_slider = document.getElementById('oct-price-slider');
+  noUiSlider.create(oct_price_slider, {
+    start: [3, 121],
+    behaviour: 'hover',
+    margin: 1,
+    connect: true,
+    range: {
+      'min': [3],
+      'max': [121]
+    },
+    format: wNumb({
+      decimals: 0
+    }),
+    slide: function(event, ui) {
+      if (ui.value == parseInt($('#oct-product-filter-data input[name=\'high_price\']').val())-1) {
+        return false;
+      }
+    }
+  });
 });
