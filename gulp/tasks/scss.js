@@ -13,14 +13,14 @@ export const scss = () => {
 		.pipe(map.init())
 		.pipe(sass({
 			// compressed
-			outputStyle: 'expanded'
+			outputStyle: 'compressed'
 		}).on('error', sass.logError))
-		// .pipe(prefixer({
-		// 	browsers: ['last 2 versions']
-		// }))
-		// .pipe(clean({
-		// 	level: 2
-		// }))
+		.pipe(prefixer({
+			browsers: ['last 2 versions']
+		}))
+		.pipe(clean({
+			level: 2
+		}))
 		.pipe(concat('style.css'))
 		.pipe(map.write('../sourcemaps/'))
 		.pipe(app.gulp.dest(app.path.build.css))
