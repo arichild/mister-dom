@@ -1,8 +1,9 @@
 $( document ).ready(function() {
   // delete card for cart.html
-  const cartList = document.querySelector('.cart-list');
 
-  if(cartList) {
+  if(document.querySelector('.cart-list')) {
+    const cartList = document.querySelector('.cart-list');
+
     cartList.addEventListener('click', (e) => {
       const getClass = e.target.classList[1];
 
@@ -15,9 +16,8 @@ $( document ).ready(function() {
   }
 
   // search menu
-  const search = document.getElementById('search');
-
-  if(search) {
+  if(document.getElementById('search')) {
+    const search = document.getElementById('search');
     const btnClear = document.querySelector('.clear-input');
     const searchMenu = document.querySelector('.header-search-result');
     const numberBlock = document.querySelector('.header-control-number');
@@ -74,9 +74,10 @@ $( document ).ready(function() {
   }
 
   // tab
-  let openTabs = document.querySelector('.ui-tab.tabs');
 
-  if(openTabs) {
+  if(document.querySelector('.ui-tab.tabs')) {
+    let openTabs = document.querySelector('.ui-tab.tabs');
+
     openTabs.addEventListener('click', (e) => {
       if(e.target.classList[0] === 'ui-tab-link') {
         let dataName = e.target.dataset.name;
@@ -101,10 +102,9 @@ $( document ).ready(function() {
   }
 
   // burger
-  const burgerBtn = document.querySelector('.header-icon.burger');
-  const burgerBtnClose = document.querySelector('.header-burger-close');
+  if(document.querySelector('.header-icon.burger')) {
+    const burgerBtn = document.querySelector('.header-icon.burger');
 
-  if(burgerBtn) {
     burgerBtn.addEventListener('click', () => {
       const burgerMenu = document.querySelector('.header-burger')
 
@@ -116,7 +116,9 @@ $( document ).ready(function() {
     })
   }
 
-  if(burgerBtnClose) {
+  if(document.querySelector('.header-burger-close')) {
+    const burgerBtnClose = document.querySelector('.header-burger-close');
+
     burgerBtnClose.addEventListener('click', (e) => {
       const burgerMenu = document.querySelector('.header-burger');
 
@@ -129,9 +131,9 @@ $( document ).ready(function() {
   }
 
   // dropdown
-  const dropdownItem = document.querySelectorAll('.dropdown');
+  if(document.querySelectorAll('.dropdown').length !== 0) {
+    const dropdownItem = document.querySelectorAll('.dropdown');
 
-  if(dropdownItem) {
     for(let i = 0; i < dropdownItem.length; i++) {
       dropdownItem[i].addEventListener('click', (e) => {
         const dropdown = e.target.closest('.dropdown').querySelector('.dropdown-content');
@@ -161,9 +163,9 @@ $( document ).ready(function() {
   }
 
   // event for the input to display the caption | making-order.html
-  const inputField = document.querySelectorAll('.ui-field input');
+  if(document.querySelectorAll('.ui-field input').length !== 0) {
+    const inputField = document.querySelectorAll('.ui-field input');
 
-  if(inputField) {
     for(let i = 0; i < inputField.length; i++) {
       inputField[i].addEventListener('focus', (e) => {
         const span = e.target.parentNode.querySelector('.ui-label');
@@ -186,9 +188,10 @@ $( document ).ready(function() {
   }
 
   // making-order.html display entry values in field like "Купон"
-  const targetBlock = document.querySelectorAll('.cart-txt .ui-input');
 
-  if(targetBlock) {
+  if(document.querySelectorAll('.cart-txt .ui-input') !== 0) {
+    const targetBlock = document.querySelectorAll('.cart-txt .ui-input');
+
     for(let i = 0; i < targetBlock.length; i++) {
       targetBlock[i].addEventListener('blur', (e) => {
         if(e.target.value !== '') {
@@ -203,9 +206,9 @@ $( document ).ready(function() {
   }
 
   // making-order.html delete values at the click of a button
-  const deleteDiscount = document.querySelectorAll('.cart-price-discount');
+  if(document.querySelectorAll('.cart-price-discount') !== 0) {
+    const deleteDiscount = document.querySelectorAll('.cart-price-discount');
 
-  if(deleteDiscount) {
     for(let i = 0; i < deleteDiscount.length; i++) {
       deleteDiscount[i].addEventListener('click', (e) => {
         if(e.target.classList[0] === 'sprite') {
@@ -321,12 +324,13 @@ $( document ).ready(function() {
   });
 
   // jquery form styler
-  $('select').styler();
+  $('.wrapper select').styler();
 
   // accrodion for category.html
-  const accordion = document.getElementsByClassName("item-title");
 
-  if(accordion) {
+  if(document.getElementsByClassName("item-title")) {
+    const accordion = document.getElementsByClassName("item-title");
+
     for (let i = 0; i < accordion.length; i++) {
       accordion[i].addEventListener("click", function(e) {
         let panel = this.nextElementSibling;
@@ -362,50 +366,62 @@ $( document ).ready(function() {
     })();
 
 
-    // filter-menu
-  const filterMenuBtn = document.querySelector('.category-btn-menu');
-
-  if(filterMenuBtn) {
+  // filter-menu
+  if(document.querySelector('.category-btn-menu')) {
+    const filterMenuBtn = document.querySelector('.category-btn-menu');
     const filterMenuClose = document.querySelector('.category-filter-close');
     const filterMenu = document.querySelector('.category-filter-menu');
     const filterMenuBg = document.querySelector('.category-filter-bg');
 
     filterMenuBtn.addEventListener('click', () => {
-      filterMenu.classList.add('active')
+      filterMenu.classList.add('active');
+
+      document.body.style.overflow = 'hidden'
     })
 
     filterMenuClose.addEventListener('click', () => {
       filterMenu.classList.remove('active')
+
+      document.body.style.overflow = ''
     })
 
     filterMenuBg.addEventListener('click', () => {
       filterMenu.classList.remove('active')
-    })
 
-    // $(document).on('mouseup',function(e) {
-    //   if ($('#oct-ismobile').has(e.target).length === 0) {
-    //     filterMenu.classList.remove('active');
-    //   }
-    // });
+      document.body.style.overflow = ''
+    })
   }
 
-  var oct_price_slider = document.getElementById('oct-price-slider');
-  noUiSlider.create(oct_price_slider, {
-    start: [3, 121],
-    behaviour: 'hover',
-    margin: 1,
-    connect: true,
-    range: {
-      'min': [3],
-      'max': [121]
-    },
-    format: wNumb({
-      decimals: 0
-    }),
-    slide: function(event, ui) {
-      if (ui.value == parseInt($('#oct-product-filter-data input[name=\'high_price\']').val())-1) {
-        return false;
+  if(document.getElementById('oct-price-slider')) {
+    var oct_price_slider = document.getElementById('oct-price-slider');
+    noUiSlider.create(oct_price_slider, {
+      start: [3, 121],
+      behaviour: 'hover',
+      margin: 1,
+      connect: true,
+      range: {
+        'min': [3],
+        'max': [121]
+      },
+      format: wNumb({
+        decimals: 0
+      }),
+      slide: function(event, ui) {
+        if (ui.value == parseInt($('#oct-product-filter-data input[name=\'high_price\']').val())-1) {
+          return false;
+        }
       }
-    }
+    });
+  }
+
+  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 });
