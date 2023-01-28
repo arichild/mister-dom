@@ -308,6 +308,25 @@
     .btn-new-next:after {
       content: '';
     }
+
+    .btn-rec-prev, .btn-rec-next {
+      position: static;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+    }
+
+    .btn-rec-prev {
+      margin-right: 24px;
+    }
+
+    .btn-rec-prev:after {
+      content: '';
+    }
+
+    .btn-rec-next:after {
+      content: '';
+    }
   }
 
   &-tab {
@@ -537,6 +556,15 @@
 }
 
 .swiper-pagination.new-pagination {
+  display: none;
+
+  @media(max-width: 1024px) {
+    bottom: 0;
+    display: block;
+  }
+}
+
+.swiper-pagination.rec-pagination {
   display: none;
 
   @media(max-width: 1024px) {

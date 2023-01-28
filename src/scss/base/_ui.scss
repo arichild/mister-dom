@@ -79,6 +79,10 @@
   color: #172542;
   position: relative;
 
+  &.height-120 {
+    height: 120px;
+  }
+
   &:hover {
     outline: 2px solid #ffebca;
     border-color: transparent;
@@ -87,6 +91,10 @@
   &:focus {
     outline: 2px solid #fad89d;
     border-color: transparent;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
   }
 
   &::placeholder {
@@ -549,6 +557,14 @@ textarea.ui-input {
   line-height: 1.375;
   resize: vertical;
   border-radius: 6px;
+
+  &.height-120 {
+    height: 120px;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
 }
 
 span.error {
@@ -1013,4 +1029,18 @@ span.error {
 .jq-selectbox li:hover {
   background: #fff;
   color: #364e80;
+}
+
+.ui-placeholder {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-size: 20px;
+  color: #728EAE;
+  pointer-events: none;
+
+  span {
+    color: #E70A0A;
+  }
 }

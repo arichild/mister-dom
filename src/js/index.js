@@ -74,7 +74,6 @@ $( document ).ready(function() {
   }
 
   // tab
-
   if(document.querySelector('.ui-tab.tabs')) {
     let openTabs = document.querySelector('.ui-tab.tabs');
 
@@ -163,8 +162,8 @@ $( document ).ready(function() {
   }
 
   // event for the input to display the caption | making-order.html
-  if(document.querySelectorAll('.ui-field input').length !== 0) {
-    const inputField = document.querySelectorAll('.ui-field input');
+  if(document.querySelectorAll('.order-info .ui-field input').length !== 0) {
+    const inputField = document.querySelectorAll('.order-info .ui-field input');
 
     for(let i = 0; i < inputField.length; i++) {
       inputField[i].addEventListener('focus', (e) => {
@@ -188,7 +187,6 @@ $( document ).ready(function() {
   }
 
   // making-order.html display entry values in field like "Купон"
-
   if(document.querySelectorAll('.cart-txt .ui-input') !== 0) {
     const targetBlock = document.querySelectorAll('.cart-txt .ui-input');
 
@@ -297,6 +295,45 @@ $( document ).ready(function() {
     }
   });
 
+  const swiperRec = new Swiper('.swiper.slider-rec', {
+    slidesPerView: 4,
+    spaceBetween: 40,
+    setWrapperSize: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next.btn-rec-next',
+      prevEl: '.swiper-button-prev.btn-rec-prev',
+    },
+
+    pagination: {
+      el: '.swiper-pagination.rec-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+      // when window width is >= 320px
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 25
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+    }
+  });
+
   const duosMain = new Swiper('.swiper.duos-main', {
     slidesPerView: 1,
     setWrapperSize: true,
@@ -323,6 +360,67 @@ $( document ).ready(function() {
     },
   });
 
+  const imgsClone = $('.swiper-card-imgs').clone().addClass('swiper-mobile-imgs').removeClass('swiper-card-imgs');
+  imgsClone.find('.card-imgs-prev').addClass('mobile-imgs-prev').removeClass('card-imgs-prev')
+  imgsClone.find('.card-imgs-next').addClass('mobile-imgs-next').removeClass('card-imgs-next')
+  imgsClone.find('.card-image').addClass('mobile-image').removeClass('card-image')
+  imgsClone.find('.mobile-image').eq(0).addClass('active');
+
+  $('.card-imgs').append(imgsClone)
+  $('.swiper-mobile-imgs').wrap('<div class="mobile-imgs"></div>')
+
+  const cardMini = new Swiper('.swiper-mobile-imgs',{
+    slidesPerView: 3,
+    // shortSwipes: false,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".mobile-imgs-next",
+      prevEl: ".mobile-imgs-prev",
+    },
+    breakpoints: {
+      841: {
+        slidesPerView: 5
+      }
+    }
+  })
+
+  const cardSwiper = new Swiper('.swiper-card-imgs',{
+    slidesPerView: 1,
+    // shortSwipes: false,
+    autoHeight: true,
+    navigation: {
+      nextEl: ".card-imgs-next",
+      prevEl: ".card-imgs-prev",
+    },
+    pagination: {
+      el: '.card-imgs-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      769: {
+        pagination: false
+      }
+    }
+  })
+
+  cardSwiper.on('slideChange',function(swiper){
+    const index = swiper.realIndex
+
+    cardMini.slideTo(index)
+    $('.mobile-image').removeClass('active');
+    $('.swiper-mobile-imgs .swiper-slide').eq(index).find('.mobile-image').addClass('active');
+  })
+
+  $(document).on('click','.mobile-image',function(e) {
+    e.preventDefault();
+
+    const index = $(this).closest('.swiper-slide').index()
+    cardSwiper.slideTo(index)
+    $('.mobile-image').removeClass('active')
+    $(this).addClass('active');
+  })
+
   // jquery form styler
   $('.wrapper select').styler();
 
@@ -334,8 +432,6 @@ $( document ).ready(function() {
     for (let i = 0; i < accordion.length; i++) {
       accordion[i].addEventListener("click", function(e) {
         let panel = this.nextElementSibling;
-
-        console.log(panel)
 
         panel.classList.toggle("active");
         this.classList.toggle("active");
@@ -424,4 +520,215 @@ $( document ).ready(function() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
+
+  if(document.querySelector('.card-tab-btn')) {
+    let cardTab = document.querySelector('.card-tab-btn');
+
+    cardTab.addEventListener('click', (e) => {
+      if(e.target.classList[0] === 'card-tab-link') {
+        let dataName = e.target.dataset.name;
+        let activeTab = document.querySelector('.card-tab-block.active')
+        let activeLink = document.querySelector('.card-tab-link.active');
+        let tab = document.querySelector(`.card-tab-block.${dataName}`)
+        let tabLink = document.querySelector(`.card-tab-link.${dataName}`);
+
+        activeTab.classList.remove('active');
+        activeLink.classList.remove('active');
+
+        tab.classList.add('active');
+        tabLink.classList.add('active');
+      }
+    })
+
+    let openComment = document.querySelector('.card-comment-link.comment');
+
+    openComment.addEventListener('click', (e) => {
+      let comment = openComment.id;
+
+      let activeTab = document.querySelector('.card-tab-block.active')
+      let activeLink = document.querySelector('.card-tab-link.active');
+      let tab = document.querySelector(`.card-tab-block.${comment}`)
+      let tabLink = document.querySelector(`.card-tab-link.${comment}`);
+
+      activeTab.classList.remove('active');
+        activeLink.classList.remove('active');
+
+        tab.classList.add('active');
+        tabLink.classList.add('active');
+    })
+
+  }
+
+  if(document.querySelector('.card-comment-form .ui-rating-stars')) {
+    let arrBlock = document.querySelector('.card-comment-form .ui-rating-stars');
+
+    arrBlock.addEventListener('click', (e) => {
+      if(e.target.classList[0] === 'ui-rating-star') {
+        let arrStars = document.querySelectorAll('.card-comment-form .ui-rating-star');
+        let number = +e.target.dataset.value;
+        let maxNumber = arrStars.length
+        let count = maxNumber - (maxNumber - number)
+
+        arrStars.forEach((e) => {
+          e.classList.remove('active')
+        })
+
+        for(let i = 0; i < count; i++) {
+          arrBlock.children[i].classList.add('active');
+        }
+      }
+    })
+  }
+
+  // validation
+  $(".order-form").validate({
+    errorElement: "span",
+
+    rules: {
+      surname: {
+        required: true,
+        lettersonly: true,
+      },
+      name: {
+        required: true,
+        lettersonly: true,
+      },
+      lastName: {
+        required: true,
+        lettersonly: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      phone: {
+        required: true,
+        minlength: 19,
+      },
+      town: {
+        required: true,
+        lettersonly: true,
+      },
+      address: {
+        required: true,
+      },
+      select1: {
+        required: true,
+      },
+      select: {
+        required: true,
+      }
+    },
+
+    errorPlacement: function (error, element) {
+      if (element.hasClass('ui-radio')) {
+        element.closest('.ui-select').after(error);
+      }
+      if (element.hasClass('ui-input')) {
+        element.closest('.ui-field').append(error);
+      }
+    },
+
+    messages: {
+      surname: {
+        required: "Пожалуйста, введите данные",
+        lettersonly: "Ваше имя не может состоять из цифр",
+      },
+      name: {
+        required: "Пожалуйста, введите данные",
+        lettersonly: "Ваша фамилия не может состоять из цифр",
+      },
+      lastName: {
+        required: "Пожалуйста, введите данные",
+        lettersonly: "Ваше отчество не может состоять из цифр",
+      },
+      email: {
+        required: "Пожалуйста, введите данные",
+        email: "Введите корректный email",
+      },
+      phone: {
+        required: "Пожалуйста, введите данные",
+        minlength: "Введите полный номер",
+      },
+      town: {
+        required: "Пожалуйста, введите данные",
+      },
+      address: {
+        required: "Пожалуйста, введите данные",
+      },
+      select1: {
+        required: "Пожалуйста, выберете способ доставки",
+      },
+      select: {
+        required: "Пожалуйста, выберете способ оплаты",
+      },
+    }
+  });
+
+  $(".card-form").validate({
+    errorElement: "span",
+
+    rules: {
+      surname: {
+        required: true,
+        lettersonly: true,
+      },
+      name: {
+        required: true,
+        lettersonly: true,
+      },
+      msg: {
+        required: true,
+      },
+    },
+
+    messages: {
+      name: {
+        required: "Пожалуйста, введите данные",
+        lettersonly: "Ваша фамилия не может состоять из цифр",
+      },
+      msg: {
+        required: "Пожалуйста, введите данные",
+      },
+    }
+  });
+
+  jQuery.validator.addMethod("lettersonly", function(value, element) {
+    return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
+  }, "Letters only please");
+
+  let phone = document.getElementById('phone')
+
+  if(phone) {
+    let phoneMask = IMask(
+      phone, {
+        mask: '+{375} (00) 000 00 00'
+    });
+  }
+
+  if(document.querySelectorAll('.card-comment-form .ui-input').length !== 0) {
+    const allInput = document.querySelectorAll('.card-comment-form .ui-input');
+
+    allInput.forEach((input) => {
+      input.addEventListener('focus', (e) => {
+        const placeholder = e.target.closest('.ui-field').querySelector('.ui-placeholder');
+
+        if(placeholder) {
+          placeholder.style.display = "none"
+        }
+      })
+
+      input.addEventListener('blur', (e) => {
+        const placeholder = e.target.closest('.ui-field').querySelector('.ui-placeholder');
+
+        if(placeholder && input.value.length !== 0) {
+          placeholder.style.display = "none"
+        }
+
+        if(placeholder && input.value.length === 0) {
+          placeholder.style.display = "block"
+        }
+      })
+    })
+  }
 });
