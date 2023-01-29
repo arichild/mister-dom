@@ -162,8 +162,8 @@ $( document ).ready(function() {
   }
 
   // event for the input to display the caption | making-order.html
-  if(document.querySelectorAll('.order-info .ui-field input').length !== 0) {
-    const inputField = document.querySelectorAll('.order-info .ui-field input');
+  if(document.querySelectorAll('.ui-input.label').length !== 0) {
+    const inputField = document.querySelectorAll('.ui-input.label');
 
     for(let i = 0; i < inputField.length; i++) {
       inputField[i].addEventListener('focus', (e) => {

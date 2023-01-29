@@ -377,6 +377,7 @@
     font-size: 25px;
     font-weight: 600;
     cursor: pointer;
+    font-family: 'FuturaLightC';
 
     @media(max-width: 1140px) {
       width: 40px;
@@ -1035,12 +1036,27 @@ span.error {
   display: block;
   position: absolute;
   top: 20px;
-  left: 24px;
+  left: 16px;
   font-size: 20px;
   color: #728EAE;
   pointer-events: none;
 
   span {
     color: #E70A0A;
+  }
+}
+
+.ui-label {
+  display: none;
+
+  &.active {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: -9px;
+    color: #728EAE;
+    font-family: 'FuturaMediumC';
+    background: #fff;
+    padding: 0 5px;
   }
 }

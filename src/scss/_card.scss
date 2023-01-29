@@ -14,11 +14,20 @@
       }
     }
 
+    .mobile-image {
+      line-height: 0;
+    }
+
+    .card-image {
+      line-height: 0;
+    }
+
     .swiper-mobile-imgs {
       .card-imgs-arrow {
         opacity: .8;
       }
     }
+
     &-prev {
       left: 40px;
     }
@@ -100,7 +109,7 @@
     .ui-rating {
       display: inline-block;
       vertical-align: bottom;
-      margin-right: 40px;
+      margin-right: 20px;
     }
 
     .ui-rating-stars {
@@ -139,7 +148,7 @@
     line-height: 28px;
     padding: 0 10px;
     vertical-align: bottom;
-    margin-right: 30px;
+    margin-right: 20px;
 
     &.red {
       background: #FFE5E5;
@@ -147,6 +156,10 @@
   }
 
   &-comment {
+    .ui-rating-stars {
+      margin-right: 0;
+    }
+
     &-link {
       display: inline-block;
       vertical-align: bottom;
@@ -265,7 +278,7 @@
       height: 60px;
       line-height: 60px;
       max-width: 190px;
-      margin-right: 40px;
+      margin-right: 36px;
 
       img {
         position: relative;
@@ -278,7 +291,7 @@
       border-radius: 30%;
       max-width: 124px;
       background: #D9E4F1;
-      margin-right: 24px;
+      margin-right: 16px;
     }
 
     .ui-count-btn {
@@ -314,7 +327,7 @@
     position: relative;
     display: inline-block;
     vertical-align: bottom;
-    margin-right: 20px;
+    margin-right: 16px;
 
     &.active {
       background: #D9E4F1;
