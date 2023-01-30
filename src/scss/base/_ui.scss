@@ -449,11 +449,35 @@
     &.minus {
       left: 0;
       top: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 2px;
+        background: url(../images/icon/ui-minus.svg) center no-repeat;
+        background-size: contain;
+      }
     }
 
     &.plus {
       right: 0;
       top: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: url(../images/icon/ui-plus.svg) center no-repeat;
+        background-size: contain;
+      }
     }
   }
 
@@ -1116,10 +1140,6 @@ span.error {
   color: #364e80;
 }
 
-.ui-placeholder {
-
-}
-
 .ui-label {
   display: none;
 
@@ -1137,14 +1157,16 @@ span.error {
   &.placeholder {
     display: block;
     position: absolute;
-    top: 20px;
-    left: 16px;
+    top: 17px;
+    left: 12px;
     font-size: 20px;
     color: #728EAE;
     pointer-events: none;
 
-    span {
+    span.dot {
       color: #E70A0A;
+      position: relative;
+      left: 4px;
     }
 
     &.active {
