@@ -1,3 +1,28 @@
+// event for the input to display the caption | making-order.html
+function labelForInput(selector) {
+  const inputField = document.querySelectorAll(selector);
+
+  for(let i = 0; i < inputField.length; i++) {
+    inputField[i].addEventListener('focus', (e) => {
+      const span = e.target.parentNode.querySelector('.ui-label');
+
+      if(e.target.value === '') {
+        span.classList.add('active')
+      }
+    })
+
+    inputField[i].addEventListener('blur', (e) => {
+      const span = e.target.parentNode.querySelector('.ui-label');
+
+      if(e.target.value !== '') {
+        span.classList.add('active')
+      } else {
+        span.classList.remove('active')
+      }
+    })
+  }
+}
+
 $( document ).ready(function() {
   // delete card for cart.html
 
@@ -14,6 +39,8 @@ $( document ).ready(function() {
       }
     })
   }
+
+  labelForInput('.ui-input.label')
 
   // search menu
   if(document.getElementById('search')) {
@@ -156,31 +183,6 @@ $( document ).ready(function() {
           }
 
           e.target.classList.add('active')
-        }
-      })
-    }
-  }
-
-  // event for the input to display the caption | making-order.html
-  if(document.querySelectorAll('.ui-input.label').length !== 0) {
-    const inputField = document.querySelectorAll('.ui-input.label');
-
-    for(let i = 0; i < inputField.length; i++) {
-      inputField[i].addEventListener('focus', (e) => {
-        const span = e.target.parentNode.querySelector('.ui-label');
-
-        if(e.target.value === '') {
-          span.classList.add('active')
-        }
-      })
-
-      inputField[i].addEventListener('blur', (e) => {
-        const span = e.target.parentNode.querySelector('.ui-label');
-
-        if(e.target.value !== '') {
-          span.classList.add('active')
-        } else {
-          span.classList.remove('active')
         }
       })
     }

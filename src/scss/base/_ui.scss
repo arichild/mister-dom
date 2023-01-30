@@ -1,6 +1,10 @@
 .page-wrapper {
   padding-bottom: 140px;
 
+  @media(max-width: 1280px) {
+    padding-bottom: 100px;
+  }
+
   @media(max-width: 576px) {
     padding-bottom: 65px;
   }
@@ -8,8 +12,13 @@
   .ui-title {
     margin-bottom: 80px;
 
-    @media(max-width: 1240px) {
-      margin-bottom: 50px;
+    @media(max-width: 1440px) {
+      margin-bottom: 45px;
+      font-size: 40px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 30px;
     }
 
     @media(max-width: 1024px) {
@@ -64,6 +73,7 @@
   @media(max-width: 1440px) {
     height: 52px;
     line-height: 52px;
+    font-size: 18px;
   }
 }
 
@@ -119,16 +129,18 @@
 
 .ui-rating.flex {
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
 }
 
 .ui-rating-stars {
   margin-right: 10px;
+  font-size: 0;
 }
 
 .ui-rating-star {
   display: inline-block;
   background: url(.././images/icon/star-empty.svg) repeat 0 0;
+  margin-right: 3px;
 
   &.active {
     background: url(.././images/icon/star.svg) repeat 0 0;
@@ -139,7 +151,7 @@
     height: 20px;
     background-size: cover;
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1440px) {
       width: 16px;
       height: 16px;
     }
@@ -157,7 +169,7 @@
   font-size: 16px;
   color: #858585;
 
-  @media(max-width: 1024px) {
+  @media(max-width: 1440px) {
     font-size: 14px;
   }
 }
@@ -165,17 +177,29 @@
 .ui-tab {
   text-align: left;
   letter-spacing: 0.05em;
+  font-size: 36px;
+
+  @media(max-width: 1440px) {
+    font-size: 32px;
+  }
+
+  @media(max-width: 1280px) {
+    font-size: 28px;
+  }
+
+  @media(max-width: 1024px) {
+    font-size: 24px;
+  }
 
   &.flex {
     flex-wrap: wrap;
   }
 
   .split {
-    display: inline-block;
+    display: inline;
     font-family: FuturaMediumC;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
     margin: 0 8px;
     color: #172542;
 
@@ -188,15 +212,10 @@
     font-family: 'FuturaMediumC';
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
     color: #172542;
     border-bottom: 2px solid transparent;
     margin-bottom: 9px;
     border-bottom: 1px solid transparent;
-
-    @media(max-width: 1024px) {
-      font-size: 24px;
-    }
 
     &.active {
       color: #172542;
@@ -232,9 +251,19 @@
     font-size: 35px;
   }
 
-  @media(max-width: 1024px) {
-    font-size: 36px;
+  @media(max-width: 1440px) {
+    margin-bottom: 45px;
+    font-size: 40px;
   }
+
+  @media(max-width: 1280px) {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  // @media(max-width: 1024px) {
+  //   font-size: 36px;
+  // }
 
   @media(max-width: 576px) {
     font-size: 32px;
@@ -256,6 +285,12 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     white-space: nowrap;
+
+    @media(max-width: 1440px) {
+      font-size: 13px;
+      line-height: 26px;
+      padding: 0 10px;
+    }
 
     @media(max-width: 1024px) {
       padding: 0 6px;
@@ -284,9 +319,21 @@
   &.margin-72 {
     margin-bottom: 72px;
 
-    @media(max-width: 576px) {
-      margin-bottom: 42px;
+    @media(max-width: 1440px) {
+      margin-bottom: 55px;
     }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+
+    // @media(max-width: 576px) {
+    //   margin-bottom: 42px;
+    // }
   }
 
   img {
@@ -350,6 +397,10 @@
   width: 100%;
   height: 60px;
 
+  @media(max-width: 1440px) {
+    max-width: 160px;
+  }
+
   @media(max-width: 1140px) {
     max-width: 130px;
     height: 40px;
@@ -378,6 +429,10 @@
     font-weight: 600;
     cursor: pointer;
     font-family: 'FuturaLightC';
+
+    @media(max-width: 1440px) {
+      width: 50px;
+    }
 
     @media(max-width: 1140px) {
       width: 40px;
@@ -414,6 +469,10 @@
     margin: 2px 0;
     padding: 0 60px;
     -moz-appearance: textfield;
+
+    @media(max-width: 1440px) {
+      padding: 0 50px;
+    }
 
     @media(max-width: 1140px) {
       height: 36px;
@@ -777,6 +836,10 @@ span.error {
   color: #172542;
   letter-spacing: 0.05em;
   margin-top: 45px;
+
+  @media(max-width: 1440px) {
+    font-size: 20px;
+  }
 }
 
 .ui-fav-btn {
@@ -790,6 +853,11 @@ span.error {
   z-index: 1;
   cursor: pointer;
 
+  @media(max-width: 1440px) {
+    width: 42px;
+    height: 42px;
+  }
+
   &:hover {
     background: #ffe5e5;
   }
@@ -797,7 +865,14 @@ span.error {
   img {
     position: relative;
     top: 11px;
-    left: 14px
+    left: 14px;
+
+    @media(max-width: 1440px) {
+      top: 6px;
+      left: 12px;
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 
@@ -938,6 +1013,11 @@ span.error {
   border-radius: 6px;
   padding-left: 24px;
 
+  @media(max-width: 1440px) {
+    height: 52px;
+    line-height: 52px;
+  }
+
   @media(max-width: 1024px) {
     height: 46px;
     line-height: 46px;
@@ -952,6 +1032,10 @@ span.error {
   font-family: 'FuturaBookC';
   font-size: 20px;
   color: #172542;
+
+  @media(max-width: 1280px) {
+    font-size: 18px;
+  }
 
   @media(max-width: 1024px) {
     font-size: 16px;
@@ -1033,17 +1117,7 @@ span.error {
 }
 
 .ui-placeholder {
-  display: block;
-  position: absolute;
-  top: 20px;
-  left: 16px;
-  font-size: 20px;
-  color: #728EAE;
-  pointer-events: none;
 
-  span {
-    color: #E70A0A;
-  }
 }
 
 .ui-label {
@@ -1058,5 +1132,31 @@ span.error {
     font-family: 'FuturaMediumC';
     background: #fff;
     padding: 0 5px;
+  }
+
+  &.placeholder {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 20px;
+    color: #728EAE;
+    pointer-events: none;
+
+    span {
+      color: #E70A0A;
+    }
+
+    &.active {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: -9px;
+      color: #728EAE;
+      font-family: 'FuturaMediumC';
+      background: #fff;
+      padding: 0 5px;
+      font-size: 16px;
+    }
   }
 }

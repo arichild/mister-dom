@@ -68,7 +68,7 @@
     a {
       display: block;
       font-family: 'FuturaBookC';
-      font-size: 22px;
+      // font-size: 22px;
 
       &.active {
         color: #728EAE;
@@ -82,6 +82,16 @@
 
     li {
       margin-bottom: 30px;
+      font-size: 22px;
+
+      @media(max-width: 1440px) {
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+
+      @media(max-width: 1280px) {
+        margin-bottom: 25px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -98,6 +108,16 @@
     font-size: 36px;
     margin-bottom: 32px;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1440px) {
+      font-size: 34px;
+      margin-bottom: 28px;
+    }
+
+    @media(max-width: 1280px) {
+      font-size: 32px;
+      margin-bottom: 26px;
+    }
 
     @media(max-width: 1024px) {
       font-size: 28px;
@@ -124,6 +144,13 @@
         height: 80px;
         max-width: 100%;
 
+        @media(max-width: 1440px) {
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
         @media(max-width: 1024px) {
           height: 65px;
         }
@@ -145,6 +172,14 @@
       font-family: 'FuturaMediumC';
       font-size: 36px;
       color: #172542;
+
+      @media(max-width: 1440px) {
+        font-size: 32px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 30px;
+      }
     }
 
     &-link {
@@ -192,6 +227,14 @@
       font-family: 'FuturaDemiC';
       font-size: 28px;
       color: #172542;
+
+      @media(max-width: 1440px) {
+        font-size: 26px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 24px;
+      }
     }
 
     .ui-tooltip {

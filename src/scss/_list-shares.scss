@@ -16,8 +16,24 @@
   &-card {
     margin-bottom: 80px;
 
+    @media(max-width: 1440px) {
+      margin-bottom: 60px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 50px;
+    }
+
     @media(max-width: 1024px) {
       margin-bottom: 50px;
+    }
+
+    @media(max-width: 576px) {
+      margin-bottom: 40px;
+
+      +.form-mailing {
+        margin-top: 50px;
+      }
     }
 
     &-link {
@@ -25,8 +41,16 @@
       position: relative;
       margin-bottom: 35px;
 
+      @media(max-width: 1440px) {
+        margin-bottom: 20px;
+      }
+
       @media(max-width: 1024px) {
         margin-bottom: 15px;
+      }
+
+      @media(max-width: 576px) {
+        margin-bottom: 10px;
       }
 
       .ui-status {
@@ -50,12 +74,21 @@
       margin-bottom: 15px;
       line-height: 1.2;
 
+      @media(max-width: 1440px) {
+        font-size: 32px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 28px;
+      }
+
       @media(max-width: 1024px) {
         font-size: 24px;
       }
 
       @media(max-width: 576px) {
         font-size: 20px;
+        margin-bottom: 10px;
       }
     }
 

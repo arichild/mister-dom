@@ -2,6 +2,14 @@
   &-sliders {
     margin-bottom: 60px;
 
+    @media(max-width: 1440px) {
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 40px;
+    }
+
     @media(max-width: 1024px) {
       margin-bottom: 30px;
     }
@@ -138,6 +146,10 @@
   &-content {
     margin-bottom: 105px;
 
+    @media(max-width: 1024px) {
+      margin-bottom: 0;
+    }
+
     @media(max-width: 768px) {
       flex-direction: column;
     }
@@ -148,17 +160,26 @@
       margin-bottom: 0;
       padding: 80px 95px;
 
-      @media(max-width: 1366px) {
+      @media(max-width: 1440px) {
+        padding: 60px 75px;
+      }
+
+      @media(max-width: 1280px) {
         padding: 50px;
       }
 
-      @media(max-width: 768px) {
-        padding: 25px;
+      @media(max-width: 1024px) {
+        padding: 40px 30px;
       }
 
       @media(max-width: 768px) {
+        padding: 35px;
         max-width: 100%;
         flex: 0 0 100%;
+      }
+
+      @media(max-width: 420px) {
+        padding: 35px 20px;
       }
 
       &.flex {
@@ -178,6 +199,10 @@
         max-width: 100%;
         margin-right: 0;
 
+        @media(max-width: 1440px) {
+          margin-bottom: 30px;
+        }
+
         &.margin-0 {
           margin-bottom: 0;
         }
@@ -185,12 +210,37 @@
 
       &-title {
         margin-bottom: 25px;
+
+        @media(max-width: 1440px) {
+          font-size: 40px;
+        }
+
+        @media(max-width: 1280px) {
+          font-size: 36px;
+        }
+
+        @media(max-width: 1024px) {
+          margin-bottom: 20px;
+          font-size: 28px;
+        }
       }
 
       &-subtitle {
         padding-left: 0;
         margin-bottom: 33px;
         max-width: 600px;
+
+        @media(max-width: 1440px) {
+          font-size: 18px;
+        }
+
+        @media(max-width: 1024px) {
+          font-size: 16px;
+        }
+
+        @media(max-width: 768px) {
+          margin-bottom: 20px;
+        }
       }
 
       &-list {
@@ -204,8 +254,22 @@
           letter-spacing: 0.05em;
           line-height: 1.2;
 
-          @media(max-width: 576px) {
+          @media(max-width: 1440px) {
+            font-size: 22px;
+          }
+
+          @media(max-width: 1024px) {
             font-size: 20px;
+          }
+
+          // @media(max-width: 576px) {
+          //   font-size: 20px;
+          // }
+
+          &:last-child {
+            .form-mailing-el {
+              margin-bottom: 0;
+            }
           }
         }
       }
@@ -223,34 +287,59 @@
         text-align: center;
         color: #172542;
         border: 2px solid #172542;
-        font-family: FuturaDemiC;
+        // font-family: FuturaDemiC;
         font-size: 32px;
         min-width: 44px;
         height: 44px;
-        line-height: 44px;
+        line-height: 40px;
         padding: 0 2px;
         display: inline-block;
         letter-spacing: 0;
 
-        @media(max-width: 768px) {
-          display: none;
+        @media(max-width: 1440px) {
+          min-width: 38px;
+          height: 38px;
+          line-height: 34px;
+          font-size: 26px;
+          top: -4px;
         }
+
+        @media(max-width: 1280px) {
+          font-size: 24px;
+          min-width: 36px;
+          height: 36px;
+          line-height: 32px;
+          top: -3px;
+        }
+
+        // @media(max-width: 768px) {
+        //   display: none;
+        // }
       }
 
       &-caption {
         font-size: 32px;
         padding-left: 65px;
 
-        @media(max-width: 1024px) {
-          font-size: 28px;
+        @media(max-width: 1440px) {
+          font-size: 26px;
+          padding-left: 55px;
         }
 
-        @media(max-width: 768px) {
-          padding-left: 0;
+        @media(max-width: 1280px) {
           font-size: 24px;
         }
 
-        @media(max-width: 576px) {
+        // @media(max-width: 1024px) {
+        //   font-size: 28px;
+        // }
+
+        // @media(max-width: 768px) {
+        //   // padding-left: 0;
+        //   // font-size: 24px;
+        // }
+
+        @media(max-width: 1024px) {
           font-size: 20px;
         }
       }
@@ -271,6 +360,10 @@
 
       &-cell {
         margin-bottom: 38px;
+
+        @media(max-width: 1440px) {
+          margin-bottom: 15px;
+        }
 
         @media(max-width: 1024px) {
           flex-direction: column;

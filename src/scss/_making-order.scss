@@ -2,8 +2,24 @@
   &-info {
     margin-bottom: 68px;
 
+    @media(max-width: 1440px) {
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 40px;
+    }
+
     &.margin-42 {
       margin-bottom: 42px;
+
+      @media(max-width: 1440px) {
+        margin-bottom: 24px;
+      }
+
+      @media(max-width: 1280px) {
+        margin-bottom: 14px;
+      }
     }
 
     .ui-btn {
@@ -29,6 +45,16 @@
       font-size: 36px;
       margin-bottom: 38px;
 
+      @media(max-width: 1440px) {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
       @media(max-width: 1024px) {
         font-size: 28px;
         margin-bottom: 20px;
@@ -41,9 +67,17 @@
       &.margin-30 {
         margin-bottom: 30px;
 
-        @media(max-width: 1024px) {
+        @media(max-width: 1440px) {
           margin-bottom: 20px;
         }
+
+        @media(max-width: 1280px) {
+          margin-bottom: 15px;
+        }
+
+        // @media(max-width: 1024px) {
+        //   margin-bottom: 20px;
+        // }
       }
     }
 
@@ -51,6 +85,14 @@
       font-family: 'FuturaBookC';
       font-size: 20px;
       margin-bottom: 40px;
+
+      @media(max-width: 1440px) {
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 1280px) {
+        margin-bottom: 25px;
+      }
 
       @media(max-width: 576px) {
         font-size: 18px;
@@ -190,12 +232,23 @@
       position: absolute;
       left: 0;
       top: -8px;
+
+      @media(max-width: 1440px) {
+        top: 0;
+        width: 40px;
+        height: 40px;
+      }
     }
 
     &-txt {
       padding-left: 64px;
       font-size: 18px;
       color: #728EAE;
+
+      @media(max-width: 1440px) {
+        font-size: 16px;
+        padding-left: 54px;
+      }
 
       span {
         font-family: 'FuturaMediumC';
@@ -204,6 +257,14 @@
           display: block;
           color: #172542;
           margin-bottom: 24px;
+
+          @media(max-width: 1440px) {
+            margin-bottom: 20px;
+          }
+
+          @media(max-width: 1280px) {
+            margin-bottom: 15px;
+          }
         }
       }
     }

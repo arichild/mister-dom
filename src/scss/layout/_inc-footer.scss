@@ -4,6 +4,17 @@
     border-bottom: 1px solid #D9E4F1;
     margin-bottom: 48px;
 
+    @media(max-width: 1440px) {
+      padding-bottom: 60px;
+      margin-bottom: 35px;
+    }
+
+    &> .row > .col-md-3:first-child {
+      @media(max-width: 576px) {
+        order: 1;
+      }
+    }
+
     @media(max-width: 1024px) {
       padding-bottom: 50px;
       margin-bottom: 30px;
@@ -36,9 +47,18 @@
     margin-bottom: 45px;
     letter-spacing: 0.05em;
 
-    @media(max-width: 1024px) {
-      margin-bottom: 25px;
+    @media(max-width: 1440px) {
+      margin-bottom: 30px;
     }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    // @media(max-width: 1024px) {
+    //   margin-bottom: 25px;
+    // }
   }
 
   &-subtitle {
@@ -46,6 +66,18 @@
     font-size: 16px;
     line-height: 1.12;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1440px) {
+      font-size: 14px;
+    }
+
+    @media(max-width: 1280px) {
+      font-size: 13px;
+    }
+
+    @media(max-width: 480px) {
+      font-size: 11px;
+    }
 
     @media(max-width: 1024px) {
       br {
@@ -154,6 +186,8 @@
   }
 
   &-paymnet {
+    padding-right: 15px;
+
     ul {
       margin-bottom: 0;
     }
@@ -161,16 +195,15 @@
     li {
       display: inline-block;
       vertical-align: middle;
+      margin-right: 5px;
+      max-width: 98px;
 
-    a {
-        margin-right: 5px;
-        max-width: 98px;
+      @media(max-width: 1440px) {
+        max-width: 80px;
       }
 
       @media(max-width: 1024px) {
-        a {
-          max-width: 45px;
-        }
+        max-width: 45px;
       }
     }
   }

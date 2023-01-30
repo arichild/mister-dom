@@ -135,6 +135,7 @@
     font-family: 'FuturaDemiC';
     font-size: 40px;
     margin-bottom: 20px;
+    margin-top: 0;
   }
 
   &-count {
@@ -248,6 +249,11 @@
     }
   }
 
+  &-btns {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
   &-serv {
     max-width: 135px;
     width: 100%;
@@ -260,6 +266,8 @@
 
     &-img {
       margin-bottom: 18px;
+      line-height: 0;
+      height: 64px;
     }
 
     &-txt {
@@ -322,7 +330,7 @@
     border: 1px solid #D9E4F1;
     border-radius: 50%;
     max-width: 60px;
-    width: 100%;
+    width: 60px;
     height: 60px;
     position: relative;
     display: inline-block;

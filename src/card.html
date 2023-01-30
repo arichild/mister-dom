@@ -84,9 +84,9 @@
         <div class="col-md-6">
           <div class="card-info">
             <div class="card-header">
-              <div class="card-caption">
+              <h1 class="card-caption">
                 Блохэй мягкая игрушка, плюшевая акула синего цвета, 70 см
-              </div>
+              </h1>
 
               <div class="card-links">
                 <div class="card-count">
@@ -115,56 +115,60 @@
             </div>
 
             <div class="card-body">
-              <div class="card-price">
-                12 059.99 р.
-              </div>
-
-              <div class="card-control">
-                <div class="ui-count">
-                  <button class="ui-count-btn minus" type="button" onclick="this.nextElementSibling.stepDown(); ">-</button>
-                  <input autocomplete="off" type="number" min="1" value="1" readonly="">
-                  <button class="ui-count-btn plus" type="button" onclick="this.previousElementSibling.stepUp(); ">+</button>
+              <div class="card-control-section">
+                <div class="card-price">
+                  12 059.99 р.
                 </div>
 
-                <button class="ui-btn">
-                  <img src="./images/icon/cart-btn.svg" alt="alt">
-                  В корзину
-                </button>
+                <div class="card-control">
+                  <div class="ui-count">
+                    <button class="ui-count-btn minus" type="button" onclick="this.nextElementSibling.stepDown(); ">-</button>
+                    <input autocomplete="off" type="number" min="1" value="1" readonly="">
+                    <button class="ui-count-btn plus" type="button" onclick="this.previousElementSibling.stepUp(); ">+</button>
+                  </div>
 
-                <a href="#" class="card-btn">
-                  <svg class="sprite">
-                    <use xlink:href="./images/svg/symbols.svg#card-fav"></use>
-                  </svg>
-                </a>
-                <a href="#" class="card-btn mr-0 active">
-                  <svg class="sprite">
-                    <use xlink:href="./images/svg/symbols.svg#card-comparison"></use>
-                  </svg>
-                </a>
-              </div>
+                  <button class="ui-btn">
+                    <img src="./images/icon/cart-btn.svg" alt="alt">
+                    В корзину
+                  </button>
 
-              <div class="card-specifications-desc">
-                <div class="card-specifications">
-                  <span class="ui-tooltip">
-                    <span class="ui-tooltip-icon">
+                  <div class="card-btns">
+                    <a href="#" class="card-btn">
                       <svg class="sprite">
-                        <use xlink:href="./images/svg/symbols.svg#tooltip"></use>
+                        <use xlink:href="./images/svg/symbols.svg#card-fav"></use>
                       </svg>
-                    </span>
-                    <div class="ui-tooltip-answer">
-                      Чтобы накапливать баллы зарегистрируйтесь и вступайте в клуб “Mymisterdom”.
-                    </div>
-                  </span>
-
-                  код товара:
-
-                  <span>403.735.97-01</span>
+                    </a>
+                    <a href="#" class="card-btn mr-0 active">
+                      <svg class="sprite">
+                        <use xlink:href="./images/svg/symbols.svg#card-comparison"></use>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
 
-                <div class="card-specifications">
-                  артикул:
+                <div class="card-specifications-desc">
+                  <div class="card-specifications">
+                    <span class="ui-tooltip">
+                      <span class="ui-tooltip-icon">
+                        <svg class="sprite">
+                          <use xlink:href="./images/svg/symbols.svg#tooltip"></use>
+                        </svg>
+                      </span>
+                      <div class="ui-tooltip-answer">
+                        Чтобы накапливать баллы зарегистрируйтесь и вступайте в клуб “Mymisterdom”.
+                      </div>
+                    </span>
 
-                  <span>477</span>
+                    код товара:
+
+                    <span>403.735.97-01</span>
+                  </div>
+
+                  <div class="card-specifications">
+                    артикул:
+
+                    <span>477</span>
+                  </div>
                 </div>
               </div>
 
@@ -346,22 +350,20 @@
 
                       <div class="ui-field">
                         <textarea id="msg" name="msg" class="ui-input label height-120" rows="4"></textarea>
-                        <label class="ui-placeholder hide">
+                        <label class="ui-label placeholder">
                           <span>*</span>
                           Ваш отзыв
                         </label>
-                        <label class="ui-label">* Ваш отзыв</label>
                       </div>
 
                       <div class="row">
                         <div class="col-md-6">
                           <div class="ui-field">
                             <input type="text" class="ui-input label" name="name" id="name">
-                            <label class="ui-placeholder hide">
+                            <label class="ui-label placeholder">
                               <span>*</span>
                               Ваше имя
                             </label>
-                            <label class="ui-label">* Ваше имя</label>
                           </div>
                         </div>
 

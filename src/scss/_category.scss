@@ -2,6 +2,14 @@
   &-cart {
     margin-bottom: 53px;
 
+    @media(max-width: 1440px) {
+      margin-bottom: 30px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 15px;
+    }
+
     @media(max-width: 1024px) {
       margin-bottom: 10px;
     }
@@ -13,6 +21,14 @@
 
   &-settings {
     margin-bottom: 80px;
+
+    @media(max-width: 1440px) {
+      margin-bottom: 60px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 50px;
+    }
 
     @media(max-width: 1024px) {
       margin-bottom: 30px;
@@ -81,6 +97,11 @@
       border: 1px solid #D4DFEA;
       border-radius: 6px;
 
+      @media(max-width: 1440px) {
+        width: 52px;
+        height: 52px;
+      }
+
       @media(max-width: 1024px) {
         width: 46px;
         height: 46px;
@@ -108,6 +129,14 @@
     .ui-pgn-btns {
       margin-bottom: 120px;
 
+      @media(max-width: 1440px) {
+        margin-bottom: 80px;
+      }
+
+      @media(max-width: 1280px) {
+        margin-bottom: 65px;
+      }
+
       @media(max-width: 1024px) {
         margin-bottom: 55px;
       }
@@ -117,6 +146,10 @@
   &-txt {
     font-family: 'FuturaLightC';
     font-size: 22px;
+
+    @media(max-width: 1440px) {
+      font-size: 20px;
+    }
 
     @media(max-width: 1024px) {
       font-size: 18px;
@@ -151,9 +184,14 @@
       letter-spacing: 0.05em;
       position: relative;
 
-      @media(max-width: 1215px) {
-        font-size: 28px;
+      @media(max-width: 1440px) {
+        font-size: 30px;
         margin-bottom: 30px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 28px;
+        margin-bottom: 28px;
       }
 
       @media(max-width: 1024px) {
@@ -185,7 +223,11 @@
       font-size: 20px;
       margin-bottom: 40px;
 
-      @media(max-width: 1215px) {
+      @media(max-width: 1440px) {
+        margin-bottom: 30px;
+      }
+
+      @media(max-width: 1280px) {
         font-size: 18px;
         margin-bottom: 20px;
       }
@@ -396,10 +438,19 @@
   background: transparent;
   color: #172542;
 
-  @media(max-width: 1215px) {
-    font-size: 28px;
-    margin-bottom: 25px;
+  @media(max-width: 1440px) {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
 
+  @media(max-width: 1280px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: 1215px) {
+    // font-size: 28px;
+    margin-bottom: 25px;
   }
 
   @media(max-width: 1024px) {
@@ -430,6 +481,10 @@
   margin-bottom: 15px;
   position: relative;
   padding-right: 35px;
+
+  @media(max-width: 1440px) {
+    margin-bottom: 10px;
+  }
 
   &::after {
     content: "";

@@ -10,7 +10,8 @@
   <div class="ui-popup-form">
     <form action="#" class="ui-popup-validate">
       <div class="ui-popup-field">
-        <input autocomplete="off" type="text" class="ui-input popup" name="email" id="email" placeholder="Электронная почта">
+        <input autocomplete="off" type="text" class="ui-input label popup" name="email" id="email" placeholder="Электронная почта">
+        <label class="ui-label">Электронная почта</label>
       </div>
 
       <div class="ui-popup-field">
@@ -31,7 +32,8 @@
 
   <script>
     $( document ).ready(function() {
-      console.log($(".ui-popup-form"))
+      labelForInput('.ui-popup .ui-input.label')
+
       $(".ui-popup-validate").validate({
         errorElement: "span",
 
