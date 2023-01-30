@@ -15,7 +15,8 @@
       </div>
 
       <div class="ui-popup-field">
-        <input autocomplete="off" type="text" class="ui-input popup" id="password" name="password" placeholder="Пароль">
+        <input autocomplete="off" type="text" class="ui-input label popup" id="password" name="password" placeholder="Пароль">
+        <label class="ui-label">Пароль</label>
       </div>
 
       <div class="ui-popup-control flex">
@@ -41,6 +42,8 @@
 
   <script>
     $( document ).ready(function() {
+      labelForInput('.ui-popup .ui-input.label')
+
       $(".ui-popup-validate").validate({
         errorElement: "span",
 
