@@ -365,14 +365,15 @@ $( document ).ready(function() {
   const imgsClone = $('.swiper-card-imgs').clone().addClass('swiper-mobile-imgs').removeClass('swiper-card-imgs');
   imgsClone.find('.card-imgs-prev').addClass('mobile-imgs-prev').removeClass('card-imgs-prev')
   imgsClone.find('.card-imgs-next').addClass('mobile-imgs-next').removeClass('card-imgs-next')
-  imgsClone.find('.card-image').addClass('mobile-image').removeClass('card-image')
+  imgsClone.find('.card-image').addClass('mobile-image').removeClass('card-image card-gallery').removeClass('card-image').removeAttr('data-qualification')
   imgsClone.find('.mobile-image').eq(0).addClass('active');
 
   $('.card-imgs').append(imgsClone)
   $('.swiper-mobile-imgs').wrap('<div class="mobile-imgs"></div>')
 
   const cardMini = new Swiper('.swiper-mobile-imgs',{
-    slidesPerView: 3,
+    // slidesPerView: 3,
+      slidesPerView: "auto",
     // shortSwipes: false,
     spaceBetween: 15,
     navigation: {
@@ -380,30 +381,41 @@ $( document ).ready(function() {
       prevEl: ".mobile-imgs-prev",
     },
     breakpoints: {
-      841: {
-        slidesPerView: 5
-      }
+      // 1024: {
+      //   slidesPerView: 3
+      // },
+
+      // 300: {
+      //   slidesPerView: "auto"
+      // }
+
+      // 576: {
+      //   slidesPerView: 3,
+      // }
     }
   })
 
   const cardSwiper = new Swiper('.swiper-card-imgs',{
     slidesPerView: 1,
+    autoHeight: true, //enable auto height
+    pagination: false,
+
     // shortSwipes: false,
     autoHeight: true,
     navigation: {
       nextEl: ".card-imgs-next",
       prevEl: ".card-imgs-prev",
     },
-    pagination: {
-      el: '.card-imgs-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      769: {
-        pagination: false
-      }
-    }
+    // pagination: {
+    //   el: '.card-imgs-pagination',
+    //   type: 'bullets',
+    //   clickable: true
+    // },
+    // breakpoints: {
+    //   576: {
+    //     pagination: false
+    //   }
+    // }
   })
 
   cardSwiper.on('slideChange',function(swiper){
@@ -445,23 +457,45 @@ $( document ).ready(function() {
 
   // category.html
   (function() {
-      if(matchMedia) {
-        const screen1024 = window.matchMedia('(max-width:1024px)');
+    if(matchMedia) {
+      const screen1024 = window.matchMedia('(max-width:1024px)');
 
-        screen1024.addListener(changes);
-        changes(screen1024);
-      }
+      screen1024.addListener(changes);
+      changes(screen1024);
+    }
 
-      function changes(screen) {
-        if(screen.matches) {
-          //экран менее 1024
-          $('.category-bottom').after($('.category-subscribe'))
-        } else {
-          //экран более 1024
-          $('.category-filter-menu').after($('.category-subscribe'))
-        }
+    function changes(screen) {
+      if(screen.matches) {
+        //экран менее 1024
+        $('.category-bottom').after($('.category-subscribe'))
+      } else {
+        //экран более 1024
+        $('.category-filter-menu').after($('.category-subscribe'))
       }
-    })();
+    }
+  })();
+
+  // card.html
+  (function() {
+    if(matchMedia) {
+      const screen1024 = window.matchMedia('(max-width:1024px)');
+
+      screen1024.addListener(changes);
+      changes(screen1024);
+    }
+
+    function changes(screen) {
+      if(screen.matches) {
+        //экран менее 1024
+        $('.card-mob-slider').append($('.swiper.swiper-card-imgs'))
+        $('.card-mob-slider').append($('.mobile-imgs'))
+      } else {
+        //экран более 1024
+        $('.card-imgs').prepend($('.mobile-imgs'))
+        $('.card-imgs').prepend($('.swiper.swiper-card-imgs'))
+      }
+    }
+  })();
 
 
   // filter-menu
@@ -708,29 +742,12 @@ $( document ).ready(function() {
     });
   }
 
-  if(document.querySelectorAll('.card-comment-form .ui-input').length !== 0) {
-    const allInput = document.querySelectorAll('.card-comment-form .ui-input');
+  if(document.querySelector('.card-imgs')) {
+    let sliderGallery = document.querySelector('.card-imgs');
 
-    allInput.forEach((input) => {
-      input.addEventListener('focus', (e) => {
-        const placeholder = e.target.closest('.ui-field').querySelector('.ui-placeholder');
-
-        if(placeholder) {
-          placeholder.style.display = "none"
-        }
-      })
-
-      input.addEventListener('blur', (e) => {
-        const placeholder = e.target.closest('.ui-field').querySelector('.ui-placeholder');
-
-        if(placeholder && input.value.length !== 0) {
-          placeholder.style.display = "none"
-        }
-
-        if(placeholder && input.value.length === 0) {
-          placeholder.style.display = "block"
-        }
-      })
+    lightGallery(sliderGallery, {
+      selector: ".card-image",
+      download: false,
     })
   }
 });
