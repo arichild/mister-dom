@@ -397,6 +397,44 @@
 
                     <button class="ui-btn">Отправить отзыв</button>
                   </form>
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded",() => {
+                      jQuery(document).ready(function($){
+                        $(".card-form").validate({
+                          errorElement: "span",
+
+                          rules: {
+                            surname: {
+                              required: true,
+                              lettersonly: true,
+                            },
+                            name: {
+                              required: true,
+                              lettersonly: true,
+                            },
+                            msg: {
+                              required: true,
+                            },
+                          },
+
+                          messages: {
+                            name: {
+                              required: "Пожалуйста, введите данные",
+                              lettersonly: "Ваша фамилия должно состоять только из латинский или кириллических букв, без цифр",
+                            },
+                            msg: {
+                              required: "Пожалуйста, введите данные",
+                            },
+                          }
+                        });
+
+                        jQuery.validator.addMethod("lettersonly", function(value, element) {
+                          return this.optional(element) || /^([а-яё]+|[a-z]+)$/i.test(value);
+                        }, "Letters only please");
+                      })
+                    });
+                  </script>
                 </div>
               </div>
             </div>

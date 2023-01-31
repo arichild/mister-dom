@@ -497,7 +497,6 @@ $( document ).ready(function() {
     }
   })();
 
-
   // filter-menu
   if(document.querySelector('.category-btn-menu')) {
     const filterMenuBtn = document.querySelector('.category-btn-menu');
@@ -616,126 +615,9 @@ $( document ).ready(function() {
     })
   }
 
-  // validation
-  $(".order-form").validate({
-    errorElement: "span",
+  if(document.getElementById('phone')) {
+    let phone = document.getElementById('phone')
 
-    rules: {
-      surname: {
-        required: true,
-        lettersonly: true,
-      },
-      name: {
-        required: true,
-        lettersonly: true,
-      },
-      lastName: {
-        required: true,
-        lettersonly: true,
-      },
-      email: {
-        required: true,
-        email: true,
-      },
-      phone: {
-        required: true,
-        minlength: 19,
-      },
-      town: {
-        required: true,
-        lettersonly: true,
-      },
-      address: {
-        required: true,
-      },
-      select1: {
-        required: true,
-      },
-      select: {
-        required: true,
-      }
-    },
-
-    errorPlacement: function (error, element) {
-      if (element.hasClass('ui-radio')) {
-        element.closest('.ui-select').after(error);
-      }
-      if (element.hasClass('ui-input')) {
-        element.closest('.ui-field').append(error);
-      }
-    },
-
-    messages: {
-      surname: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваше имя не может состоять из цифр",
-      },
-      name: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваша фамилия не может состоять из цифр",
-      },
-      lastName: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваше отчество не может состоять из цифр",
-      },
-      email: {
-        required: "Пожалуйста, введите данные",
-        email: "Введите корректный email",
-      },
-      phone: {
-        required: "Пожалуйста, введите данные",
-        minlength: "Введите полный номер",
-      },
-      town: {
-        required: "Пожалуйста, введите данные",
-      },
-      address: {
-        required: "Пожалуйста, введите данные",
-      },
-      select1: {
-        required: "Пожалуйста, выберете способ доставки",
-      },
-      select: {
-        required: "Пожалуйста, выберете способ оплаты",
-      },
-    }
-  });
-
-  $(".card-form").validate({
-    errorElement: "span",
-
-    rules: {
-      surname: {
-        required: true,
-        lettersonly: true,
-      },
-      name: {
-        required: true,
-        lettersonly: true,
-      },
-      msg: {
-        required: true,
-      },
-    },
-
-    messages: {
-      name: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваша фамилия не может состоять из цифр",
-      },
-      msg: {
-        required: "Пожалуйста, введите данные",
-      },
-    }
-  });
-
-  jQuery.validator.addMethod("lettersonly", function(value, element) {
-    return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
-  }, "Letters only please");
-
-  let phone = document.getElementById('phone')
-
-  if(phone) {
     let phoneMask = IMask(
       phone, {
         mask: '+{375} (00) 000 00 00'
