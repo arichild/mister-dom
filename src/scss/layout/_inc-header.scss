@@ -262,11 +262,13 @@
           position: relative;
           font-size: 18px;
           color: #172542;
-          padding: 14px 20px 14px 18px;
+          padding: 0 20px 0 18px;
           white-space: nowrap;
           margin-right: 40px;
           background: #F8FBFF;
           border-radius: 32px;
+          height: 52px;
+          line-height: 52px;
 
           img {
             top: -2px;
@@ -420,9 +422,10 @@
     }
 
     &-link {
-      max-width: 156px;
-      width: 100%;
+      // max-width: 156px;
+      // width: 100%;
       text-align: right;
+      flex: 1 0 auto;
 
       a {
         margin-left: 19px;
@@ -784,14 +787,12 @@
   color: #172542;
   border: none;
   font-family: 'FuturaDemiC';
-  text-decoration: underline;
-  text-decoration-style: dotted;
   background-color: transparent;
   cursor: pointer;
   font-size: 16px;
-  // border-bottom: 1px red dotted;
-  // padding: 0;
-  // text-decoration-skip-ink: none;
+  border-bottom: 1px dotted #172542;
+  line-height: 14px;
+  padding: 0;
 }
 
 .dropdown {

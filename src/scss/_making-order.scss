@@ -22,6 +22,11 @@
       }
     }
 
+    .ui-radio+label {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     .ui-btn {
       max-width: 100%;
     }

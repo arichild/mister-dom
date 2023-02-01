@@ -23,6 +23,10 @@ function labelForInput(selector) {
   }
 }
 
+jQuery.validator.addMethod("lettersonly", function(value, element) {
+  return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
+}, "Letters only please");
+
 $( document ).ready(function() {
   // delete card for cart.html
 
@@ -381,17 +385,17 @@ $( document ).ready(function() {
       prevEl: ".mobile-imgs-prev",
     },
     breakpoints: {
-      // 1024: {
-      //   slidesPerView: 3
-      // },
+      576: {
+        spaceBetween: 15
+      },
 
-      // 300: {
-      //   slidesPerView: "auto"
-      // }
+      360: {
+        spaceBetween: 10
+      },
 
-      // 576: {
-      //   slidesPerView: 3,
-      // }
+      300: {
+        spaceBetween: 5
+      }
     }
   })
 

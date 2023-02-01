@@ -85,4 +85,9 @@ body {
   max-width: $widthContainer;
   padding-left: $paddingContainer;
   padding-right: $paddingContainer;
+
+  @media(max-width: 360px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

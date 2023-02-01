@@ -381,17 +381,17 @@ $( document ).ready(function() {
       prevEl: ".mobile-imgs-prev",
     },
     breakpoints: {
-      // 1024: {
-      //   slidesPerView: 3
-      // },
+      576: {
+        spaceBetween: 15
+      },
 
-      // 300: {
-      //   slidesPerView: "auto"
-      // }
+      360: {
+        spaceBetween: 10
+      },
 
-      // 576: {
-      //   slidesPerView: 3,
-      // }
+      300: {
+        spaceBetween: 5
+      }
     }
   })
 

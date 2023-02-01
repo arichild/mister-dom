@@ -279,52 +279,54 @@
               </div>
 
               <div class="card-tab-block comment">
-                <div class="card-comment">
-                  <div class="card-comment-header flex">
-                    <div class="card-comment-name">
-                      Екатерина Волох <span>2023-01-20</span>
-                    </div>
+                <div class="card-comment-list">
+                  <div class="card-comment">
+                    <div class="card-comment-header flex">
+                      <div class="card-comment-name">
+                        Екатерина Волох <span>2023-01-20</span>
+                      </div>
 
-                    <div class="card-comment-rating">
-                      <div class="ui-rating">
-                        <div class="ui-rating-stars">
-                          <div class="ui-rating-star base active"></div>
-                          <div class="ui-rating-star base active"></div>
-                          <div class="ui-rating-star base active"></div>
-                          <div class="ui-rating-star base"></div>
-                          <div class="ui-rating-star base"></div>
+                      <div class="card-comment-rating">
+                        <div class="ui-rating">
+                          <div class="ui-rating-stars">
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base active"></div>
+                            <div class="ui-rating-star base"></div>
+                            <div class="ui-rating-star base"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="card-comment-body">
-                    <div class="card-comment-txt">
-                      <div class="card-comment-title plus">
-                        <img src="./images/icon/comment-plus.svg" alt="alt">
+                    <div class="card-comment-body">
+                      <div class="card-comment-txt">
+                        <div class="card-comment-title plus">
+                          <img src="./images/icon/comment-plus.svg" alt="alt">
 
-                        Достоинства
+                          Достоинства
+                        </div>
+
+                        <div class="card-comment-desc">
+                          Плюшевая, теплая, красивая.
+                        </div>
                       </div>
 
-                      <div class="card-comment-desc">
-                        Плюшевая, теплая, красивая.
+                      <div class="card-comment-txt">
+                        <div class="card-comment-title minus">
+                          <img src="./images/icon/comment-minus.svg" alt="alt">
+
+                          Недостатки
+                        </div>
+
+                        <div class="card-comment-desc">
+                          Не обнаружено!
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="card-comment-txt">
-                      <div class="card-comment-title minus">
-                        <img src="./images/icon/comment-minus.svg" alt="alt">
-
-                        Недостатки
+                      <div class="card-comment-msg">
+                        Очень хороший товар, прямо просто замечательный! Не могу нарадоваться покупке. Как же здорово, что я ее купила. Спасибо!
                       </div>
-
-                      <div class="card-comment-desc">
-                        Не обнаружено!
-                      </div>
-                    </div>
-
-                    <div class="card-comment-msg">
-                      Очень хороший товар, прямо просто замечательный! Не могу нарадоваться покупке. Как же здорово, что я ее купила. Спасибо!
                     </div>
                   </div>
                 </div>
@@ -336,10 +338,10 @@
 
                   <form action="#" class="card-form">
                     <div class="card-comment-fields">
-                      <div class="row">
+                      <div class="row mini">
                         <div class="col-xs-6">
                           <div class="ui-field">
-                            <textarea class="ui-input label height-120" rows="4"></textarea>
+                            <textarea class="ui-input label" rows="3"></textarea>
                             <label class="ui-label">
                               <span class="title">Достоинства</span>
                             </label>
@@ -348,7 +350,7 @@
 
                         <div class="col-xs-6">
                           <div class="ui-field">
-                            <textarea class="ui-input label height-120" rows="4"></textarea>
+                            <textarea class="ui-input label" rows="3"></textarea>
                             <label class="ui-label">
                               <span class="title">Недостатки</span>
                             </label>
@@ -357,20 +359,20 @@
                       </div>
 
                       <div class="ui-field">
-                        <textarea id="msg" name="msg" class="ui-input label height-120" rows="4"></textarea>
+                        <textarea id="msg" name="msg" class="ui-input label" rows="3"></textarea>
                         <label class="ui-label">
                           <span class="dot">*</span>
-                          <span>Ваш отзыв</span>
+                          <span class="title">Ваш отзыв</span>
                         </label>
                       </div>
 
-                      <div class="row">
+                      <div class="row mini">
                         <div class="col-xs-6">
                           <div class="ui-field">
                             <input type="text" class="ui-input label" name="name" id="name">
                             <label class="ui-label">
                               <span class="dot">*</span>
-                              <span>Ваше имя</span>
+                              <span class="title">Ваше имя</span>
                             </label>
                           </div>
                         </div>
@@ -421,17 +423,13 @@
                           messages: {
                             name: {
                               required: "Пожалуйста, введите данные",
-                              lettersonly: "Ваша фамилия должно состоять только из латинский или кириллических букв, без цифр",
+                              lettersonly: "Ваша фамилия может состоять только из латинский или кириллических букв, без цифр",
                             },
                             msg: {
                               required: "Пожалуйста, введите данные",
                             },
                           }
                         });
-
-                        jQuery.validator.addMethod("lettersonly", function(value, element) {
-                          return this.optional(element) || /^([а-яё]+|[a-z]+)$/i.test(value);
-                        }, "Letters only please");
                       })
                     });
                   </script>

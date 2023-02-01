@@ -339,7 +339,7 @@
                       <div class="row">
                         <div class="col-xs-6">
                           <div class="ui-field">
-                            <textarea class="ui-input label height-120" rows="4"></textarea>
+                            <textarea class="ui-input label" rows="3"></textarea>
                             <label class="ui-label">
                               <span class="title">Достоинства</span>
                             </label>
@@ -348,7 +348,7 @@
 
                         <div class="col-xs-6">
                           <div class="ui-field">
-                            <textarea class="ui-input label height-120" rows="4"></textarea>
+                            <textarea class="ui-input label" rows="3"></textarea>
                             <label class="ui-label">
                               <span class="title">Недостатки</span>
                             </label>
@@ -357,7 +357,7 @@
                       </div>
 
                       <div class="ui-field">
-                        <textarea id="msg" name="msg" class="ui-input label height-120" rows="4"></textarea>
+                        <textarea id="msg" name="msg" class="ui-input label" rows="3"></textarea>
                         <label class="ui-label">
                           <span class="dot">*</span>
                           <span>Ваш отзыв</span>
@@ -421,17 +421,13 @@
                           messages: {
                             name: {
                               required: "Пожалуйста, введите данные",
-                              lettersonly: "Ваша фамилия должно состоять только из латинский или кириллических букв, без цифр",
+                              lettersonly: "Ваша фамилия может состоять только из латинский или кириллических букв, без цифр",
                             },
                             msg: {
                               required: "Пожалуйста, введите данные",
                             },
                           }
                         });
-
-                        jQuery.validator.addMethod("lettersonly", function(value, element) {
-                          return this.optional(element) || /^([а-яё]+|[a-z]+)$/i.test(value);
-                        }, "Letters only please");
                       })
                     });
                   </script>
