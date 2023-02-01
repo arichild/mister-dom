@@ -47,6 +47,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
+  &.disabled {
+    background: #ebd2a7;
+    cursor: not-allowed
+  }
+
   &.white {
     background: transparent;
     border: 1px solid #172542;

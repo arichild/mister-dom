@@ -636,4 +636,20 @@ $( document ).ready(function() {
       download: false,
     })
   }
+
+  if(document.querySelectorAll('.data-form.data input') !== 0) {
+    const allInput = document.querySelectorAll('.data-form.data input')
+    const btn = document.querySelector('.data-form.data .ui-btn')
+
+    allInput.forEach((item) => {
+      item.addEventListener('keyup', () => {
+        if(item.value !== "") {
+          btn.classList.remove("disabled")
+        } else {
+          btn.classList.add("disabled")
+        }
+      })
+    })
+  }
+
 });
