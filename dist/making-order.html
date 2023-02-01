@@ -403,7 +403,7 @@
 
               errorPlacement: function (error, element) {
                 if (element.hasClass('ui-radio')) {
-                  element.closest('.ui-select').after(error);
+                  element.closest('.order-option').append(error);
                 }
                 if (element.hasClass('ui-input')) {
                   element.closest('.ui-field').append(error);

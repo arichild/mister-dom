@@ -111,6 +111,10 @@
         margin-left: 16px;
         color: #4670C8;
 
+        @media(max-width: 320px) {
+          margin-left: 0;
+        }
+
         &:hover {
           color: #a8bed6;
         }

@@ -221,6 +221,40 @@
   &-option {
     margin-bottom: 25px;
 
+    .error {
+      display: block;
+      margin-top: 5px;
+
+      @media(max-width: 1170px) {
+        margin-top: -7px;
+      }
+
+      @media(max-width: 1024px) {
+        margin-top: 5px;
+      }
+
+      @media(max-width: 576px) {
+        margin-top: -7px;
+      }
+    }
+
+    .ui-select {
+      @media(max-width: 1170px) {
+        height: calc(100% - 12px);
+        margin-bottom: 12px;
+      }
+
+      @media(max-width: 1024px) {
+        height: 100%;
+        margin-bottom: 0;
+      }
+
+      @media(max-width: 576px) {
+        height: calc(100% - 12px);
+        margin-bottom: 12px;
+      }
+    }
+
     &.margin-0 {
       margin-bottom: 0;
     }

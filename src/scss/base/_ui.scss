@@ -401,6 +401,10 @@
   }
 }
 
+.ui-field {
+  position: relative;
+}
+
 .ui-count {
   background: #EEF1F7;
   max-width: 180px;
@@ -559,21 +563,6 @@
     // height: calc(100% - 12px);
     min-height: 80px;
     height: 100%;
-
-    @media(max-width: 1170px) {
-      height: calc(100% - 12px);
-      margin-bottom: 12px;
-    }
-
-    @media(max-width: 1024px) {
-      height: 100%;
-      margin-bottom: 0;
-    }
-
-    @media(max-width: 576px) {
-      height: calc(100% - 12px);
-      margin-bottom: 12px;
-    }
 
     &-img {
       position: absolute;
@@ -1171,6 +1160,10 @@ span.error {
   color: #728EAE;
   pointer-events: none;
   z-index: 10;
+  white-space: nowrap;
+  max-width: calc(100% - 36px);
+  text-overflow: ellipsis;
+  overflow: hidden;
 
   span.dot {
     color: #E70A0A;

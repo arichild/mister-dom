@@ -23,6 +23,10 @@ function labelForInput(selector) {
   }
 }
 
+jQuery.validator.addMethod("lettersonly", function(value, element) {
+  return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
+}, "Letters only please");
+
 $( document ).ready(function() {
   // delete card for cart.html
 
