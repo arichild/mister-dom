@@ -3,7 +3,7 @@
   max-width: 510px;
   padding: 50px 40px;
   background: #fff;
-  margin: 0 auto;
+  margin: 20px auto;
 
   &.width-920 {
     max-width: 920px;
@@ -110,6 +110,10 @@
       a {
         margin-left: 16px;
         color: #4670C8;
+
+        @media(max-width: 320px) {
+          margin-left: 0;
+        }
 
         &:hover {
           color: #a8bed6;

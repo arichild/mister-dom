@@ -34,7 +34,7 @@
 
   &-form {
     @media(max-width: 1024px) {
-      margin-bottom: 120px;
+      // margin-bottom: 120px;
 
       .ui-btn {
         max-width: 100%;
@@ -153,6 +153,7 @@
 
         @media(max-width: 1024px) {
           height: 65px;
+          line-height: 65px;
         }
 
         @media(max-width: 768px) {

@@ -23,6 +23,10 @@ function labelForInput(selector) {
   }
 }
 
+jQuery.validator.addMethod("lettersonly", function(value, element) {
+  return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
+}, "Letters only please");
+
 $( document ).ready(function() {
   // delete card for cart.html
 
@@ -365,14 +369,15 @@ $( document ).ready(function() {
   const imgsClone = $('.swiper-card-imgs').clone().addClass('swiper-mobile-imgs').removeClass('swiper-card-imgs');
   imgsClone.find('.card-imgs-prev').addClass('mobile-imgs-prev').removeClass('card-imgs-prev')
   imgsClone.find('.card-imgs-next').addClass('mobile-imgs-next').removeClass('card-imgs-next')
-  imgsClone.find('.card-image').addClass('mobile-image').removeClass('card-image')
+  imgsClone.find('.card-image').addClass('mobile-image').removeClass('card-image card-gallery').removeClass('card-image').removeAttr('data-qualification')
   imgsClone.find('.mobile-image').eq(0).addClass('active');
 
   $('.card-imgs').append(imgsClone)
   $('.swiper-mobile-imgs').wrap('<div class="mobile-imgs"></div>')
 
   const cardMini = new Swiper('.swiper-mobile-imgs',{
-    slidesPerView: 3,
+    // slidesPerView: 3,
+      slidesPerView: "auto",
     // shortSwipes: false,
     spaceBetween: 15,
     navigation: {
@@ -380,30 +385,41 @@ $( document ).ready(function() {
       prevEl: ".mobile-imgs-prev",
     },
     breakpoints: {
-      841: {
-        slidesPerView: 5
+      576: {
+        spaceBetween: 15
+      },
+
+      360: {
+        spaceBetween: 10
+      },
+
+      300: {
+        spaceBetween: 5
       }
     }
   })
 
   const cardSwiper = new Swiper('.swiper-card-imgs',{
     slidesPerView: 1,
+    autoHeight: true, //enable auto height
+    pagination: false,
+
     // shortSwipes: false,
     autoHeight: true,
     navigation: {
       nextEl: ".card-imgs-next",
       prevEl: ".card-imgs-prev",
     },
-    pagination: {
-      el: '.card-imgs-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      769: {
-        pagination: false
-      }
-    }
+    // pagination: {
+    //   el: '.card-imgs-pagination',
+    //   type: 'bullets',
+    //   clickable: true
+    // },
+    // breakpoints: {
+    //   576: {
+    //     pagination: false
+    //   }
+    // }
   })
 
   cardSwiper.on('slideChange',function(swiper){
@@ -445,24 +461,45 @@ $( document ).ready(function() {
 
   // category.html
   (function() {
-      if(matchMedia) {
-        const screen1024 = window.matchMedia('(max-width:1024px)');
+    if(matchMedia) {
+      const screen1024 = window.matchMedia('(max-width:1024px)');
 
-        screen1024.addListener(changes);
-        changes(screen1024);
+      screen1024.addListener(changes);
+      changes(screen1024);
+    }
+
+    function changes(screen) {
+      if(screen.matches) {
+        //экран менее 1024
+        $('.category-bottom').after($('.category-subscribe'))
+      } else {
+        //экран более 1024
+        $('.category-filter-menu').after($('.category-subscribe'))
       }
+    }
+  })();
 
-      function changes(screen) {
-        if(screen.matches) {
-          //экран менее 1024
-          $('.category-bottom').after($('.category-subscribe'))
-        } else {
-          //экран более 1024
-          $('.category-filter-menu').after($('.category-subscribe'))
-        }
+  // card.html
+  (function() {
+    if(matchMedia) {
+      const screen1024 = window.matchMedia('(max-width:1024px)');
+
+      screen1024.addListener(changes);
+      changes(screen1024);
+    }
+
+    function changes(screen) {
+      if(screen.matches) {
+        //экран менее 1024
+        $('.card-mob-slider').append($('.swiper.swiper-card-imgs'))
+        $('.card-mob-slider').append($('.mobile-imgs'))
+      } else {
+        //экран более 1024
+        $('.card-imgs').prepend($('.mobile-imgs'))
+        $('.card-imgs').prepend($('.swiper.swiper-card-imgs'))
       }
-    })();
-
+    }
+  })();
 
   // filter-menu
   if(document.querySelector('.category-btn-menu')) {
@@ -582,155 +619,21 @@ $( document ).ready(function() {
     })
   }
 
-  // validation
-  $(".order-form").validate({
-    errorElement: "span",
+  if(document.getElementById('phone')) {
+    let phone = document.getElementById('phone')
 
-    rules: {
-      surname: {
-        required: true,
-        lettersonly: true,
-      },
-      name: {
-        required: true,
-        lettersonly: true,
-      },
-      lastName: {
-        required: true,
-        lettersonly: true,
-      },
-      email: {
-        required: true,
-        email: true,
-      },
-      phone: {
-        required: true,
-        minlength: 19,
-      },
-      town: {
-        required: true,
-        lettersonly: true,
-      },
-      address: {
-        required: true,
-      },
-      select1: {
-        required: true,
-      },
-      select: {
-        required: true,
-      }
-    },
-
-    errorPlacement: function (error, element) {
-      if (element.hasClass('ui-radio')) {
-        element.closest('.ui-select').after(error);
-      }
-      if (element.hasClass('ui-input')) {
-        element.closest('.ui-field').append(error);
-      }
-    },
-
-    messages: {
-      surname: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваше имя не может состоять из цифр",
-      },
-      name: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваша фамилия не может состоять из цифр",
-      },
-      lastName: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваше отчество не может состоять из цифр",
-      },
-      email: {
-        required: "Пожалуйста, введите данные",
-        email: "Введите корректный email",
-      },
-      phone: {
-        required: "Пожалуйста, введите данные",
-        minlength: "Введите полный номер",
-      },
-      town: {
-        required: "Пожалуйста, введите данные",
-      },
-      address: {
-        required: "Пожалуйста, введите данные",
-      },
-      select1: {
-        required: "Пожалуйста, выберете способ доставки",
-      },
-      select: {
-        required: "Пожалуйста, выберете способ оплаты",
-      },
-    }
-  });
-
-  $(".card-form").validate({
-    errorElement: "span",
-
-    rules: {
-      surname: {
-        required: true,
-        lettersonly: true,
-      },
-      name: {
-        required: true,
-        lettersonly: true,
-      },
-      msg: {
-        required: true,
-      },
-    },
-
-    messages: {
-      name: {
-        required: "Пожалуйста, введите данные",
-        lettersonly: "Ваша фамилия не может состоять из цифр",
-      },
-      msg: {
-        required: "Пожалуйста, введите данные",
-      },
-    }
-  });
-
-  jQuery.validator.addMethod("lettersonly", function(value, element) {
-    return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
-  }, "Letters only please");
-
-  let phone = document.getElementById('phone')
-
-  if(phone) {
     let phoneMask = IMask(
       phone, {
         mask: '+{375} (00) 000 00 00'
     });
   }
 
-  if(document.querySelectorAll('.card-comment-form .ui-input').length !== 0) {
-    const allInput = document.querySelectorAll('.card-comment-form .ui-input');
+  if(document.querySelector('.card-imgs')) {
+    let sliderGallery = document.querySelector('.card-imgs');
 
-    allInput.forEach((input) => {
-      input.addEventListener('focus', (e) => {
-        const placeholder = e.target.closest('.ui-field').querySelector('.ui-placeholder');
-
-        if(placeholder) {
-          placeholder.style.display = "none"
-        }
-      })
-
-      input.addEventListener('blur', (e) => {
-        const placeholder = e.target.closest('.ui-field').querySelector('.ui-placeholder');
-
-        if(placeholder && input.value.length !== 0) {
-          placeholder.style.display = "none"
-        }
-
-        if(placeholder && input.value.length === 0) {
-          placeholder.style.display = "block"
-        }
-      })
+    lightGallery(sliderGallery, {
+      selector: ".card-image",
+      download: false,
     })
   }
 });

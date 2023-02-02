@@ -32,31 +32,31 @@
               <div class="row mini">
                 <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
-                    <input autocomplete="off" type="text" class="ui-input label" name="surname" id="surname" placeholder="Фамилия">
+                    <input autocomplete="off" type="text" class="ui-input label" name="surname" id="surname">
                     <label class="ui-label label">Фамилия</label>
                   </div>
                 </div>
                 <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
-                    <input autocomplete="off" type="text" class="ui-input label" name="name" id="name" placeholder="Имя">
+                    <input autocomplete="off" type="text" class="ui-input label" name="name" id="name">
                     <label class="ui-label">Имя</label>
                   </div>
                 </div>
                 <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
-                    <input autocomplete="off" type="text" class="ui-input label" name="lastName" id="lastName" placeholder="Отчество">
+                    <input autocomplete="off" type="text" class="ui-input label" name="lastName" id="lastName">
                     <label class="ui-label">Отчество</label>
                   </div>
                 </div>
                 <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
-                    <input autocomplete="off" type="text" class="ui-input label" name="email" id="email" placeholder="Email">
+                    <input autocomplete="off" type="text" class="ui-input label" name="email" id="email">
                     <label class="ui-label">Email</label>
                   </div>
                 </div>
                 <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
-                    <input autocomplete="off" type="text" class="ui-input label" name="phone" id="phone" placeholder="Телефон">
+                    <input autocomplete="off" type="text" class="ui-input label" name="phone" id="phone">
                     <label class="ui-label">Телефон</label>
                   </div>
                 </div>
@@ -71,9 +71,8 @@
                   </div>
 
                   <div class="ui-field">
-                    <input autocomplete="off" type="text" class="ui-input label" name="town" id="town" placeholder="Город">
+                    <input autocomplete="off" type="text" class="ui-input label" name="town" id="town">
                     <label class="ui-label">Город</label>
-
                   </div>
 
                   <div class="order-warn">
@@ -128,7 +127,7 @@
                       <div class="col-lg-6 col-md-12 col-xs-6">
                         <div class="ui-select">
                           <input autocomplete="off" type="radio" class="ui-radio" id="select3" name="select1">
-                          <label for="select3" class="padding">
+                          <label for="select3">
                             До двери
 
                             <span>10.02 р., срок 6 дн.</span>
@@ -153,7 +152,7 @@
                   </div>
 
                   <div class="ui-field margin-0">
-                    <input autocomplete="off" type="text" name="address" id="address" class="ui-input label" placeholder="Адрес">
+                    <input autocomplete="off" type="text" name="address" id="address" class="ui-input label">
                     <label class="ui-label">Адрес</label>
                   </div>
                 </div>
@@ -164,7 +163,7 @@
                   </div>
 
                   <div class="ui-field margin-30">
-                    <textarea id="textbox" name="textbox" placeholder="Комментарий к заказу" class="ui-input label height" rows="4"></textarea>
+                    <textarea id="textbox" name="textbox" class="ui-input label height" rows="4"></textarea>
                     <label class="ui-label">Комментарий к заказу</label>
                   </div>
 
@@ -359,6 +358,96 @@
           </div>
         </div>
       </form>
+
+      <script>
+        document.addEventListener("DOMContentLoaded",() => {
+          jQuery(document).ready(function($){
+            $(".order-form").validate({
+              errorElement: "span",
+
+              rules: {
+                surname: {
+                  required: true,
+                  lettersonly: true,
+                },
+                name: {
+                  required: true,
+                  lettersonly: true,
+                },
+                lastName: {
+                  required: true,
+                  lettersonly: true,
+                },
+                email: {
+                  required: true,
+                  email: true,
+                },
+                phone: {
+                  required: true,
+                  minlength: 19,
+                },
+                town: {
+                  required: true,
+                  lettersonly: true,
+                },
+                address: {
+                  required: true,
+                },
+                select1: {
+                  required: true,
+                },
+                select: {
+                  required: true,
+                }
+              },
+
+              errorPlacement: function (error, element) {
+                if (element.hasClass('ui-radio')) {
+                  element.closest('.order-option').append(error);
+                }
+                if (element.hasClass('ui-input')) {
+                  element.closest('.ui-field').append(error);
+                }
+              },
+
+              messages: {
+                surname: {
+                  required: "Пожалуйста, введите данные",
+                  lettersonly: "Ваше имя может состоять только из латинский или кириллических букв, без цифр",
+                },
+                name: {
+                  required: "Пожалуйста, введите данные",
+                  lettersonly: "Ваша фамилия может состоять только из латинский или кириллических букв, без цифр",
+                },
+                lastName: {
+                  required: "Пожалуйста, введите данные",
+                  lettersonly: "Ваше отчество может состоять только из латинский или кириллических букв, без цифр",
+                },
+                email: {
+                  required: "Пожалуйста, введите данные",
+                  email: "Введите корректный email",
+                },
+                phone: {
+                  required: "Пожалуйста, введите данные",
+                  minlength: "Введите полный номер",
+                },
+                town: {
+                  required: "Пожалуйста, введите данные",
+                },
+                address: {
+                  required: "Пожалуйста, введите данные",
+                },
+                select1: {
+                  required: "Пожалуйста, выберете способ доставки",
+                },
+                select: {
+                  required: "Пожалуйста, выберете способ оплаты",
+                },
+              }
+            });
+          })
+        });
+      </script>
     </div>
 
     <div class="services">

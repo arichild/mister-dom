@@ -250,6 +250,8 @@
         margin-bottom: 15px;
       }
 
+
+
       .ui-input {
         border: 1px solid #172542;
         border-radius: 32px;
@@ -295,6 +297,22 @@
 
         &.active {
           display: block;
+        }
+      }
+
+      .ui-field {
+        margin-bottom: 2px;
+      }
+
+      .ui-input {
+        background: transparent;
+      }
+
+      .ui-label {
+        background: #f9fcff;
+
+        @media(max-width: 1024px) {
+          background: #fff;
         }
       }
     }
