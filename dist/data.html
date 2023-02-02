@@ -135,21 +135,6 @@
                       minlength: "Введите полный номер",
                     },
                   },
-
-                  submitHandler: function(form, event) {
-                    event.preventDefault();
-
-                    const allInput = document.querySelectorAll('.data-form.data input')
-                    const btn = document.querySelector('.data-form.data .ui-btn')
-
-                    allInput.forEach((item) => {
-                      if(item.value !== '') {
-                        form.submit()
-                      } else {
-                        console.log("aaa")
-                      }
-                    })
-                  }
                 });
               })
             });

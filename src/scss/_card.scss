@@ -36,6 +36,10 @@
         opacity: 0;
       }
 
+      @media(max-width: 768px) {
+        display: none;
+      }
+
       @media(max-width: 576px) {
         width: 32px;
         height: 32px;
@@ -910,10 +914,16 @@
 .mobile-image {
   line-height: 0;
   height: 0;
-  padding-bottom: 100%;
+  padding-bottom: calc(100% - 2px);
   display: block;
   position: relative;
   overflow: hidden;
+  border: 1px solid #D9E4F1;
+  cursor: pointer;
+
+  &.active {
+    border: 1px solid #fdc300;
+  }
 
   img {
     // max-height: 142px;
@@ -929,11 +939,11 @@
 .card-image {
   line-height: 0;
   display: block;
-  padding-bottom: 100%;
+  padding-bottom: calc(100% - 2px);
   height: 0;
   position: relative;
   overflow: hidden;
-  border: 1px solid #D9E4F1;
+  border: 1px solid #d9e4f1;
 
   img {
     position: absolute;
@@ -949,6 +959,8 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
+    border: 0;
+    box-shadow: inset 0px 0px 0px 1px #d9e4f1;
 
     img {
       max-height: 448px;
@@ -995,15 +1007,6 @@
 
 .swiper-card-imgs {
   margin-bottom: 15px;
-}
-
-.mobile-image {
-  border: 1px solid #D9E4F1;
-  cursor: pointer;
-}
-
-.mobile-image.active {
-  border: 1px solid #fdc300;
 }
 
 .card-imgs-pagination {
