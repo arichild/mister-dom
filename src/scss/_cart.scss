@@ -488,27 +488,24 @@
 
     &-info {
       align-items: center;
+      max-width: calc(100% - 140px);
+      flex: 0 0 calc(100% - 140px);
+      padding-right: 0;
 
-      &.first {
-        max-width: calc(100% - 140px);
-        flex: 0 0 calc(100% - 140px);
-        padding-right: 0;
+      @media(max-width: 1310px) {
+        // max-width: 100%;
+        // flex: 0 0 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-        @media(max-width: 1310px) {
-          // max-width: 100%;
-          // flex: 0 0 100%;
-          flex-direction: column;
-          align-items: flex-start;
-        }
+      @media(max-width: 1024px) {
+        margin-bottom: 10px;
+      }
 
-        @media(max-width: 1024px) {
-          margin-bottom: 10px;
-        }
-
-        @media(max-width: 480px) {
-          // padding-right: 30px;
-          align-items: flex-start;
-        }
+      @media(max-width: 480px) {
+        // padding-right: 30px;
+        align-items: flex-start;
       }
 
       &.txt {
@@ -519,11 +516,14 @@
         @media(max-width: 1310px) {
           max-width: 100%;
           flex: 0 0 100%;
+          flex-direction: row;
+          align-items: center;
         }
 
         @media(max-width: 1024px) {
           max-width: calc(100% - 210px);
           flex: 0 0 calc(100% - 210px);
+          margin-bottom: 0;
           // padding-right: 58px;
         }
 
@@ -534,42 +534,6 @@
         }
       }
 
-      &.second {
-        max-width: 560px;
-        flex: 0 0 560px;
-
-        @media(max-width: 1310px) {
-          max-width: 100%;
-          flex: 0 0 100%;
-          padding-left: 155px;
-          width: 100%;
-        }
-
-        @media(max-width: 1140px) {
-          position: relative;
-        }
-
-        @media(max-width: 1024px) {
-          padding-left: 120px;
-        }
-
-        @media(max-width: 480px) {
-          padding-left: 68px;
-        }
-
-        // @media(max-width: 480px) {
-        //   flex-wrap: wrap;
-        //   border-top: 1px solid #d9e4f1;
-        //   margin-top: 10px;
-        //   padding-left: 76px;
-        //   padding-top: 10px;
-        // }
-
-        // @media(max-width: 380px) {
-        //   padding-left: 0;
-        //   justify-content: space-between;
-        // }
-      }
       &.price {
         max-width: 210px;
         flex: 0 0 210px;
@@ -578,12 +542,14 @@
           max-width: 100%;
           flex: 0 0 100%;
           padding-left: 85px;
+          flex-direction: row;
         }
 
         @media(max-width: 1024px) {
           max-width: 210px;
           flex: 0 0 210px;
           padding-left: 0;
+          margin-bottom: 0;
         }
 
         @media(max-width: 525px) {
