@@ -75,7 +75,6 @@
       }
 
       @media(max-width: 768px) {
-        display: inline-block;
         margin-right: 20px;
       }
     }
@@ -99,6 +98,7 @@
 
       @media(max-width: 768px) {
         margin-bottom: 5px;
+        display: inline-block;
       }
     }
   }

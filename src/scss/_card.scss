@@ -528,7 +528,7 @@
     }
 
     .ui-count {
-      height: 60px;
+      height: 58px;
       border-radius: 30%;
       max-width: 124px;
       background: #D9E4F1;
@@ -567,6 +567,7 @@
     .ui-count input[type=number] {
       height: 56px;
       padding: 0 32px;
+      margin: 1px 0;
 
       @media(max-width: 360px) {
         padding: 0 30px;

@@ -47,9 +47,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
-  &.disabled {
-    background: #ebd2a7;
-    cursor: not-allowed
+  &.uppercase {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'FuturaMediumC';
   }
 
   &.white {
@@ -78,7 +79,7 @@
   @media(max-width: 1440px) {
     height: 52px;
     line-height: 52px;
-    font-size: 18px;
+    // font-size: 18px;
   }
 }
 
@@ -681,6 +682,11 @@ span.error {
   position: relative;
   padding-left: 34px;
   font-size: 18px;
+
+  a {
+    font-size: 18px;
+    color: #4670c8;
+  }
 
   &-inline {
     display: inline-block;

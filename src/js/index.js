@@ -27,9 +27,25 @@ jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
 }, "Letters only please");
 
+function checkInputValue(input) {
+  const inputField = document.querySelectorAll(input);
+
+  for(let i = 0; i < inputField.length; i++) {
+    const label = inputField[i].parentNode.querySelector('.ui-label');
+
+    if(inputField[i].value !== '') {
+      label.classList.add('active')
+
+    } else {
+      label.classList.remove('active')
+    }
+  }
+}
+
+checkInputValue(".ui-field input")
+
 $( document ).ready(function() {
   // delete card for cart.html
-
   if(document.querySelector('.cart-list')) {
     const cartList = document.querySelector('.cart-list');
 
@@ -187,40 +203,6 @@ $( document ).ready(function() {
           }
 
           e.target.classList.add('active')
-        }
-      })
-    }
-  }
-
-  // making-order.html display entry values in field like "Купон"
-  if(document.querySelectorAll('.cart-txt .ui-input') !== 0) {
-    const targetBlock = document.querySelectorAll('.cart-txt .ui-input');
-
-    for(let i = 0; i < targetBlock.length; i++) {
-      targetBlock[i].addEventListener('blur', (e) => {
-        if(e.target.value !== '') {
-          const discountBlock = e.target.closest('.cart-price').querySelector('.cart-price-discount')
-
-          e.target.classList.add('hide');
-
-          discountBlock.classList.add('active')
-        }
-      })
-    }
-  }
-
-  // making-order.html delete values at the click of a button
-  if(document.querySelectorAll('.cart-price-discount') !== 0) {
-    const deleteDiscount = document.querySelectorAll('.cart-price-discount');
-
-    for(let i = 0; i < deleteDiscount.length; i++) {
-      deleteDiscount[i].addEventListener('click', (e) => {
-        if(e.target.classList[0] === 'sprite') {
-          const input = e.target.closest('.cart-price').querySelector('.ui-input');
-          const thisBlock = e.target.closest('.cart-price-discount')
-
-          input.classList.remove('hide')
-          thisBlock.classList.remove('active')
         }
       })
     }

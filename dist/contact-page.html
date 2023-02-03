@@ -1,0 +1,232 @@
+<!--#include file="inc-header.html"-->
+
+<div class="middle" id="middle">
+  <div class="container">
+    <div class="ui-breadcrumbs margin-72">
+      <a href="#" class="ui-breadcrumbs-link">
+        <img src="./images/icon/home.svg" alt="alt">
+
+        <span>На главную</span>
+      </a>
+      <div class="ui-breadcrumbs-dash"></div>
+      <div class="ui-breadcrumbs-current">Контакты</div>
+    </div>
+
+    <div class="page-wrapper">
+      <h1 class="ui-title">
+        Контактная информация
+      </h1>
+
+      <div class="contact-block">
+        <div class="row">
+          <div class="col-md-9 col-sm-8">
+            <div class="contact-info">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="contact-title">
+                    Реквизиты и контакты
+                  </div>
+
+                  <div class="contact-info-block">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="contact-txt">
+                          Индивидуальный предприниматель Деменчук Вадим Вячеславович,УНП 291180223, свидетельство о государственной регистрации 15.05.2013, выдано «Администрацией Московского района г.Бреста».
+                          Адрес регистрации: Беларусь, 224012, Брест, Сикорского, 7.
+                          Адрес торгового объекта: Беларусь, 224012, Брест, Карбышева 74.
+                          Регистрационный номер в Торговом реестре Республики Беларусь: 517703 от 27 августа 2021.
+                        </div>
+                      </div>
+
+                      <div class="col-xs-6">
+                        <div class="footer-content-links">
+                          <div class="footer-contact">
+                            <div class="footer-contact-img">
+                              <img src="./images/icon/loc.svg" alt="alt">
+                            </div>
+
+                            <div class="footer-caption">Республика Беларусь</div>
+                          </div>
+
+                          <div class="footer-contact">
+                            <div class="footer-contact-img">
+                              <img src="./images/icon/phone.svg" alt="alt">
+                            </div>
+
+                            <a href="tel:+375333556677" class="footer-caption">+ 375 33 355 66 77</a>
+                            <a href="tel:+375333055677" class="footer-caption">+ 375 33 305 56 77</a>
+                          </div>
+
+                          <div class="footer-contact">
+                            <div class="footer-contact-img top-8">
+                              <img src="./images/icon/email.svg" alt="alt">
+                            </div>
+
+                            <a href="mailto:ikeabrest@mail.ru" class="footer-caption">ikeabrest@mail.ru</a>
+                          </div>
+
+                          <div class="footer-contact">
+                            <div class="footer-contact-img">
+                              <img src="./images/icon/time.svg" alt="alt">
+                            </div>
+
+                            <div class="footer-caption">ПН-ПТ 10:00 - 19:00</div>
+                            <div class="footer-caption">ВС 10:00 - 17:00</div>
+                          </div>
+                        </div>
+
+                        <div class="contact-address">
+                          <span class="ff-bold">Для корреспонденции: </span>
+                          <span class="ff-light">224012 Брест, Сикорского, 7. </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="contact-form-content">
+                    <div class="contact-form-title">
+                      Обратная связь
+                    </div>
+
+                    <form action="#" class="contact-form">
+                      <div class="contact-form-fields">
+                        <div class="ui-field">
+                          <input type="text" class="ui-input label" name="surname" id="surname">
+                          <label class="ui-label">Фамилия</label>
+                        </div>
+                        <div class="ui-field">
+                          <input type="text" class="ui-input label" name="email" id="email">
+                          <label class="ui-label">Email</label>
+
+                        </div>
+                        <div class="ui-field">
+                          <textarea class="ui-input label" rows="3"></textarea>
+                          <label class="ui-label">Сообщение</label>
+                        </div>
+                      </div>
+
+                      <button class="ui-btn">Отправить отзыв</button>
+                    </form>
+
+                    <script>
+                      document.addEventListener("DOMContentLoaded",() => {
+                        jQuery(document).ready(function($){
+                          $(".contact-form").validate({
+                            errorElement: "span",
+
+                            rules: {
+                              surname: {
+                                required: true,
+                                lettersonly: true,
+                              },
+                              email: {
+                                required: true,
+                                email: true,
+                              },
+                            },
+
+                            messages: {
+                              surname: {
+                                required: "Пожалуйста, введите данные",
+                                lettersonly: "Ваше имя может состоять только из латинский или кириллических букв, без цифр",
+                              },
+                              email: {
+                                required: "Пожалуйста, введите данные",
+                                email: "Введите корректный email",
+                              },
+                            }
+                          });
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-map">
+              <div id="map" style="width: 100%; height: 450px"></div>
+
+              <script>
+                window.onload = function() {
+                  const script = document.createElement("script");
+
+                  script.src = "//api-maps.yandex.ru/2.1/?lang=ru_RU"
+
+                  document.body.appendChild(script)
+
+                  script.onload = function() {
+                    var myMap;
+                    ymaps.ready(init);
+
+                    function init () {
+                      myMap = new ymaps.Map('map', {
+                          center: [52.102274, 23.710565],
+                          zoom: 14
+                      }, {
+                          searchControlProvider: 'yandex#search'
+                      });
+                    }
+                  }
+                }
+            </script>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-4">
+            <div class="data-menu">
+              <div class="data-title">Меню</div>
+
+              <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Возврат</a></li>
+                <li><a href="#">Юридическим лицам</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Оферта</a></li>
+                <li><a href="#" class="active">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="commercial">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="commercial-img">
+              <img src="./images/pic-1.png" alt="alt">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="commercial-img">
+              <img src="./images/pic-2.png" alt="alt">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="commercial-img-txt">
+              <img src="./images/pic-3.png" alt="alt">
+
+              <div class="commercial-title">
+                БОЛЕЕ <br> <strong>1000 ТОВАРОВ</strong>
+              </div>
+
+              <div class="commercial-subtitle">
+                ДЛЯ ВДОХНОВЛЯЮЩИХ ИНТЕРЬЕРОВ
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="commercial-img">
+              <img src="./images/pic-4.png" alt="alt">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="inc-footer.html"-->
