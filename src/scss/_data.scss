@@ -75,8 +75,18 @@
       }
 
       @media(max-width: 768px) {
-        display: inline-block;
         margin-right: 20px;
+      }
+    }
+
+    ul {
+      margin-bottom: 0;
+
+      @media(max-width: 768px) {
+        white-space: nowrap;
+        overflow-x: auto;
+        margin: 0 0 -20px 0;
+        padding: 0 0 20px 0;
       }
     }
 
@@ -99,6 +109,7 @@
 
       @media(max-width: 768px) {
         margin-bottom: 5px;
+        display: inline-block;
       }
     }
   }

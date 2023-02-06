@@ -1,0 +1,147 @@
+.contact {
+  &-title {
+    font-family: 'FuturaMediumC';
+    font-size: 36px;
+    margin-bottom: 22px;
+
+    @media(max-width: 1440px) {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: 1280px) {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    @media(max-width: 1024px) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-form {
+    &-content {
+      @media(max-width: 768px) {
+        margin-bottom: 55px;
+      }
+    }
+    &-title {
+      font-family: 'FuturaMediumC';
+      font-size: 36px;
+      margin-bottom: 28px;
+
+      @media(max-width: 1440px) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 28px;
+        margin-bottom: 18px;
+      }
+
+      @media(max-width: 1024px) {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &-fields {
+      margin-bottom: 40px;
+    }
+
+    .ui-field {
+      margin-bottom: 25px;
+    }
+  }
+
+  &-txt {
+    font-family: 'FuturaLightC';
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #172542;
+
+    @media(max-width: 1024px) {
+      font-size: 18px;
+    }
+
+    @media(max-width: 576px) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &-address {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+
+    @media(max-width: 1024px) {
+      font-size: 18px;
+    }
+
+    span {
+      display: block;
+    }
+
+    .ff-bold {
+      font-family: 'FuturaMediumC';
+      margin-bottom: 5px;
+    }
+
+    .ff-light {
+      font-family: 'FuturaLightC';
+    }
+  }
+
+  &-info {
+    margin-bottom: 120px;
+
+    @media(max-width: 1440px) {
+      margin-bottom: 100px;
+    }
+
+    @media(max-width: 1280px) {
+      margin-bottom: 80px;
+    }
+
+    &-block {
+      @media(max-width: 1024px) {
+        margin-bottom: 55px;
+      }
+
+      @media(max-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &> .row > .col-md-8 {
+      @media(max-width: 768px) {
+        order: 1;
+      }
+    }
+  }
+
+  &-map {
+    margin-bottom: 180px;
+
+    @media(max-width: 1024px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-block {
+    &> .row > .col-md-9 {
+      @media(max-width: 768px) {
+        order: 1;
+      }
+    }
+
+    #map {
+      height: 450px;
+
+      @media(max-width: 576px) {
+        height: 300px;
+      }
+    }
+  }
+}

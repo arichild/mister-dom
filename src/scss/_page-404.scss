@@ -150,19 +150,6 @@
       margin: 0 auto 20px auto;
     }
 
-
-    &.height-auto {
-      min-height: auto;
-
-      @media(max-width: 1024px) {
-        min-height: calc(100% - 30px);
-      }
-
-      @media(max-width: 576px) {
-        min-height: calc(100% - 20px);
-      }
-    }
-
     &.light-blue {
       background: #DBEEF5;
     }
@@ -385,6 +372,7 @@
     @media(max-width: 480px) {
       margin: 0 auto;
       display: block;
+      max-width: 100%;
     }
 
     &-block {
@@ -396,7 +384,7 @@
       }
 
       @media(max-width: 480px) {
-        max-width: 250px;
+        max-width: 100%;
         margin: 0 auto 30px;
       }
     }

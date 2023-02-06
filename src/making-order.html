@@ -33,7 +33,7 @@
                 <div class="col-md-4 col-xs-6">
                   <div class="ui-field">
                     <input autocomplete="off" type="text" class="ui-input label" name="surname" id="surname">
-                    <label class="ui-label label">Фамилия</label>
+                    <label class="ui-label">Фамилия</label>
                   </div>
                 </div>
                 <div class="col-md-4 col-xs-6">
@@ -283,7 +283,7 @@
 
                 <div class="cart-price margin-7 flex">
                   <div class="cart-price-txt">
-                    <span>Списать бонусы (у вас <b>523</b> балла)</span>
+                    <span>Списать бонусы <br> (у вас <b>523</b> балла)</span>
 
                     <span class="ui-tooltip">
                       <span class="ui-tooltip-icon">
@@ -297,7 +297,7 @@
                     </span>
                   </div>
 
-                  <input autocomplete="off" type="text" class="ui-input">
+                  <input autocomplete="off" type="text" class="ui-input" name="bonus" id="bonus">
 
                   <div class="cart-price-discount">
                     <div class="cart-price-minus"> -246 р.</div>
@@ -315,7 +315,7 @@
                     <span>Купон</span>
                   </div>
 
-                  <input autocomplete="off" type="text" class="ui-input">
+                  <input autocomplete="off" type="text" class="ui-input" name="coupon" id="coupon">
 
                   <div class="cart-price-discount">
                     <div class="cart-price-minus"> -431 р.</div>
@@ -333,7 +333,7 @@
                     <span>Подарочный сертификат</span>
                   </div>
 
-                  <input autocomplete="off" type="text" class="ui-input">
+                  <input autocomplete="off" type="text" class="ui-input" name="certificate" id="certificate">
 
                   <div class="cart-price-discount">
                     <div class="cart-price-minus"> -10 000 р.</div>
@@ -398,7 +398,16 @@
                 },
                 select: {
                   required: true,
-                }
+                },
+                bonus: {
+                  number: true
+                },
+                coupon: {
+                  number: true
+                },
+                certificate: {
+                  number: true
+                },
               },
 
               errorPlacement: function (error, element) {
@@ -408,20 +417,20 @@
                 if (element.hasClass('ui-input')) {
                   element.closest('.ui-field').append(error);
                 }
+                if (element.hasClass('ui-input')) {
+                  element.closest('.cart-price').append(error);
+                }
               },
 
               messages: {
                 surname: {
                   required: "Пожалуйста, введите данные",
-                  lettersonly: "Ваше имя может состоять только из латинский или кириллических букв, без цифр",
                 },
                 name: {
                   required: "Пожалуйста, введите данные",
-                  lettersonly: "Ваша фамилия может состоять только из латинский или кириллических букв, без цифр",
                 },
                 lastName: {
                   required: "Пожалуйста, введите данные",
-                  lettersonly: "Ваше отчество может состоять только из латинский или кириллических букв, без цифр",
                 },
                 email: {
                   required: "Пожалуйста, введите данные",
@@ -443,9 +452,57 @@
                 select: {
                   required: "Пожалуйста, выберете способ оплаты",
                 },
+                bonus: {
+                  number: "Данное поле не может содержать буквы"
+                },
+                coupon: {
+                  number: "Данное поле не может содержать буквы"
+                },
+                certificate: {
+                  number: "Данное поле не может содержать буквы"
+                }
               }
             });
           })
+
+          // making-order.html display entry values in field like "Купон"
+          if(document.querySelectorAll('.cart-txt .ui-input') !== 0) {
+            const targetBlock = document.querySelectorAll('.cart-txt .ui-input');
+
+            for(let i = 0; i < targetBlock.length; i++) {
+              targetBlock[i].addEventListener('blur', (e) => {
+                const error = e.target.closest('.cart-price').querySelector("span.error")
+
+                if(Number.isInteger(+e.target.value) && e.target.value !== '') {
+                  const parent = e.target.closest('.cart-price');
+                  const discountBlock = parent.querySelector('.cart-price-discount')
+
+                  e.target.classList.add('hide');
+                  discountBlock.classList.add('active')
+                  parent.classList.add('active')
+                }
+              })
+            }
+          }
+
+          // making-order.html delete values at the click of a button
+          if(document.querySelectorAll('.cart-price-discount') !== 0) {
+            const deleteDiscount = document.querySelectorAll('.cart-price-discount');
+
+            for(let i = 0; i < deleteDiscount.length; i++) {
+              deleteDiscount[i].addEventListener('click', (e) => {
+                if(e.target.classList[0] === 'sprite') {
+                  const parent = e.target.closest('.cart-price');
+                  const input = e.target.closest('.cart-price').querySelector('.ui-input');
+                  const thisBlock = e.target.closest('.cart-price-discount')
+
+                  input.classList.remove('hide')
+                  thisBlock.classList.remove('active')
+                  parent.classList.remove('active')
+                }
+              })
+            }
+          }
         });
       </script>
     </div>
@@ -496,6 +553,9 @@
               <div class="services-subtitle">
                 Отмечай товары и получай по SMS автоматические уведомления
               </div>
+            </div>
+            <div class="services-img">
+              <img src="./images/services-4.png" alt="alt">
             </div>
           </div>
         </div>
