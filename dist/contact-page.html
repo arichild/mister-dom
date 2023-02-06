@@ -129,7 +129,6 @@
                             messages: {
                               surname: {
                                 required: "Пожалуйста, введите данные",
-                                lettersonly: "Ваше имя может состоять только из латинский или кириллических букв, без цифр",
                               },
                               email: {
                                 required: "Пожалуйста, введите данные",
@@ -146,7 +145,7 @@
             </div>
 
             <div class="contact-map">
-              <div id="map" style="width: 100%; height: 450px"></div>
+              <div id="map" style="width: 100%"></div>
 
               <script>
                 window.onload = function() {
@@ -163,10 +162,21 @@
                     function init () {
                       myMap = new ymaps.Map('map', {
                           center: [52.102274, 23.710565],
-                          zoom: 14
+                          zoom: 14,
+                          controls: ['zoomControl']
                       }, {
                           searchControlProvider: 'yandex#search'
+                      }),
+                      myPlacemark = new ymaps.Placemark([52.102274, 23.710565], {
+                          // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+                          balloonContentHeader: "Балун метки",
+                          balloonContentBody: "Содержимое <em>балуна</em> метки",
+                          balloonContentFooter: "Подвал",
+                          hintContent: "Хинт метки"
                       });
+
+                      myMap.geoObjects.add(myPlacemark);
+                      myMap.behaviors.disable('scrollZoom')
                     }
                   }
                 }

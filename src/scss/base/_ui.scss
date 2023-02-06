@@ -14,7 +14,7 @@
 
     @media(max-width: 1440px) {
       margin-bottom: 45px;
-      font-size: 40px;
+      // font-size: 40px;
     }
 
     @media(max-width: 1280px) {
@@ -22,7 +22,7 @@
     }
 
     @media(max-width: 1024px) {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -1151,6 +1151,7 @@ span.error {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 24px;
+  white-space: normal;
 
   @media(max-width: 1024px) {
     font-size: 16px;

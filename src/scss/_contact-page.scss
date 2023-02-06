@@ -135,5 +135,13 @@
         order: 1;
       }
     }
+
+    #map {
+      height: 450px;
+
+      @media(max-width: 576px) {
+        height: 300px;
+      }
+    }
   }
 }

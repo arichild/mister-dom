@@ -25,7 +25,7 @@ function labelForInput(selector) {
 
 jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
-}, "Letters only please");
+}, "Поле может состоять из букв и пробелов, без цифр");
 
 function checkInputValue(input) {
   const inputField = document.querySelectorAll(input);
