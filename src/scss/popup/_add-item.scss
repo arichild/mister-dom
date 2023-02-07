@@ -29,11 +29,42 @@
     }
   }
 
+  .cart-item-sum {
+    @media(max-width: 525px) {
+      margin-bottom: 0;
+    }
+  }
+
   .cart-item-info {
     margin-right: 0 !important;
+    max-width: 100%;
+    flex: 0 0 100%;
+
+    @media(max-width: 1310px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media(max-width: 1024px) {
+      margin-bottom: 0;
+    }
 
     @media(max-width: 480px) {
       align-items: flex-start;
+    }
+  }
+
+  .cart-item-title {
+    @media(max-width: 525px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .cart-item-txt {
+    padding-right: 0;
+
+    @media(max-width: 1310px) {
+      margin-bottom: 0;
     }
   }
 
