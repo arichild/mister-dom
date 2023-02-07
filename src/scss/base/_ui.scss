@@ -135,7 +135,8 @@
 
 .ui-rating.flex {
   flex-wrap: wrap;
-  align-items: center;
+  // align-items: center;
+  align-items: flex-end
 }
 
 .ui-rating-stars {
@@ -178,6 +179,8 @@
   font-weight: 400;
   font-size: 16px;
   color: #858585;
+  position: relative;
+  top: 2px;
 
   @media(max-width: 1440px) {
     font-size: 14px;
@@ -412,12 +415,15 @@
 }
 
 .ui-count {
-  background: #EEF1F7;
-  max-width: 180px;
+  // background: #EEF1F7;
+  background: #D9E4F1;
+  // max-width: 180px;
+  max-width: 124px;
   display: inline-block;
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 58px;
+  border-radius: 30%;
 
   @media(max-width: 1440px) {
     max-width: 160px;
@@ -441,7 +447,7 @@
 
   &-btn {
     position: absolute;
-    width: 60px;
+    width: 32px;
     height: 100%;
     padding: 0;
     display: block;
@@ -451,6 +457,7 @@
     font-weight: 600;
     cursor: pointer;
     font-family: 'FuturaLightC';
+    background: #D9E4F1;
 
     @media(max-width: 1440px) {
       width: 50px;
@@ -471,6 +478,7 @@
     &.minus {
       left: 0;
       top: 0;
+      border-radius: 90px 0 0 90px;
 
       &::after {
         content: "";
@@ -488,6 +496,7 @@
     &.plus {
       right: 0;
       top: 0;
+      border-radius: 0 90px 90px 0;
 
       &::after {
         content: "";
@@ -512,8 +521,8 @@
     border: none;
     font-size: 22px;
     outline: none;
-    margin: 2px 0;
-    padding: 0 60px;
+    margin: 1px 0;
+    padding: 0 32px;
     -moz-appearance: textfield;
 
     @media(max-width: 1440px) {
@@ -738,6 +747,8 @@ span.error {
 
     span {
       color: #8BA0B7;
+      position: relative;
+      top: -4px;
     }
   }
 

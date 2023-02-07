@@ -10,7 +10,7 @@
     padding: 80px;
 
     @media(max-width: 576px) {
-      padding: 50px 15px;
+      padding: 50px 28px;
     }
   }
 
@@ -19,7 +19,7 @@
   }
 
   @media(max-width: 576px) {
-    padding: 50px 15px;
+    padding: 50px 28px;
   }
 
   &-title {
@@ -42,6 +42,10 @@
     font-size: 20px;
     color: #172542;
     margin-bottom: 30px;
+
+    @media(max-width: 1024px) {
+      font-size: 18px;
+    }
   }
 
   &-img {
