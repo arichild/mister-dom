@@ -618,4 +618,10 @@ $( document ).ready(function() {
       download: false,
     })
   }
+
+  $(document).on('mouseup',function(e) {
+    if ($('.dropdown-content').has(e.target).length === 0) {
+      $('.dropdown-content').removeClass('active')
+    }
+  });
 });
