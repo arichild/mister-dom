@@ -45,10 +45,6 @@
       align-items: center;
     }
 
-    @media(max-width: 1024px) {
-      margin-bottom: 0;
-    }
-
     @media(max-width: 480px) {
       align-items: flex-start;
     }
@@ -62,6 +58,8 @@
 
   .cart-item-txt {
     padding-right: 0;
+    max-width: 100%;
+    flex: auto;
 
     @media(max-width: 1310px) {
       margin-bottom: 0;
