@@ -2,6 +2,8 @@
 function labelForInput(selector) {
   const inputField = document.querySelectorAll(selector);
 
+  console.log("asdas")
+
   for(let i = 0; i < inputField.length; i++) {
     inputField[i].addEventListener('focus', (e) => {
       const span = e.target.parentNode.querySelector('.ui-label');
@@ -20,8 +22,12 @@ function labelForInput(selector) {
         span.classList.remove('active')
       }
     })
+
+    checkInputValue(".ui-input.label")
   }
 }
+
+labelForInput('.ui-input.label')
 
 jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
@@ -42,8 +48,6 @@ function checkInputValue(input) {
   }
 }
 
-checkInputValue(".ui-field input")
-
 $( document ).ready(function() {
   // delete card for cart.html
   if(document.querySelector('.cart-list')) {
@@ -59,8 +63,6 @@ $( document ).ready(function() {
       }
     })
   }
-
-  labelForInput('.ui-input.label')
 
   // search menu
   if(document.getElementById('search')) {
