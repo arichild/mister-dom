@@ -25,8 +25,6 @@ function labelForInput(selector) {
   }
 }
 
-labelForInput('.ui-input.label')
-
 jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
 }, "Поле может состоять из букв и пробелов, без цифр");
@@ -47,6 +45,8 @@ function checkInputValue(input) {
 }
 
 $( document ).ready(function() {
+  labelForInput('.ui-input.label')
+
   // delete card for cart.html
   if(document.querySelector('.cart-list')) {
     const cartList = document.querySelector('.cart-list');
