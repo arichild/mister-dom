@@ -93,7 +93,7 @@
 
     .ui-input {
       border-radius: 32px;
-      padding-left: 50px;
+      padding-left: 48px;
 
       @media(max-width: 576px) {
         margin-bottom: 10px;
@@ -104,8 +104,8 @@
   .header-control-search {
     img {
       position: absolute;
-      left: 21px;
-      top: 16px;
+      left: 15px;
+      top: 15px;
       margin-bottom: 0;
     }
   }
