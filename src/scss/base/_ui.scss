@@ -336,6 +336,11 @@
 .ui-breadcrumbs {
   margin-bottom: 30px;
   display: block;
+  font-size: 22px;
+
+  @media(max-width: 1480px) {
+    font-size: 20px;
+  }
 
   &.margin-72 {
     margin-bottom: 72px;
@@ -361,12 +366,16 @@
     margin-right: 10px;
     position: relative;
     top: 5px;
+
+    @media(max-width: 1480px) {
+      width: 22px;
+    }
   }
 
   &-link {
     display: inline-block;
     vertical-align: middle;
-    font-size: 22px;
+    // font-size: 22px;
     color: #172542;
 
     span {
@@ -393,7 +402,7 @@
   }
 
   &-current {
-    font-size: 22px;
+    // font-size: 22px;
     color: #BECCDC;
     display: inline-block;
     vertical-align: bottom;

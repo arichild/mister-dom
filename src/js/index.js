@@ -21,7 +21,7 @@ function labelForInput(selector) {
       }
     })
 
-    checkInputValue(".ui-input.label")
+    checkInputValue(selector)
   }
 }
 
