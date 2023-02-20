@@ -169,6 +169,10 @@
     background: #F7F0E7;
     padding: 45px 40px;
 
+    @media(max-width: 1360px) {
+      padding: 45px 24px;
+    }
+
     @media(max-width: 1215px) {
       padding: 45px 15px;
     }
@@ -419,6 +423,10 @@
   box-shadow: 0 4px 35px rgb(114 142 174 / 20%);
   margin-bottom: 54px;
 
+  @media(max-width: 1360px) {
+    padding: 45px 24px;
+  }
+
   @media(max-width: 1215px) {
       padding: 45px 12px;
     }
@@ -538,6 +546,12 @@
 .list-group-item.item-content {
   overflow: hidden;
   padding: 15px 2px 50px;
+
+  .ui-label {
+    @media(max-width: 1215px) {
+      left: 20px;
+    }
+  }
 }
 
 .inner-box.expanded .list-group-item.item-content {

@@ -2,8 +2,6 @@
 function labelForInput(selector) {
   const inputField = document.querySelectorAll(selector);
 
-  console.log("asdas")
-
   for(let i = 0; i < inputField.length; i++) {
     inputField[i].addEventListener('focus', (e) => {
       const span = e.target.parentNode.querySelector('.ui-label');
@@ -23,7 +21,7 @@ function labelForInput(selector) {
       }
     })
 
-    checkInputValue(".ui-input.label")
+    checkInputValue(selector)
   }
 }
 
