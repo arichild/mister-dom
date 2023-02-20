@@ -509,28 +509,6 @@ $( document ).ready(function() {
     })
   }
 
-  if(document.getElementById('oct-price-slider')) {
-    var oct_price_slider = document.getElementById('oct-price-slider');
-    noUiSlider.create(oct_price_slider, {
-      start: [3, 121],
-      behaviour: 'hover',
-      margin: 1,
-      connect: true,
-      range: {
-        'min': [3],
-        'max': [121]
-      },
-      format: wNumb({
-        decimals: 0
-      }),
-      slide: function(event, ui) {
-        if (ui.value == parseInt($('#oct-product-filter-data input[name=\'high_price\']').val())-1) {
-          return false;
-        }
-      }
-    });
-  }
-
   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
   let vh = window.innerHeight * 0.01;
   // Then we set the value in the --vh custom property to the root of the document
