@@ -672,6 +672,14 @@
   position: relative;
   background: transparent;
   margin-bottom: 4px;
+
+  @media(max-width: 1440px) {
+    height: 52px;
+  }
+
+  @media(max-width: 1215px) {
+    padding-left: 20px;
+  }
 }
 
 .box-filters .form-control:hover {
