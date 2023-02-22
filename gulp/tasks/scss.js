@@ -15,9 +15,10 @@ export const scss = () => {
 			// compressed
 			outputStyle: 'compressed'
 		}).on('error', sass.logError))
-		.pipe(prefixer({
-			browsers: ['last 2 versions']
-		}))
+		// .pipe(prefixer({
+		// 	browsers: ['last 2 versions']
+		// }))
+		.pipe(prefixer())
 		.pipe(clean({
 			level: 2
 		}))
