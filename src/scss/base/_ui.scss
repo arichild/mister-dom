@@ -794,25 +794,25 @@ span.error {
     }
   }
 
-  &-input:disabled {
-    cursor: not-allowed;
+  // &-input:disabled {
+  //   cursor: not-allowed;
 
-    &+.ui-checkbox-label {
-      color: #D3D3D3;
-      cursor: not-allowed;
-    }
+  //   &+.ui-checkbox-label {
+  //     color: #D3D3D3;
+  //     cursor: not-allowed;
+  //   }
 
-    &+.ui-checkbox-label::before {
-      border-color: #D3D3D3 !important;
-      background-color: #FFF !important;
-      cursor: not-allowed;
-    }
+  //   &+.ui-checkbox-label::before {
+  //     border-color: #D3D3D3 !important;
+  //     background-color: #FFF !important;
+  //     cursor: not-allowed;
+  //   }
 
-    &+.ui-checkbox-label::after {
-      opacity: 0;
-      cursor: not-allowed;
-    }
-  }
+  //   &+.ui-checkbox-label::after {
+  //     opacity: 0;
+  //     cursor: not-allowed;
+  //   }
+  // }
 }
 
 .ui-tooltip {
