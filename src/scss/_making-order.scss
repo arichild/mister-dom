@@ -353,3 +353,16 @@
     padding-right: 13px;
   }
 }
+
+
+.order-form {
+  .cart-item-title {
+    max-width: none;
+  }
+
+  @media (max-width: 1024px) and (min-width: 576px) {
+    .cart-item-info.txt {
+      padding-right: 20px;
+    }
+  }
+}

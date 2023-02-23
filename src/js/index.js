@@ -588,7 +588,7 @@ $( document ).ready(function() {
     });
   }
 
-  if(document.querySelector('.card-imgs')) {
+  if(document.querySelector('.card-imgs') && document.querySelectorAll('.card-imgs a.card-image').length) {
     let sliderGallery = document.querySelector('.card-imgs');
 
     lightGallery(sliderGallery, {

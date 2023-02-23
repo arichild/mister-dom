@@ -368,6 +368,11 @@
     .ui-btn {
       max-width: 235px;
     }
+
+    .cart-txt {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &-btn {
@@ -528,12 +533,15 @@
 
           @media(max-width: 1310px) {
             padding-right: 0;
+            flex: 0 0 calc(100% - 76px);
+            max-width: calc(100% - 76px);
           }
         }
 
         @media(max-width: 1310px) {
           max-width: 100%;
           flex: 0 0 100%;
+          width: 100%;
           flex-direction: row;
           align-items: center;
         }
