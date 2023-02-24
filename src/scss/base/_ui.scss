@@ -592,10 +592,12 @@
 .ui {
   &-select {
     position: relative;
-    // height: calc(100% - 12px);
-    min-height: 80px;
-    height: 100%;
+    // min-height: 80px;
+    min-height: calc(100% - 12px);
+    // height: 100%;
     line-height: 1;
+    display: flex;
+    margin-bottom: 12px;
 
     &-img {
       position: absolute;
@@ -623,18 +625,17 @@
     opacity: 0;
 
     &+label {
-      display: inline-flex;
+      display: flex;
       justify-content: center;
       flex-direction: column;
-      user-select: none;
-      padding: 35px 45px 35px 62px;
+      padding: 10px 45px 10px 62px;
       border: 1px solid #D4DFEA;
       border-radius: 8px;
       width: 100%;
       cursor: pointer;
       font-size: 20px;
       color: #172542;
-      height: 100%;
+      min-height: 80px;
 
       &::before {
         content: "";
