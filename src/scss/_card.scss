@@ -478,6 +478,61 @@
     }
   }
 
+  &-notification {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 50px;
+
+    &-link {
+      margin-right: 33px;
+
+      @media(max-width: 480px) {
+        margin-right: 10px;
+      }
+
+      @media(max-width: 360px) {
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      &:hover {
+        span {
+          border-bottom: 2px dotted #a8bed6;
+        }
+      }
+
+      span {
+        font-family: 'FuturaDemiC';
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        border-bottom: 2px dotted #172542;
+        font-size: 20px;
+
+        @media(max-width: 480px) {
+          font-size: 16px;
+        }
+      }
+
+      img {
+        position: relative;
+        top: 10px;
+
+        @media(max-width: 480px) {
+          width: 40px;
+        }
+      }
+    }
+
+    .card-btn {
+      position: relative;
+      top: 15px;
+
+      @media(max-width: 360px) {
+        top: 0;
+      }
+    }
+  }
+
   &-control {
     margin-bottom: 40px;
 

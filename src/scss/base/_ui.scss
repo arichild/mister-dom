@@ -338,6 +338,17 @@
     &.light-blue {
       background-color: #ADBFD4;
     }
+
+    &.mini {
+      height: 22px;
+      line-height: 22px;
+      background-color: #F7F0E7;
+      color: #172542;
+      font-size: 16px;
+      font-family: 'FuturaBookC';
+      text-transform: none;
+      font-weight: 400;
+    }
   }
 }
 
