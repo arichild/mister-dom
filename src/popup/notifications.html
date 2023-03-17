@@ -28,38 +28,18 @@
         rules: {
           phone: {
             required: true,
-            minlength: 19,
-            phoneNumber: true
+            phone: true
           },
         },
 
         messages: {
           phone: {
             required: "Пожалуйста, введите данные",
-            minlength: "Введите полный номер",
           },
         }
       });
 
-      jQuery.validator.addMethod("phoneNumber", function (value, element) {
-        if (!value.match('_')) {
-          return element.value === value
-        }
-
-      }, "Введите корректный номер");
-
-      let phone = document.getElementById('phone')
-
-      if (phone) {
-        phone.addEventListener('focus', function () {
-          mask = IMask(this, {
-            mask: '+{375} (00) 000-00-00',
-            overwrite: true,
-            lazy: false,
-            placeholderChar: '_',
-          });
-        })
-      }
+      phoneRule()
     });
   </script>
 </div>
