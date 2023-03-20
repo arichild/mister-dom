@@ -27,6 +27,18 @@
     .slider-items {
       margin-bottom: 0;
     }
+
+    .slider-items .swiper-wrapper {
+      margin-bottom: 0;
+
+      @media(max-width: 1024px) {
+        margin-bottom: 80px;
+      }
+
+      @media(max-width: 576px) {
+        margin-bottom: 60px;
+      }
+    }
   }
 
   &-title {
