@@ -348,6 +348,14 @@
       font-family: 'FuturaBookC';
       text-transform: none;
       font-weight: 400;
+
+      @media(max-width: 1024px) {
+        font-size: 14px;
+      }
+
+      @media(max-width: 480px) {
+        font-size: 12px;
+      }
     }
   }
 }

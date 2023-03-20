@@ -25,7 +25,6 @@ function labelForInput(selector) {
   }
 }
 
-
 function lettersOnly() {
   jQuery.validator.addMethod("lettersonly", function(value, element) {
     return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);

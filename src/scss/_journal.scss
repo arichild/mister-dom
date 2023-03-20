@@ -1,0 +1,140 @@
+.journal {
+  &-list {
+    margin-bottom: 15px;
+
+    @media(max-width: 1024px) {
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: 576px) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &-content {
+    // .form-mailing {
+    //   margin-bottom: 60px;
+
+    //   @media(max-width: 1024px) {
+    //     margin-bottom: 80px;
+    //   }
+
+    //   @media(max-width: 576px) {
+    //     margin-bottom: 40px;
+    //   }
+    // }
+
+    .slider-items {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    font-family: FuturaMediumC;
+    font-size: 36px;
+    letter-spacing: .05em;
+    color: #172542;
+    margin-bottom: 42px;
+
+    @media(max-width: 1440px) {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    @media(max-width: 1280px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    @media(max-width: 1024px) {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    @media(max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  &-card {
+    max-width: 370px;
+    margin-bottom: 55px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media(max-width: 1200px) {
+      margin-bottom: 45px;
+    }
+
+    @media(max-width: 576px) {
+      margin-bottom: 30px;
+    }
+
+    @media(max-width: 480px) {
+      max-width: 100%;
+    }
+
+    &-txt {
+      .ui-status {
+        display: inline-block;
+      }
+    }
+
+    &-img {
+      display: block;
+      margin-bottom: 20px;
+      line-height: 0;
+
+      @media(max-width: 1440px) {
+        margin-bottom: 15px;
+      }
+
+      @media(max-width: 1280px) {
+        margin-bottom: 10px;
+      }
+
+      @media(max-width: 480px) {
+        text-align: center;
+      }
+    }
+
+    &-link {
+      margin-bottom: 15px;
+
+      @media(max-width: 1280px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-tag {
+      .ui-status {
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+    }
+
+    &-caption {
+      // display: block;
+      font-family: FuturaMediumC;
+      font-size: 28px;
+      color: #172542;
+      letter-spacing: .05em;
+      // margin-bottom: 15px;
+      line-height: 1.2;
+
+      @media(max-width: 1440px) {
+        font-size: 24px;
+      }
+
+      @media(max-width: 1280px) {
+        font-size: 20px;
+        // margin-bottom: 10px;
+      }
+
+      @media(max-width: 1024px) {
+        font-size: 18px;
+        // margin-bottom: 10px;
+      }
+    }
+  }
+}
